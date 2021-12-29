@@ -17,6 +17,7 @@
 		2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3017BD277AA5FA00369590 /* ContentView.swift */; };
 		2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
 		2A3017E9277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
+		2A47EDD9277C2B8A00664E74 /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47EDD8277C2B8A00664E74 /* minigame2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		2A3017DC277AA5FC00369590 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3017E0277AA5FC00369590 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2A47EDD8277C2B8A00664E74 /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -86,6 +88,7 @@
 		2A3017B6277AA5F900369590 = {
 			isa = PBXGroup;
 			children = (
+				2A47EDDA277C2B8F00664E74 /* haeun */,
 				2A3017BB277AA5FA00369590 /* Shared */,
 				2A3017CA277AA5FC00369590 /* macOS */,
 				2A3017D3277AA5FC00369590 /* Tests iOS */,
@@ -139,6 +142,14 @@
 				2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		2A47EDDA277C2B8F00664E74 /* haeun */ = {
+			isa = PBXGroup;
+			children = (
+				2A47EDD8277C2B8A00664E74 /* minigame2.swift */,
+			);
+			path = haeun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -301,6 +312,7 @@
 			files = (
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
+				2A47EDD9277C2B8A00664E74 /* minigame2.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
