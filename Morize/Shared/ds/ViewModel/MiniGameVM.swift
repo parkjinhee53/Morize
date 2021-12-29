@@ -56,4 +56,12 @@ class MiniGameVM: ObservableObject{
     func add(pos: Int){
         checkArray.append(pos)
     }
+    
+    // 게임이 끝났는지 검사
+    func checkEnd() -> Bool {
+        if buttonArray.contains(false) {
+            return false
+        }
+        return true
+    }
 }
