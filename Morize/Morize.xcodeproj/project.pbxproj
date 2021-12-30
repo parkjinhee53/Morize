@@ -18,6 +18,13 @@
 		2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
 		2A3017E9277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
 		2A47EDD9277C2B8A00664E74 /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A47EDD8277C2B8A00664E74 /* minigame2.swift */; };
+		B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B712F9C6277D6D8700E7A3BD /* Lottie */; };
+		B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B712F9C9277D6DE000E7A3BD /* LottieView.swift */; };
+		B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = B712F9CB277D6F9300E7A3BD /* fireworks.json */; };
+		B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FAB1F277D41EC00957C5B /* Extension+Color.swift */; };
+		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
+		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
+
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,6 +58,11 @@
 		2A3017E0277AA5FC00369590 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
 		2A47EDD8277C2B8A00664E74 /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
+		B712F9C9277D6DE000E7A3BD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		B712F9CB277D6F9300E7A3BD /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
+		B71FAB1F277D41EC00957C5B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
+		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
+		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +70,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -100,6 +113,8 @@
 		2A3017BB277AA5FA00369590 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B71FAB1E277D41AB00957C5B /* Utill */,
+				B774CEFA277BECAD00A9B368 /* ds */,
 				2A3017BC277AA5FA00369590 /* MorizeApp.swift */,
 				2A3017BD277AA5FA00369590 /* ContentView.swift */,
 				2A3017BE277AA5FC00369590 /* Assets.xcassets */,
@@ -150,6 +165,55 @@
 				2A47EDD8277C2B8A00664E74 /* minigame2.swift */,
 			);
 			path = haeun;
+		B712F9C8277D6DD500E7A3BD /* Animation */ = {
+			isa = PBXGroup;
+			children = (
+				B712F9CB277D6F9300E7A3BD /* fireworks.json */,
+				B712F9C9277D6DE000E7A3BD /* LottieView.swift */,
+			);
+			path = Animation;
+			sourceTree = "<group>";
+		};
+		B71FAB1E277D41AB00957C5B /* Utill */ = {
+			isa = PBXGroup;
+			children = (
+				B71FAB1F277D41EC00957C5B /* Extension+Color.swift */,
+			);
+			path = Utill;
+			sourceTree = "<group>";
+		};
+		B774CEFA277BECAD00A9B368 /* ds */ = {
+			isa = PBXGroup;
+			children = (
+				B712F9C8277D6DD500E7A3BD /* Animation */,
+				B774CEFF277BECEF00A9B368 /* Model */,
+				B774CEFE277BECE200A9B368 /* ViewModel */,
+				B774CEFD277BECDA00A9B368 /* View */,
+			);
+			path = ds;
+			sourceTree = "<group>";
+		};
+		B774CEFD277BECDA00A9B368 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				B774CEFB277BECC900A9B368 /* MiniGame.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		B774CEFE277BECE200A9B368 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				B774CF00277BEDD500A9B368 /* MiniGameVM.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
+		B774CEFF277BECEF00A9B368 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -168,6 +232,9 @@
 			dependencies = (
 			);
 			name = "Morize (iOS)";
+			packageProductDependencies = (
+				B712F9C6277D6D8700E7A3BD /* Lottie */,
+			);
 			productName = "Morize (iOS)";
 			productReference = 2A3017C3277AA5FC00369590 /* Morize.app */;
 			productType = "com.apple.product-type.application";
@@ -260,6 +327,9 @@
 				Base,
 			);
 			mainGroup = 2A3017B6277AA5F900369590;
+			packageReferences = (
+				B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+			);
 			productRefGroup = 2A3017C4277AA5FC00369590 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -277,6 +347,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */,
 				2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -310,9 +381,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
+				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
+				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				2A47EDD9277C2B8A00664E74 /* minigame2.swift in Sources */,
+				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -477,7 +552,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -540,7 +615,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -568,7 +643,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -715,6 +790,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 3.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		B712F9C6277D6D8700E7A3BD /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 2A3017B7277AA5F900369590 /* Project object */;
 }
