@@ -36,9 +36,8 @@ class MiniGameVM: ObservableObject{
     // 체크 배열
     var checkArray: [Int] = []
     
-    // 버튼 disable 배열
-    @Published var buttonArray: [Bool] = [false, false, false, false, false, false, false, false,
-                               false, false, false, false, false, false, false, false]
+    // 버튼 disable 배열, 0: 기본상태 1: 대기상태, 2: 사라진상태
+    @Published var buttonArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
     // MARK: - 메소드
     // 선택된 2개의 단어가 맞는지 체크
     func check(a: String, b: String) -> Bool{
@@ -59,7 +58,7 @@ class MiniGameVM: ObservableObject{
     
     // 게임이 끝났는지 검사
     func checkEnd() -> Bool {
-        if buttonArray.contains(false) {
+        if buttonArray.contains(1) || buttonArray.contains(0) {
             return false
         }
         return true
