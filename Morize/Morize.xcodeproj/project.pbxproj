@@ -23,6 +23,7 @@
 		B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FAB1F277D41EC00957C5B /* Extension+Color.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
+		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -60,6 +61,7 @@
 		B71FAB1F277D41EC00957C5B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
+		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -109,6 +111,7 @@
 		2A3017BB277AA5FA00369590 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7D7607C277D984800D50AFA /* haeun */,
 				B71FAB1E277D41AB00957C5B /* Utill */,
 				B774CEFA277BECAD00A9B368 /* ds */,
 				2A3017BC277AA5FA00369590 /* MorizeApp.swift */,
@@ -204,6 +207,14 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		B7D7607C277D984800D50AFA /* haeun */ = {
+			isa = PBXGroup;
+			children = (
+				B7D7607D277D985600D50AFA /* minigame2.swift */,
+			);
+			path = haeun;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -374,6 +385,7 @@
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
+				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,

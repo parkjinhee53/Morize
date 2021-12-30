@@ -1,5 +1,3 @@
-
-Morize/Morize.xcodeproj/project.xcworkspace/xcuserdata/kimha-eun.xcuserdatad/UserInterfaceState.xcuserstate
-
-*.xcuserstate
-Morize/.DS_Store
+**/.DS_Store
+*.plist
+MorizeApp.swift
