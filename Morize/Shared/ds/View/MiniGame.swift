@@ -26,18 +26,24 @@ struct MiniGame: View {
                         Button {
                             if viewModel.checkArray.isEmpty{
                                 viewModel.add(pos: (i * 4) + (j))
+                                viewModel.buttonArray[(i * 4) + (j)] = 1
                                 print(viewModel.checkArray)
                             }
                             else{
+                                // 단어와 뜻이 맞으면 disable
                                 if viewModel.check(a: viewModel.wordFour[viewModel.checkArray[0]], b: viewModel.wordFour[(i * 4) + (j)]) {
-                                    // disable
-                                    viewModel.buttonArray[(i * 4) + (j)] = true
-                                    viewModel.buttonArray[viewModel.checkArray[0]] = true
-                                    
+                                    viewModel.buttonArray[(i * 4) + (j)] = 2
+                                    viewModel.buttonArray[viewModel.checkArray[0]] = 2
+                                    // 게임이 끝났는지 체크
                                     if viewModel.checkEnd(){
                                         self.timer.upstream.connect().cancel()
                                     }
-                                    print(viewModel.buttonArray)
+                                }
+                                // 단어와 뜻이 다르면
+                                else {
+                                    for i in viewModel.checkArray{
+                                        viewModel.buttonArray[i] = 0
+                                    }
                                 }
                                 viewModel.checkArray.removeAll()
                             }
@@ -45,11 +51,11 @@ struct MiniGame: View {
                             Text(viewModel.wordFour[(i * 4) + (j)])
                                 .frame(width: 70, height: 70, alignment: .center)
                         }
-                        .background(Color(.sRGB, red: 0.6, green: 0.6, blue: 1, opacity: 1))
+                        .background(viewModel.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
                         .font(.system(size: 12, weight: .bold, design: .monospaced))
                         .foregroundColor(.black)
                         .cornerRadius(8)
-                        .opacity(viewModel.buttonArray[(i * 4) + (j)] ? 0 : 1)
+                        .opacity(viewModel.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
                     }
                 }
             }
