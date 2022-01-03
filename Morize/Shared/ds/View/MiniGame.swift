@@ -62,6 +62,7 @@ struct MiniGame: View {
                             .font(.system(size: 12, weight: .bold, design: .monospaced))
                             .foregroundColor(.black)
                             .cornerRadius(8)
+                            // Disable Animation
                             .scaleEffect(viewModel.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
                             .animation(.easeInOut(duration: 0.3), value: viewModel.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
                         }
