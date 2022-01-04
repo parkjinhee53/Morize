@@ -9,9 +9,9 @@ import Foundation
 
 // 문제
 struct Question: Hashable {
-    let questionText: String
-    let possibleAnswers: [String]
-    let correctAnswerIndex: Int
+    let questionText: String // 문제
+    let possibleAnswers: [String] // 보기
+    let correctAnswerIndex: Int // 정답 인덱스
     
     static let allQuestions: [Question] = [
         Question(questionText: "Apple",

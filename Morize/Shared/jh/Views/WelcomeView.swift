@@ -7,6 +7,7 @@
 
 import SwiftUI
 
+// 첫 화면
 struct WelcomeView: View {
     var body: some View {
         NavigationView {
