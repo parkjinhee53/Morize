@@ -48,6 +48,8 @@
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
+		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
+		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -98,6 +100,7 @@
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
+		F7F7E130278415BB008FF432 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,11 +201,9 @@
 		B709681E2782CDB0001B0884 /* jh */ = {
 			isa = PBXGroup;
 			children = (
-				B709681F2782CDB0001B0884 /* Game.swift */,
-				B70968202782CDB0001B0884 /* GameColor.swift */,
-				B70968212782CDB0001B0884 /* Question.swift */,
+				F7F7E12F2784155D008FF432 /* ViewModels */,
+				F7F7E12E2784153F008FF432 /* Models */,
 				B70968222782CDB0001B0884 /* MyTimer.swift */,
-				B70968232782CDB0001B0884 /* GameViewModel.swift */,
 				B70968242782CDB0001B0884 /* Views */,
 			);
 			name = jh;
@@ -218,7 +219,7 @@
 				B70968282782CDB0001B0884 /* ResultsView.swift */,
 				B70968292782CDB0001B0884 /* WelcomeView.swift */,
 				B709682A2782CDB0001B0884 /* ControlsView.swift */,
-				B709682B2782CDB0001B0884 /* ResultsViewModel.swift */,
+				F7F7E130278415BB008FF432 /* WordList.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -280,6 +281,25 @@
 				B7D7607D277D985600D50AFA /* minigame2.swift */,
 			);
 			path = haeun;
+			sourceTree = "<group>";
+		};
+		F7F7E12E2784153F008FF432 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B70968212782CDB0001B0884 /* Question.swift */,
+				B709681F2782CDB0001B0884 /* Game.swift */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		F7F7E12F2784155D008FF432 /* ViewModels */ = {
+			isa = PBXGroup;
+			children = (
+				B709682B2782CDB0001B0884 /* ResultsViewModel.swift */,
+				B70968232782CDB0001B0884 /* GameViewModel.swift */,
+				B70968202782CDB0001B0884 /* GameColor.swift */,
+			);
+			path = ViewModels;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -456,6 +476,7 @@
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
+				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
@@ -487,6 +508,7 @@
 				2A3017E5277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
+				F7F7E132278415BB008FF432 /* WordList.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
