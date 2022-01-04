@@ -248,7 +248,7 @@ struct minigame2: View {
                 HStack {
                     Spacer()
                     Button(action: {self.checkAnswers()}) {
-                        Text("Check Answers")
+                        Text("정답 확인하기")
                         .fontWeight(.bold)
                         .foregroundColor(Color.black)
                         .font(.custom("Arial Bold", size: 15))
