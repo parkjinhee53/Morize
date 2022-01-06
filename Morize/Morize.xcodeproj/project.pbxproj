@@ -17,6 +17,15 @@
 		2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3017BD277AA5FA00369590 /* ContentView.swift */; };
 		2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
 		2A3017E9277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
+		2A3C59EE278526BD0005865D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59ED278526BD0005865D /* LoginView.swift */; };
+		2A3C59F027852F0B0005865D /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59EF27852F0B0005865D /* SignUpView.swift */; };
+		2A3C59F6278530150005865D /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F5278530150005865D /* WordView.swift */; };
+		2A3C59FA278530410005865D /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
+		2A3C59FC278530510005865D /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
+		2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
+		2A6A37932786727B0068DD0B /* Appdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* Appdelegate.swift */; };
+		2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */; };
+		7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */; };
 		B709682C2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682D2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682E2782CDB0001B0884 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968202782CDB0001B0884 /* GameColor.swift */; };
@@ -71,6 +80,7 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		25D9DB5502EB0EB628DE1CF9 /* Pods-Morize (macOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).release.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).release.xcconfig"; sourceTree = "<group>"; };
 		2A3017BC277AA5FA00369590 /* MorizeApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorizeApp.swift; sourceTree = "<group>"; };
 		2A3017BD277AA5FA00369590 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		2A3017BE277AA5FC00369590 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -83,6 +93,18 @@
 		2A3017DC277AA5FC00369590 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3017E0277AA5FC00369590 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2A3C59ED278526BD0005865D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		2A3C59EF27852F0B0005865D /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
+		2A3C59F5278530150005865D /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
+		2A3C59F9278530410005865D /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
+		2A3C59FB278530510005865D /* MiniGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameView.swift; sourceTree = "<group>"; };
+		2A3C59FF278534510005865D /* TabViewSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSetting.swift; sourceTree = "<group>"; };
+		2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Morize--iOS--Info.plist"; sourceTree = "<group>"; };
+		2A6A37922786727B0068DD0B /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
+		32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		3CC5EE289EDDEB2E4A9D8C4F /* Pods-Morize (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).debug.xcconfig"; sourceTree = "<group>"; };
+		8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).debug.xcconfig"; sourceTree = "<group>"; };
+		AB332727A5833889AE29007F /* Pods-Morize (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).release.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		B709681F2782CDB0001B0884 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
 		B70968202782CDB0001B0884 /* GameColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		B70968212782CDB0001B0884 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
@@ -104,6 +126,7 @@
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		B777307B27851FD800123DAD /* CardFlipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipVM.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
+		D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -112,6 +135,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */,
+				7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -119,6 +143,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,11 +167,14 @@
 		2A3017B6277AA5F900369590 = {
 			isa = PBXGroup;
 			children = (
+				2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */,
 				2A3017BB277AA5FA00369590 /* Shared */,
 				2A3017CA277AA5FC00369590 /* macOS */,
 				2A3017D3277AA5FC00369590 /* Tests iOS */,
 				2A3017DF277AA5FC00369590 /* Tests macOS */,
 				2A3017C4277AA5FC00369590 /* Products */,
+				660DB6B6E904C437F53A2D48 /* Pods */,
+				8AE4B96E6A49472505845744 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -199,6 +227,47 @@
 				2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */,
 			);
 			path = "Tests macOS";
+			sourceTree = "<group>";
+		};
+		2A3C59EA2785268C0005865D /* LoginView */ = {
+			isa = PBXGroup;
+			children = (
+				2A3C59ED278526BD0005865D /* LoginView.swift */,
+				2A3C59EF27852F0B0005865D /* SignUpView.swift */,
+				2A6A37922786727B0068DD0B /* Appdelegate.swift */,
+			);
+			path = LoginView;
+			sourceTree = "<group>";
+		};
+		2A3C59FE2785327B0005865D /* TabView */ = {
+			isa = PBXGroup;
+			children = (
+				2A3C59FB278530510005865D /* MiniGameView.swift */,
+				2A3C59F9278530410005865D /* WordListView.swift */,
+				2A3C59F5278530150005865D /* WordView.swift */,
+				2A3C59FF278534510005865D /* TabViewSetting.swift */,
+			);
+			path = TabView;
+			sourceTree = "<group>";
+		};
+		660DB6B6E904C437F53A2D48 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				3CC5EE289EDDEB2E4A9D8C4F /* Pods-Morize (iOS).debug.xcconfig */,
+				AB332727A5833889AE29007F /* Pods-Morize (iOS).release.xcconfig */,
+				8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */,
+				25D9DB5502EB0EB628DE1CF9 /* Pods-Morize (macOS).release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+		8AE4B96E6A49472505845744 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */,
+				D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */,
+			);
+			name = Frameworks;
 			sourceTree = "<group>";
 		};
 		B709681E2782CDB0001B0884 /* jh */ = {
@@ -286,7 +355,9 @@
 		B7D7607C277D984800D50AFA /* haeun */ = {
 			isa = PBXGroup;
 			children = (
+				2A3C59EA2785268C0005865D /* LoginView */,
 				B7D7607D277D985600D50AFA /* minigame2.swift */,
+				2A3C59FE2785327B0005865D /* TabView */,
 			);
 			path = haeun;
 			sourceTree = "<group>";
@@ -298,9 +369,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3017EC277AA5FC00369590 /* Build configuration list for PBXNativeTarget "Morize (iOS)" */;
 			buildPhases = (
+				DBDD764A95452C7E95E8D357 /* [CP] Check Pods Manifest.lock */,
 				2A3017BF277AA5FC00369590 /* Sources */,
 				2A3017C0277AA5FC00369590 /* Frameworks */,
 				2A3017C1277AA5FC00369590 /* Resources */,
+				3853A92E5CB8EB4AD2F1E3E6 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -318,9 +391,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 2A3017EF277AA5FC00369590 /* Build configuration list for PBXNativeTarget "Morize (macOS)" */;
 			buildPhases = (
+				BEDD80140DB696F038931E29 /* [CP] Check Pods Manifest.lock */,
 				2A3017C5277AA5FC00369590 /* Sources */,
 				2A3017C6277AA5FC00369590 /* Frameworks */,
 				2A3017C7277AA5FC00369590 /* Resources */,
+				72934FA25CE3E576C74061C9 /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -451,6 +526,87 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		3853A92E5CB8EB4AD2F1E3E6 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		72934FA25CE3E576C74061C9 /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS)-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS)-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS)-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BEDD80140DB696F038931E29 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Morize (macOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+		DBDD764A95452C7E95E8D357 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-Morize (iOS)-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		2A3017BF277AA5FC00369590 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
@@ -463,20 +619,30 @@
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
+				2A3C59F6278530150005865D /* WordView.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
+				2A3C59FC278530510005865D /* MiniGameView.swift in Sources */,
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
+				2A6A37932786727B0068DD0B /* Appdelegate.swift in Sources */,
+				2A3C59F027852F0B0005865D /* SignUpView.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
+				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
+<<<<<<< HEAD
+				2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */,
+=======
 				B777307A27851BA000123DAD /* CardFlip.swift in Sources */,
+>>>>>>> main
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
+				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -649,20 +815,22 @@
 		};
 		2A3017ED277AA5FC00369590 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3CC5EE289EDDEB2E4A9D8C4F /* Pods-Morize (iOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X843D4L2C2;
+				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Morize--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -679,6 +847,7 @@
 		};
 		2A3017EE277AA5FC00369590 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = AB332727A5833889AE29007F /* Pods-Morize (iOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -687,12 +856,13 @@
 				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = "Morize--iOS--Info.plist";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				IPHONEOS_DEPLOYMENT_TARGET = 15.2;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
@@ -710,6 +880,7 @@
 		};
 		2A3017F0277AA5FC00369590 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -717,7 +888,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X843D4L2C2;
+				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
@@ -738,6 +909,7 @@
 		};
 		2A3017F1277AA5FC00369590 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 25D9DB5502EB0EB628DE1CF9 /* Pods-Morize (macOS).release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -745,7 +917,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X843D4L2C2;
+				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
