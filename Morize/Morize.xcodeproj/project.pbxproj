@@ -48,6 +48,8 @@
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
+		F7A6586B2784983200FC2250 /* WordList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6586A2784983200FC2250 /* WordList2.swift */; };
+		F7A6586C2784983200FC2250 /* WordList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6586A2784983200FC2250 /* WordList2.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 /* End PBXBuildFile section */
@@ -100,6 +102,7 @@
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
+		F7A6586A2784983200FC2250 /* WordList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList2.swift; sourceTree = "<group>"; };
 		F7F7E130278415BB008FF432 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -220,6 +223,7 @@
 				B70968292782CDB0001B0884 /* WelcomeView.swift */,
 				B709682A2782CDB0001B0884 /* ControlsView.swift */,
 				F7F7E130278415BB008FF432 /* WordList.swift */,
+				F7A6586A2784983200FC2250 /* WordList2.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -472,6 +476,7 @@
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
+				F7A6586B2784983200FC2250 /* WordList2.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
@@ -498,6 +503,7 @@
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
+				F7A6586C2784983200FC2250 /* WordList2.swift in Sources */,
 				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709682D2782CDB0001B0884 /* Game.swift in Sources */,
