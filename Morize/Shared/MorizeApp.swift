@@ -9,9 +9,15 @@ import SwiftUI
 
 @main
 struct MorizeApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
+<<<<<<< HEAD
+            LoginView()
+=======
             CardFlip()
+>>>>>>> main
         }
     }
 }
