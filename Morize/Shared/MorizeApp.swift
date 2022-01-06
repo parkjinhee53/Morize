@@ -9,9 +9,11 @@ import SwiftUI
 
 @main
 struct MorizeApp: App {
+    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+    
     var body: some Scene {
         WindowGroup {
-            MiniGame()
+            LoginView()
         }
     }
 }
