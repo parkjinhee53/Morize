@@ -7,36 +7,32 @@
 
 import SwiftUI
 
-struct Middle: View {
-    var body: some View {
-        Text("apple")
-    }
-}
-struct High: View {
-    var body: some View {
-        Text("house")
-    }
-}
-struct TOEIC: View {
-    var body: some View {
-        Text("ice")
-    }
-}
-
 struct WordList: View {
+    @State var arr1: [String] = ["하나", "둘"]
     var body: some View {
-        List {
-            Section(header: Text("중등 영단어"), footer: Text("footer"), content: {
-                Middle()
-            })
-            Section(header: Text("고등 영단어"), footer: Text("footer"), content: {
-                High()
-            })
-            Section(header: Text("토익 영단어"), footer: Text("footer"), content: {
-                TOEIC()
-            })
-        }
-        .listStyle(SidebarListStyle())
+        NavigationView {
+            List {
+                NavigationLink(
+                    destination: MiddleWord(),
+                    label: {
+                        Text("중등 영단어")
+                    }
+                )
+                NavigationLink(
+                    destination: HighWord(),
+                    label: {
+                        Text("고등 영단어")
+                    }
+                )
+                NavigationLink(
+                    destination: ToeicWord(),
+                    label: {
+                        Text("토익")
+                    }
+                )
+            }
+        }.navigationBarItems(trailing: EditButton())
+        .navigationTitle(Text("영단어"))
     }
 }
 

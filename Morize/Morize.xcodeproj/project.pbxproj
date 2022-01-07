@@ -50,6 +50,14 @@
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		F7A6586B2784983200FC2250 /* WordList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6586A2784983200FC2250 /* WordList2.swift */; };
 		F7A6586C2784983200FC2250 /* WordList2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A6586A2784983200FC2250 /* WordList2.swift */; };
+		F7AE67442786765E007D62FF /* WordList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE67432786765E007D62FF /* WordList3.swift */; };
+		F7AE67452786765E007D62FF /* WordList3.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE67432786765E007D62FF /* WordList3.swift */; };
+		F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674927867D5F007D62FF /* MiddleWord.swift */; };
+		F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674927867D5F007D62FF /* MiddleWord.swift */; };
+		F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
+		F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
+		F7AE675027867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
+		F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 /* End PBXBuildFile section */
@@ -103,6 +111,10 @@
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 		F7A6586A2784983200FC2250 /* WordList2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList2.swift; sourceTree = "<group>"; };
+		F7AE67432786765E007D62FF /* WordList3.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList3.swift; sourceTree = "<group>"; };
+		F7AE674927867D5F007D62FF /* MiddleWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleWord.swift; sourceTree = "<group>"; };
+		F7AE674C27867F0E007D62FF /* HighWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighWord.swift; sourceTree = "<group>"; };
+		F7AE674F27867F3B007D62FF /* ToeicWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToeicWord.swift; sourceTree = "<group>"; };
 		F7F7E130278415BB008FF432 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -224,6 +236,10 @@
 				B709682A2782CDB0001B0884 /* ControlsView.swift */,
 				F7F7E130278415BB008FF432 /* WordList.swift */,
 				F7A6586A2784983200FC2250 /* WordList2.swift */,
+				F7AE67432786765E007D62FF /* WordList3.swift */,
+				F7AE674927867D5F007D62FF /* MiddleWord.swift */,
+				F7AE674C27867F0E007D62FF /* HighWord.swift */,
+				F7AE674F27867F3B007D62FF /* ToeicWord.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -476,8 +492,10 @@
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
+				F7AE675027867F3B007D62FF /* ToeicWord.swift in Sources */,
 				F7A6586B2784983200FC2250 /* WordList2.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
+				F7AE67442786765E007D62FF /* WordList3.swift in Sources */,
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
@@ -489,7 +507,9 @@
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
+				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
+				F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 			);
@@ -500,13 +520,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
+				F7AE67452786765E007D62FF /* WordList3.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
+				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
 				F7A6586C2784983200FC2250 /* WordList2.swift in Sources */,
 				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709682D2782CDB0001B0884 /* Game.swift in Sources */,
+				F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */,
 				B709683D2782CDB0001B0884 /* ResultsView.swift in Sources */,
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */,
@@ -515,6 +538,7 @@
 				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				F7F7E132278415BB008FF432 /* WordList.swift in Sources */,
+				F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
