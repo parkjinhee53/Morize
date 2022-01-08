@@ -13,11 +13,7 @@ struct MorizeApp: App {
     
     var body: some Scene {
         WindowGroup {
-<<<<<<< HEAD
             LoginView()
-=======
-            CardFlip()
->>>>>>> main
         }
     }
 }
