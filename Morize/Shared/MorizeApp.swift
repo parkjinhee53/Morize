@@ -13,7 +13,7 @@ struct MorizeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            CardFlip()
+            CardMemory()
         }
     }
 }
