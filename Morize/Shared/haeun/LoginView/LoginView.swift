@@ -11,10 +11,13 @@ import KakaoSDKUser
 import KakaoSDKAuth
 
 struct LoginView: View {
+    @State var nickName: String = "로그인"
+    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
+    
     var body: some View {
         
         Text("Morize")
-        
+        Text(nickName)
         // 소셜 로그인 부분
         
         HStack{
@@ -23,50 +26,48 @@ struct LoginView: View {
                 if (UserApi.isKakaoTalkLoginAvailable()) {
                     UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
                         if let error = error {
+                            // 예외 처리 (로그인 취소 등등)
                             print(error)
                         }
                         else {
                             print("loginWithKakaoTalk() success.")
                             
                             //do something
-                            _ = oauthToken
+                            // 회원가입 성공 시 oauthToken 저장
+                             _ = oauthToken
+                            let accessToken = oauthToken?.accessToken
+                                            
+                            // 카카오 로그인을 통해 사용자 토큰을 발급 받은 후 사용자 관리 API 호출
+                            self.setKakaoUserInfo()
                             
                         }
                     }
                 }
                 else {
                     print("카카오톡 미설치")
+                    UserApi.shared.loginWithKakaoAccount{(oauthToken, error) in
+                        print(oauthToken?.accessToken)
+                        print(error)
+                    }
                 }
-//                else{
-//                    // 카카오톡이 설치되어 있지 않으면 사파리를 통한 로그인 진행
-//                    UserApi.shared.loginWithKakaoAccount{(oauthToken, error) in
-//                        print(oauthToken?.accessToken)
-//                        print(error)
-//                    }
-//                }
             }){
-                Text("카카오 로그인")
+                Image("kakaolink_btn_small")
+                    .resizable()
+                    .frame(width: 50, height: 50)
             }
             .onOpenURL(perform: { url in
                 if (AuthApi.isKakaoTalkLoginUrl(url)) {
                     _ = AuthController.handleOpenUrl(url: url)
                 }
             })
+            .padding()
             
             Button(action: {
                 
             }) {
-                Text("네이버")
-                    .font(.headline)
-                    .padding()
-            }.padding()
-            
-            Button(action: {
-                
-            }) {
-                Text("구글")
-                    .font(.headline)
-                    .padding()
+                Image("btn_google_light_normal_ios")
+                    .resizable()
+                    .frame(width: 60, height: 60)
             }.padding()
             
             Button(action: {
@@ -77,18 +78,25 @@ struct LoginView: View {
                     .padding()
             }.padding()
         }
-        
-        // morize 서버 로그인 부분
-        HStack{
-            // 회원가입 버튼
-            Button(action: {
-//                SignUpView()
-            }){
-                Text("signup")
+    }
+    
+    func setKakaoUserInfo() {
+        UserApi.shared.me() {(user, error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("me() success.")
+                //do something
+                _ = user
+                nickName = (user?.kakaoAccount?.profile?.nickname)!!
+
             }
         }
     }
+    
 }
+
 
 struct LoginView_Previews: PreviewProvider {
     static var previews: some View {
