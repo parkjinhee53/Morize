@@ -12,17 +12,11 @@ struct CardFlip: View {
     var body: some View {
         ZStack{
             ForEach(0..<viewModel.getWordsCount()) { i in
-                ZStack{
-                    RoundedRectangle(cornerRadius: 30)
-                        .fill(LinearGradient(gradient: Gradient(colors: viewModel.getColor(index: i)), startPoint: .top, endPoint: .bottomTrailing))
-                        .frame(width: 300, height: 250, alignment: .center)
-                        .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.15), radius: 15, x: 0, y: 0)
+                Flashcard(front: {
                     Text(viewModel.words[i])
-                        .font(.system(size: 30, weight: .bold, design: .rounded))
-                        .foregroundColor(.white)
-                        .shadow(color: .black, radius: 2)
-                }
-                .rotation3DEffect(viewModel.flipped[i] ? Angle(degrees: -180): Angle(degrees: 0), axis: (x: CGFloat(0), y: CGFloat(10), z: CGFloat(0)))
+                }, back: {
+                    Text(viewModel.means[i])
+                }, color: viewModel.getColor(index: i))
                 .offset(viewModel.dragOffset[i])
                 .zIndex(viewModel.zIndexs[i])
                 .modifier(AnimatableModifierDouble(bindedValue: viewModel.dragOffset[i].height, completion: {
