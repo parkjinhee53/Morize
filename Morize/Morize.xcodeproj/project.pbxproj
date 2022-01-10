@@ -633,11 +633,8 @@
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
-<<<<<<< HEAD
 				2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */,
-=======
 				B777307A27851BA000123DAD /* CardFlip.swift in Sources */,
->>>>>>> main
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
@@ -821,7 +818,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
@@ -853,7 +850,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
