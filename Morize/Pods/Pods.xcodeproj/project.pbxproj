@@ -2275,7 +2275,7 @@
 			);
 			name = "Pods-Morize (macOS)";
 			productName = Pods_Morize__macOS_;
-			productReference = 9F9ABD025507BA7DDECB88344616D148 /* Pods-Morize (macOS) */;
+			productReference = 9F9ABD025507BA7DDECB88344616D148 /* Pods_Morize__macOS_.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		0E926BC1516A2EF17D72996D70848F5B /* KakaoSDKAuth-library */ = {
@@ -2451,7 +2451,7 @@
 			);
 			name = "Pods-Morize (iOS)";
 			productName = Pods_Morize__iOS_;
-			productReference = EA97338C0F55D39502FCBFA61C060188 /* Pods-Morize (iOS) */;
+			productReference = EA97338C0F55D39502FCBFA61C060188 /* Pods_Morize__iOS_.framework */;
 			productType = "com.apple.product-type.framework";
 		};
 		75C46964ABD6B608E5953892DE60DA98 /* KakaoSDKCommon-library */ = {
