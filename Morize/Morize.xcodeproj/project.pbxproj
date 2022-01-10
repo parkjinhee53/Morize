@@ -53,6 +53,11 @@
 		B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B712F9C6277D6D8700E7A3BD /* Lottie */; };
 		B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B712F9C9277D6DE000E7A3BD /* LottieView.swift */; };
 		B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = B712F9CB277D6F9300E7A3BD /* fireworks.json */; };
+		B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */; };
+		B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F46B278BC3C70040E6A4 /* Flashcard.swift */; };
+		B713F46F278BC7E60040E6A4 /* click.json in Resources */ = {isa = PBXBuildFile; fileRef = B713F46D278BC7E50040E6A4 /* click.json */; };
+		B713F470278BC7E60040E6A4 /* arrow.json in Resources */ = {isa = PBXBuildFile; fileRef = B713F46E278BC7E60040E6A4 /* arrow.json */; };
+		B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F471278BD7050040E6A4 /* CardMemory.swift */; };
 		B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FAB1F277D41EC00957C5B /* Extension+Color.swift */; };
 		B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
@@ -119,6 +124,11 @@
 		B709682B2782CDB0001B0884 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		B712F9C9277D6DE000E7A3BD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		B712F9CB277D6F9300E7A3BD /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
+		B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipTutorial.swift; sourceTree = "<group>"; };
+		B713F46B278BC3C70040E6A4 /* Flashcard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; name = Flashcard.swift; path = Shared/ds/View/Flashcard.swift; sourceTree = SOURCE_ROOT; };
+		B713F46D278BC7E50040E6A4 /* click.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = click.json; sourceTree = "<group>"; };
+		B713F46E278BC7E60040E6A4 /* arrow.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = arrow.json; sourceTree = "<group>"; };
+		B713F471278BD7050040E6A4 /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
 		B71FAB1F277D41EC00957C5B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierDouble.swift; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
@@ -302,6 +312,8 @@
 			isa = PBXGroup;
 			children = (
 				B712F9CB277D6F9300E7A3BD /* fireworks.json */,
+				B713F46E278BC7E60040E6A4 /* arrow.json */,
+				B713F46D278BC7E50040E6A4 /* click.json */,
 				B712F9C9277D6DE000E7A3BD /* LottieView.swift */,
 			);
 			path = Animation;
@@ -332,6 +344,8 @@
 			children = (
 				B774CEFB277BECC900A9B368 /* MiniGame.swift */,
 				B777307927851BA000123DAD /* CardFlip.swift */,
+				B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */,
+				B713F471278BD7050040E6A4 /* CardMemory.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -348,6 +362,7 @@
 		B774CEFF277BECEF00A9B368 /* Model */ = {
 			isa = PBXGroup;
 			children = (
+				B713F46B278BC3C70040E6A4 /* Flashcard.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -497,6 +512,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B713F46F278BC7E60040E6A4 /* click.json in Resources */,
+				B713F470278BC7E60040E6A4 /* arrow.json in Resources */,
 				B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */,
 				2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */,
 			);
@@ -630,19 +647,19 @@
 				2A3C59F027852F0B0005865D /* SignUpView.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
+				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
+				B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */,
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
-<<<<<<< HEAD
 				2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */,
-=======
 				B777307A27851BA000123DAD /* CardFlip.swift in Sources */,
->>>>>>> main
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
+				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -821,7 +838,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
@@ -853,7 +870,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = JVBAL8CV7V;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
