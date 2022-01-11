@@ -12,8 +12,6 @@ import KakaoSDKAuth
 
 struct LoginView: View {
     @State var nickName: String = "로그인"
-    let loginInstance = NaverThirdPartyLoginConnection.getSharedInstance()
-    
     var body: some View {
         
         Text("Morize")

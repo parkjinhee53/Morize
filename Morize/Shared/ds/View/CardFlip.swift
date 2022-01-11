@@ -26,7 +26,6 @@ struct CardFlip: View {
                     }
                 }))
                 .onTapGesture {
-                    // explicitly apply animation on toggle (choose either or)
                     withAnimation {
                         viewModel.flipped[i].toggle()
                     }
