@@ -12,13 +12,19 @@
 				<string>kakao67ccb1551072d256d2a37ebef4b61bfd</string>
 			</array>
 		</dict>
+		<dict>
+			<key>CFBundleTypeRole</key>
+			<string>Editor</string>
+			<key>CFBundleURLSchemes</key>
+			<array>
+				<string>com.googleusercontent.apps.236543077821-h2fmabvqa7gbk6p0oka8vt4og0lj2qn4</string>
+			</array>
+		</dict>
 	</array>
 	<key>LSApplicationQueriesSchemes</key>
 	<array>
 		<string>kakaokompassauth</string>
 		<string>kakaolink</string>
-		<string>naversearchapp</string>
-		<string>naversearchthirdlogin</string>
 	</array>
 </dict>
 </plist>
