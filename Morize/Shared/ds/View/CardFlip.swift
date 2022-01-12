@@ -16,7 +16,7 @@ struct CardFlip: View {
                     Text(viewModel.words[i])
                 }, back: {
                     Text(viewModel.means[i])
-                }, color: viewModel.getColor(index: i))
+                }, color: viewModel.getColor(index: i), click: true, tutorial: false)
                 .offset(viewModel.dragOffset[i])
                 .zIndex(viewModel.zIndexs[i])
                 .modifier(AnimatableModifierDouble(bindedValue: viewModel.dragOffset[i].height, completion: {
@@ -26,7 +26,6 @@ struct CardFlip: View {
                     }
                 }))
                 .onTapGesture {
-                    // explicitly apply animation on toggle (choose either or)
                     withAnimation {
                         viewModel.flipped[i].toggle()
                     }
