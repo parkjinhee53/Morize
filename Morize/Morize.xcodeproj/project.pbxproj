@@ -25,6 +25,8 @@
 		2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
 		2A6A37932786727B0068DD0B /* Appdelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* Appdelegate.swift */; };
 		2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */; };
+		2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3595C278E8AAB00A13F5B /* UserInfo.swift */; };
+		2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
 		7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */; };
 		B709682C2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682D2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
@@ -106,6 +108,8 @@
 		2A3C59FF278534510005865D /* TabViewSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSetting.swift; sourceTree = "<group>"; };
 		2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Morize--iOS--Info.plist"; sourceTree = "<group>"; };
 		2A6A37922786727B0068DD0B /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
+		2AD3595C278E8AAB00A13F5B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC5EE289EDDEB2E4A9D8C4F /* Pods-Morize (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -245,6 +249,7 @@
 				2A3C59ED278526BD0005865D /* LoginView.swift */,
 				2A3C59EF27852F0B0005865D /* SignUpView.swift */,
 				2A6A37922786727B0068DD0B /* Appdelegate.swift */,
+				2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -258,6 +263,14 @@
 				2A3C59FF278534510005865D /* TabViewSetting.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		2AD3595B278E8A5F00A13F5B /* DTO */ = {
+			isa = PBXGroup;
+			children = (
+				2AD3595C278E8AAB00A13F5B /* UserInfo.swift */,
+			);
+			path = DTO;
 			sourceTree = "<group>";
 		};
 		660DB6B6E904C437F53A2D48 /* Pods */ = {
@@ -370,6 +383,7 @@
 		B7D7607C277D984800D50AFA /* haeun */ = {
 			isa = PBXGroup;
 			children = (
+				2AD3595B278E8A5F00A13F5B /* DTO */,
 				2A3C59EA2785268C0005865D /* LoginView */,
 				B7D7607D277D985600D50AFA /* minigame2.swift */,
 				2A3C59FE2785327B0005865D /* TabView */,
@@ -652,6 +666,7 @@
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */,
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
+				2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */,
 				2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */,
 				B777307A27851BA000123DAD /* CardFlip.swift in Sources */,
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
@@ -660,6 +675,7 @@
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
+				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -838,7 +854,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X843D4L2C2;
+				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
@@ -870,7 +886,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = X843D4L2C2;
+				DEVELOPMENT_TEAM = JVBAL8CV7V;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
