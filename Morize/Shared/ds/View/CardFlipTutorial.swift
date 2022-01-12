@@ -18,6 +18,7 @@ struct CardFlipTutorial: View {
     @State var arrowOpacity = 1.0
     @State var animationAmount: CGFloat = 1
     @State var rotationAmount: CGFloat = 0
+
     var body: some View {
         VStack{
             Text(description)
@@ -28,7 +29,8 @@ struct CardFlipTutorial: View {
                     Text("Apple")
                 }, back: {
                     Text("사과")
-                }, color: viewModel.getColor(index: 0))
+                }, color: viewModel.getColor(index: 0),
+                click: false, tutorial: false)
                     .padding(.top, 150)
                     .offset(CGSize(width: 0, height: animationAmount))
                     .zIndex(viewModel.zIndexs[0])
@@ -48,22 +50,12 @@ struct CardFlipTutorial: View {
                     Text("Banana")
                 }, back: {
                     Text("바나나")
-                }, color: viewModel.getColor(index: 1))
+                }, color: viewModel.getColor(index: 1), click: false, tutorial: arrowAnimation)
                     .padding(.top, 150)
                     .offset(viewModel.dragOffset[1])
                     .zIndex(viewModel.zIndexs[1])
                     .rotation3DEffect(.degrees(rotationAmount), axis: (x: 0, y: 1, z: 0))
-                    .onAppear(perform: {
-                        if !clickAnimation {
-                            rotationAmount -= 30
-                        }
-                        else {
-                            rotationAmount = 0
-                        }
-                    })
-                    .if(!clickAnimation) { view in
-                        view.animation(Animation.easeInOut(duration: 0.5).delay(0.5).repeatForever(), value: rotationAmount)
-                    }
+                    
                 
                 LottieView(filename: "arrow", isPaused: arrowAnimation)
                     .frame(width: 200, height: 200, alignment: .top)
