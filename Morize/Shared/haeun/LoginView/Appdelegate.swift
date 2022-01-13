@@ -41,7 +41,8 @@ class AppDelegate: NSObject, UIApplicationDelegate {
                 print("me() success.")
                 //do something
                 _ = user
-                self.member.username = (user?.kakaoAccount?.profile?.nickname)!!
+//                self.member.username = (user?.kakaoAccount?.profile?.nickname)!!
+                UserDefaults.standard.set((user?.kakaoAccount?.profile?.nickname)!!, forKey: "UserName")
             }
         }
     }
