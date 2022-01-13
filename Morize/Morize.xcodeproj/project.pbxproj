@@ -62,6 +62,7 @@
 		B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F471278BD7050040E6A4 /* CardMemory.swift */; };
 		B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FAB1F277D41EC00957C5B /* Extension+Color.swift */; };
 		B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */; };
+		B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B45BD278D96E2001140D9 /* Extension+View.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
@@ -136,6 +137,7 @@
 		B713F471278BD7050040E6A4 /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
 		B71FAB1F277D41EC00957C5B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierDouble.swift; sourceTree = "<group>"; };
+		B74B45BD278D96E2001140D9 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
@@ -339,6 +341,7 @@
 			children = (
 				B71FAB1F277D41EC00957C5B /* Extension+Color.swift */,
 				B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */,
+				B74B45BD278D96E2001140D9 /* Extension+View.swift */,
 			);
 			path = Utill;
 			sourceTree = "<group>";
@@ -649,6 +652,7 @@
 				B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
+				B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
