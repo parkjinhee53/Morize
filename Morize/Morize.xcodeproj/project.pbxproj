@@ -27,6 +27,7 @@
 		2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */; };
 		2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3595C278E8AAB00A13F5B /* UserInfo.swift */; };
 		2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
+		2AEA85B8278FCD4A00BE96D9 /* QuickSignInWithApple.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA85B7278FCD4A00BE96D9 /* QuickSignInWithApple.swift */; };
 		7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */; };
 		B709682C2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682D2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
@@ -110,6 +111,8 @@
 		2A6A37922786727B0068DD0B /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
 		2AD3595C278E8AAB00A13F5B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
+		2AEA85B4278FCAB600BE96D9 /* Morize (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Morize (iOS).entitlements"; sourceTree = "<group>"; };
+		2AEA85B7278FCD4A00BE96D9 /* QuickSignInWithApple.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuickSignInWithApple.swift; sourceTree = "<group>"; };
 		32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		3CC5EE289EDDEB2E4A9D8C4F /* Pods-Morize (iOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).debug.xcconfig"; sourceTree = "<group>"; };
 		8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).debug.xcconfig"; sourceTree = "<group>"; };
@@ -181,6 +184,7 @@
 		2A3017B6277AA5F900369590 = {
 			isa = PBXGroup;
 			children = (
+				2AEA85B4278FCAB600BE96D9 /* Morize (iOS).entitlements */,
 				2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */,
 				2A3017BB277AA5FA00369590 /* Shared */,
 				2A3017CA277AA5FC00369590 /* macOS */,
@@ -250,6 +254,7 @@
 				2A3C59EF27852F0B0005865D /* SignUpView.swift */,
 				2A6A37922786727B0068DD0B /* Appdelegate.swift */,
 				2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */,
+				2AEA85B7278FCD4A00BE96D9 /* QuickSignInWithApple.swift */,
 			);
 			path = LoginView;
 			sourceTree = "<group>";
@@ -648,6 +653,7 @@
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
+				2AEA85B8278FCD4A00BE96D9 /* QuickSignInWithApple.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				2A3C59F6278530150005865D /* WordView.swift in Sources */,
@@ -852,6 +858,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Morize (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JVBAL8CV7V;
@@ -884,6 +891,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Morize (iOS).entitlements";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = JVBAL8CV7V;
