@@ -26,6 +26,7 @@ class GoogleDelegate: ObservableObject {
             guard let user = user else {return}
             let givenName = user.profile?.givenName
             UserDefaults.standard.set(givenName, forKey: "UserName")
+            print(UserDefaults.standard.string(forKey: "UserName")!)
 //            self.member.username = givenName ?? ""
             self.isLoggedIn = true
         }else{
