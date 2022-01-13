@@ -15,9 +15,9 @@ import KakaoSDKCommon
 struct LoginView: View {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
     @EnvironmentObject var googledel: GoogleDelegate
-//    @EnvironmentObject var appledel: QuickSignInWithApple
     @EnvironmentObject var kakaodel: AppDelegate   // kakao AppDelegate 함수 공유
     @AppStorage("UserName") var UserName : String = UserDefaults.standard.string(forKey: "UserName") ?? ""
+    
     var body: some View {
         
         Text("Morize")
@@ -25,6 +25,7 @@ struct LoginView: View {
         // 소셜 로그인 부분
         
         HStack{
+            // kakao login
             Button(action : {
                 kakaodel.kakaocheck()
             }){
@@ -34,6 +35,7 @@ struct LoginView: View {
             }
             .padding()
             
+            // google login
             Button(action: {
                 googledel.signIn()
             }) {
@@ -42,27 +44,23 @@ struct LoginView: View {
                     .frame(width: 60, height: 60)
             }.padding()
             
-            Button(action: {
-//                appledel.appleLogin()
-            }) {
-                Text("애플")
-                    .font(.headline)
-                    .padding()
-            }.padding()
-            
-            Button {
-                UserApi.shared.unlink {(error) in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-                        print("unlink() success.")
-                    }
-                }
-            } label: {
-                Text("카카오 로그아웃")
-            }
-
+            // apple login
+            //            AppleDelegate(.signIn,
+            //                onRequest: { (request) in
+            //                //Set up request
+            //                },
+            //                onCompletion: { (result) in
+            //                switch result {
+            //                case .success(let authorization):
+            //                    //Handle autorization
+            //                    break
+            //                case .failure(let error):
+            //                    //Handle error
+            //                    break
+            //                }
+            //
+            //        }.signInWithAppleButtonStyle(.black)
+            //        .padding()
         }
     }
 }

@@ -62,7 +62,7 @@ class AppDelegate: ObservableObject {
         }
     }
     
-    func signIn(){
+    func kakaosignIn(){
         guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
         
         if (UserApi.isKakaoTalkLoginAvailable()) {
