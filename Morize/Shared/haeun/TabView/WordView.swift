@@ -10,6 +10,7 @@ import SwiftUI
 struct WordView: View {
     var body: some View {
         Text("Word Card")
+        Text(UserDefaults.standard.string(forKey: "UserName") ?? "ㅁㄴㅇㄹ")
     }
 }
 

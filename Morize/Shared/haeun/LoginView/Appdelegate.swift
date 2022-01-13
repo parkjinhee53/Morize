@@ -12,23 +12,35 @@ import KakaoSDKAuth
 import KakaoSDKUser
 
 
-class AppDelegate: NSObject, UIApplicationDelegate {
+class AppDelegate: ObservableObject {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
-    
-    // kakao 초기화 과정
-    func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey : Any]? = nil) -> Bool {
-        
-        KakaoSDK.initSDK(appKey: "67ccb1551072d256d2a37ebef4b61bfd")
 
-        return true
-    }
-    // kakao 로그인시 url열기 위해 필요함
-    func application(_ app: UIApplication, open url: URL, options: [UIApplication.OpenURLOptionsKey : Any] = [:]) -> Bool {
-        
-        if (AuthApi.isKakaoTalkLoginUrl(url)) {
-            return AuthController.handleOpenUrl(url: url)
+    // google userInfo
+    func kakaocheckStatus(){
+        UserApi.shared.me { user, error in
+            if let error = error {
+                print(error)
+            }
+            else {
+                if user?.kakaoAccount?.profile?.nickname != nil {
+                    let user = user?.kakaoAccount?.profile?.nickname!
+                    guard let user = user else { return }
+                    let userName = user
+                    UserDefaults.standard.set(userName, forKey: "UserName")
+                    print(UserDefaults.standard.string(forKey: "UserName")!)
+                }
+            }
         }
-        return false
+    }
+    
+    func kakaocheck(){
+        UserApi.shared.loginWithKakaoAccount {(oauthToken, error) in
+            if let error = error {
+                print(error)
+            }
+            
+            self.kakaocheckStatus()
+        }
     }
     
     // kakao userInfo
@@ -37,11 +49,33 @@ class AppDelegate: NSObject, UIApplicationDelegate {
             if let error = error {
                 print(error)
             }
-            else {
-                print("me() success.")
-                //do something
-                _ = user
-                self.member.username = (user?.kakaoAccount?.profile?.nickname)!!
+            print("me() success.")
+            //do something
+            _ = user
+//                self.member.username = (user?.kakaoAccount?.profile?.nickname)!!
+            let userName = user?.kakaoAccount?.profile?.nickname
+            UserDefaults.standard.set(userName, forKey: "UserName")
+            
+            print(UserDefaults.standard.string(forKey: "UserName"))
+            
+            print("bbbb")
+        }
+    }
+    
+    func kakaosignIn(){
+        guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
+        
+        if (UserApi.isKakaoTalkLoginAvailable()) {
+            UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in
+                if let error = error {
+                    print(error)
+                }
+                else {
+                    print("loginWithKakaoTalk() success.")
+
+                    //do something
+                    _ = oauthToken
+                }
             }
         }
     }

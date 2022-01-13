@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MiniGameView: View {
     var body: some View {
-        Text("minigame")
+        List{
+            Text("카드 맞추기")
+            Text("가로세로 낱말")
+            Text("타이머 게임")
+        }
     }
 }
 
