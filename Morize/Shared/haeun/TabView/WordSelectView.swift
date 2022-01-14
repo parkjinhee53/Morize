@@ -14,7 +14,7 @@ struct WordSelectView: View {
             Button(action: {
                 
             }) {
-                Text("중등")
+                Text("중등단어")
             }.padding()
             
             Button(action: {
