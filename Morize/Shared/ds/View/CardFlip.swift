@@ -52,6 +52,12 @@ struct CardFlip: View {
                         }
                 )
             }
+            Button {
+                UserDefaults.standard.set(true, forKey: "isFirstTutorial")
+            } label: {
+                Text("처음 실행 세팅")
+                    .padding(.bottom, 600)
+            }
         }
     }
 }

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct CardMemory: View {
-    @State var isFirst = true
+    @AppStorage("isFirstTutorial") var isFirst : Bool = UserDefaults.standard.bool(forKey: "isFirstTutorial")
+    var test: Bool = true
     var body: some View {
         if isFirst {
-            CardFlipTutorial(isFirst: $isFirst)
+            CardFlipTutorial()
         }
         else {
             CardFlip()

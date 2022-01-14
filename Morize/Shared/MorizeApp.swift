@@ -14,11 +14,13 @@ struct MorizeApp: App {
     @StateObject var userAuth: GoogleDelegate = GoogleDelegate()
     init() {
         UserDefaults.standard.set("로그인", forKey: "UserName")
+        UserDefaults.standard.set(true, forKey: "isFirst")
     }
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environmentObject(self.userAuth)
+            CardMemory()
+//            LoginView()
+//                .environmentObject(self.userAuth)
         }
     }
 }
