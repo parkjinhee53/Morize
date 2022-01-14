@@ -23,32 +23,3 @@ struct TabViewSetting: View {
         }
     }
 }
-
-// 상단 탭 바
-struct HeaderTabView: View {
-    var body: some View {
-        HStack {
-            Spacer()
-            // View 이름으로 바꿀 것
-            Text("제목")
-                .foregroundColor(Color.blue)
-            Spacer()
-            
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
-            }
-            ){
-                Image(systemName: "bell")
-            }
-            
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
-            })
-            {
-                Image(systemName: "gearshape")
-            }
-        }
-    }
-}
