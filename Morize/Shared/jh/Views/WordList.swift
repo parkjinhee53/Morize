@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct WordList: View {
-    @State var arr1: [String] = ["하나", "둘"]
+//    @State var arr1: [String] = ["하나", "둘"]
     var body: some View {
         NavigationView {
             List {
