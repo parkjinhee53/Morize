@@ -21,12 +21,12 @@ class MiniGameVM: ObservableObject{
     var level = 4
 
     // 문제 배열
-    var wordFour: [String] = ["사과", "apple", "바나나", "banana", "당근", "carot", "다이아몬드", "diamond", "코끼리", "elephant", "넷", "four", "훌륭한", "great", "숨다", "hide"]
+    var wordFour: [String] = ["사과", "apple", "바나나", "banana", "당근", "carrot", "다이아몬드", "diamond", "코끼리", "elephant", "넷", "four", "훌륭한", "great", "숨다", "hide"]
     
     // 정답 딕셔너리
     var answer: [String: String] = ["사과": "apple",
                                       "바나나": "banana",
-                                      "당근": "carot",
+                                      "당근": "carrot",
                                       "다이아몬드": "diamond",
                                       "코끼리": "elephant",
                                       "넷": "four",
