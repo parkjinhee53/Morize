@@ -8,47 +8,34 @@
 import SwiftUI
 
 struct TabViewSetting: View {
+    @Binding var level: String
     var body: some View {
+        // 상단 TabView
+        WordView()
         // 하단 TabView
         TabView {
-            WordView()
+            CardMemory()
                 .tabItem{ Text("Word")  }
                 .navigationBarHidden(false)
-            WordListView()
-                .tabItem{ Text("List") }
-                .navigationBarHidden(false)
+            
+            if level == "middle" {
+                MiddleWord()
+                    .tabItem{ Text("List") }
+                    .navigationBarHidden(false)
+            }
+            else if level == "high" {
+                HighWord()
+                    .tabItem{ Text("List") }
+                    .navigationBarHidden(false)
+            }
+            else if level == "toeic" {
+                ToeicWord()
+                    .tabItem{ Text("List") }
+                    .navigationBarHidden(false)
+            }
             MiniGameView()
                 .tabItem{ Text("Game") }
                 .navigationBarHidden(false)
-        }
-    }
-}
-
-// 상단 탭 바
-struct HeaderTabView: View {
-    var body: some View {
-        HStack {
-            Spacer()
-            // View 이름으로 바꿀 것
-            Text("제목")
-                .foregroundColor(Color.blue)
-            Spacer()
-            
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
-            }
-            ){
-                Image(systemName: "bell")
-            }
-            
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
-            })
-            {
-                Image(systemName: "gearshape")
-            }
         }
     }
 }

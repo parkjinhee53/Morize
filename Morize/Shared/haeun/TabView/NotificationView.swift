@@ -1,20 +1,20 @@
 //
-//  SignUpView.swift
+//  NotificationView.swift
 //  Morize (iOS)
 //
-//  Created by 김하은 on 2022/01/05.
+//  Created by 김하은 on 2022/01/14.
 //
 
 import SwiftUI
 
-struct SignUpView: View {
+struct NotificationView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct SignUpView_Previews: PreviewProvider {
+struct NotificationView_Previews: PreviewProvider {
     static var previews: some View {
-        SignUpView()
+        NotificationView()
     }
 }
