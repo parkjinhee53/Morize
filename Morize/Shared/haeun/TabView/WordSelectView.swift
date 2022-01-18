@@ -8,26 +8,32 @@
 import SwiftUI
 
 struct WordSelectView: View {
+    @AppStorage("level") var level : String = UserDefaults.standard.string(forKey: "level") ?? "none"
+    
     var body: some View {
-        
         VStack{
-            Button(action: {
+            if level == "none" {
+                Button(action: {
+                    UserDefaults.standard.set("middle", forKey: "level")
+                }) {
+                    Text("중등단어")
+                }.padding()
                 
-            }) {
-                Text("중등")
-            }.padding()
-            
-            Button(action: {
+                Button(action: {
+                    UserDefaults.standard.set("high", forKey: "level")
+                }) {
+                    Text("고등")
+                }.padding()
                 
-            }) {
-                Text("고등")
-            }.padding()
-            
-            Button(action: {
-                
-            }) {
-                Text("토익")
-            }.padding()
+                Button(action: {
+                    UserDefaults.standard.set("toeic", forKey: "level")
+                }) {
+                    Text("토익")
+                }.padding()
+            }
+            else {
+                TabViewSetting(level: $level)
+            }
         }
     }
 }
