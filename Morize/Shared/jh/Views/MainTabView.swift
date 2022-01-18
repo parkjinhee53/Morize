@@ -12,6 +12,8 @@ struct MainTabView: View {
         TabView {
             WelcomeView()
                 .tabItem { Label("Game", systemImage: "gamecontroller") }
+//            WordList()
+//                .tabItem { Label("List", systemImage: "list") }
             ControlsView()
                 .tabItem { Label("Controls", systemImage: "gear") }
         }
