@@ -21,6 +21,26 @@
 		2A3C59FA278530410005865D /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
 		2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
 		2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */; };
+		2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* AppDelegate.swift */; };
+		2A903A5E27969AF900DB774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* AppDelegate.swift */; };
+		2A903A5F27969B1000DB774A /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
+		2A903A6027969B1B00DB774A /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
+		2A903A6127969B2400DB774A /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
+		2A903A6227969B2700DB774A /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F5278530150005865D /* WordView.swift */; };
+		2A903A6327969B2800DB774A /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F5278530150005865D /* WordView.swift */; };
+		2A903A6427969B4100DB774A /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
+		2A903A6527969B4F00DB774A /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3595C278E8AAB00A13F5B /* UserInfo.swift */; };
+		2A903A6627969B5300DB774A /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59ED278526BD0005865D /* LoginView.swift */; };
+		2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
+		2A903A6827969B5D00DB774A /* AppleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA85B92790058C00BE96D9 /* AppleDelegate.swift */; };
+		2A903A6927969B8E00DB774A /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
+		2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C86B279113D40096B483 /* NotificationView.swift */; };
+		2A903A6B27969B9300DB774A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C86B279113D40096B483 /* NotificationView.swift */; };
+		2A903A6C27969B9500DB774A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C869279113BF0096B483 /* SettingView.swift */; };
+		2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
+		2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
+		2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
+		2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
 		2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3595C278E8AAB00A13F5B /* UserInfo.swift */; };
 		2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
 		2AD8C8682791126C0096B483 /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
@@ -132,7 +152,7 @@
 		2A3C59FB278530510005865D /* MiniGameView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameView.swift; sourceTree = "<group>"; };
 		2A3C59FF278534510005865D /* TabViewSetting.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabViewSetting.swift; sourceTree = "<group>"; };
 		2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Morize--iOS--Info.plist"; sourceTree = "<group>"; };
-		2A6A37922786727B0068DD0B /* Appdelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Appdelegate.swift; sourceTree = "<group>"; };
+		2A6A37922786727B0068DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2AD3595C278E8AAB00A13F5B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		2AD8C8672791126C0096B483 /* WordSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSelectView.swift; sourceTree = "<group>"; };
@@ -297,7 +317,7 @@
 			isa = PBXGroup;
 			children = (
 				2A3C59ED278526BD0005865D /* LoginView.swift */,
-				2A6A37922786727B0068DD0B /* Appdelegate.swift */,
+				2A6A37922786727B0068DD0B /* AppDelegate.swift */,
 				2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */,
 				2AEA85B92790058C00BE96D9 /* AppleDelegate.swift */,
 			);
@@ -768,13 +788,17 @@
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
+				2A903A6027969B1B00DB774A /* ToeicWord.swift in Sources */,
+				2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
+				2A903A5F27969B1000DB774A /* High.swift in Sources */,
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				F787461727969B520010A47C /* High.swift in Sources */,
 				F787461927969BA80010A47C /* MiniGameView.swift in Sources */,
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
+				2A903A6227969B2700DB774A /* WordView.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
 				F79D02EB279003EF008A43D6 /* Timer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
@@ -795,14 +819,18 @@
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */,
+				2A903A6427969B4100DB774A /* Middle.swift in Sources */,
 				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
 				F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
+				2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
+				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
+				2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -812,25 +840,39 @@
 			files = (
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
+				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
+				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
+				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
 				F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */,
+				2A903A6C27969B9500DB774A /* SettingView.swift in Sources */,
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
 				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
+				2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */,
+				2A903A6B27969B9300DB774A /* NotificationView.swift in Sources */,
 				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
+				2A903A6527969B4F00DB774A /* UserInfo.swift in Sources */,
 				B709682D2782CDB0001B0884 /* Game.swift in Sources */,
+				2A903A6827969B5D00DB774A /* AppleDelegate.swift in Sources */,
 				F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */,
 				B709683D2782CDB0001B0884 /* ResultsView.swift in Sources */,
+				2A903A6327969B2800DB774A /* WordView.swift in Sources */,
 				F7AB7CF1278BF91E0039989F /* High.swift in Sources */,
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
+				2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */,
+				2A903A6927969B8E00DB774A /* minigame2.swift in Sources */,
 				F79D02EC279003EF008A43D6 /* Timer.swift in Sources */,
 				B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */,
+				2A903A6127969B2400DB774A /* TabViewSetting.swift in Sources */,
 				B70968392782CDB0001B0884 /* BottomText.swift in Sources */,
 				2A3017E5277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				F7AB7CF4278BF92A0039989F /* Toeic.swift in Sources */,
+				2A903A6627969B5300DB774A /* LoginView.swift in Sources */,
 				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				F7F7E132278415BB008FF432 /* WordList.swift in Sources */,
 				F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */,
+				2A903A5E27969AF900DB774A /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -999,9 +1041,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Morize (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9JBD726X3;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
@@ -1018,6 +1061,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdh.Morize;
 				PRODUCT_NAME = Morize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1032,9 +1076,10 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = "Morize (iOS).entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = T9JBD726X3;
+				DEVELOPMENT_TEAM = X843D4L2C2;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = "Morize--iOS--Info.plist";
@@ -1051,6 +1096,7 @@
 				MARKETING_VERSION = 1.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.jdh.Morize;
 				PRODUCT_NAME = Morize;
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

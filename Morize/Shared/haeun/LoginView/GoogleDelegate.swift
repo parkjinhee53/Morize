@@ -12,7 +12,6 @@ class GoogleDelegate: ObservableObject {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
     
     @Published var givenName: String = ""    // google nickname
-    @Published var isLoggedIn: Bool = false
     @Published var errorMessage: String = ""
     
     init() {
@@ -27,10 +26,9 @@ class GoogleDelegate: ObservableObject {
             let givenName = user.profile?.givenName
             UserDefaults.standard.set(givenName, forKey: "UserName")
             print(UserDefaults.standard.string(forKey: "UserName")!)
+            UserDefaults.standard.set(true, forKey: "isLogin")
 //            self.member.username = givenName ?? ""
-            self.isLoggedIn = true
         }else{
-            self.isLoggedIn = false
             self.member.username = "로그인 안됨"
         }
     }

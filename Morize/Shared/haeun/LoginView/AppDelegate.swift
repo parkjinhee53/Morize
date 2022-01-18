@@ -14,7 +14,7 @@ import KakaoSDKUser
 
 class AppDelegate: ObservableObject {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
-
+    
     // google userInfo
     func kakaocheckStatus(){
         UserApi.shared.me { user, error in
@@ -27,6 +27,7 @@ class AppDelegate: ObservableObject {
                     guard let user = user else { return }
                     let userName = user
                     UserDefaults.standard.set(userName, forKey: "UserName")
+                    UserDefaults.standard.set(true, forKey: "isLogin")
                     print(UserDefaults.standard.string(forKey: "UserName")!)
                 }
             }
