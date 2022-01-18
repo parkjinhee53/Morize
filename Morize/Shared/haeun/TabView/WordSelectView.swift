@@ -8,26 +8,38 @@
 import SwiftUI
 
 struct WordSelectView: View {
+    @State var state = 0
+    
     var body: some View {
-        
         VStack{
-            Button(action: {
+            if state == 0 {
+                Button(action: {
+                    state = 1
+                }) {
+                    Text("중등단어")
+                }.padding()
                 
-            }) {
-                Text("중등단어")
-            }.padding()
-            
-            Button(action: {
+                Button(action: {
+                    state = 2
+                }) {
+                    Text("고등")
+                }.padding()
                 
-            }) {
-                Text("고등")
-            }.padding()
-            
-            Button(action: {
-                
-            }) {
-                Text("토익")
-            }.padding()
+                Button(action: {
+                    state = 3
+                }) {
+                    Text("토익")
+                }.padding()
+            }
+            else if state == 1 {
+                TabViewSetting()
+            }
+            else if state == 2 {
+                TabViewSetting()
+            }
+            else if state == 3 {
+                TabViewSetting()
+            }
         }
     }
 }

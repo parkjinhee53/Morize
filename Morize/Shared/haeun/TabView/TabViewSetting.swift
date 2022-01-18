@@ -9,9 +9,11 @@ import SwiftUI
 
 struct TabViewSetting: View {
     var body: some View {
+        // 상단 TabView
+        WordView()
         // 하단 TabView
         TabView {
-            WordView()
+            CardMemory()
                 .tabItem{ Text("Word")  }
                 .navigationBarHidden(false)
             WordListView()
