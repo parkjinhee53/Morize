@@ -11,7 +11,6 @@ struct MiddleWord: View {
     @State var middlelist = middle().sortedArray()
 
     var body: some View {
-        NavigationView {
             ScrollView {
                 ForEach(0..<middlelist.count, id:\.self) { m in
                     HStack{
@@ -35,8 +34,6 @@ struct MiddleWord: View {
                     .padding()
                 }
             }
-            .navigationBarItems(trailing: EditButton())
-        }
     }
     
     // 삭제
