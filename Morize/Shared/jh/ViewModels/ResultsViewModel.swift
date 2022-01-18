@@ -16,6 +16,7 @@ struct ResultsViewModel {
         "\(score) %"
     }
     
+    // 등급
     var letterGradeText: String {
         switch score {
         case 90...100: return "A"
@@ -27,10 +28,12 @@ struct ResultsViewModel {
         }
     }
     
+    // 맞은 개수
     var correctSelectionText: String {
         "\(selectionCount.correct) ✅"
     }
     
+    // 틀린 개수
     var incorrectSelectionText: String {
         "\(selectionCount.incorrect) ❌"
     }
