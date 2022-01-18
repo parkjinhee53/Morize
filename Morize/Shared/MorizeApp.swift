@@ -7,20 +7,24 @@
 
 import SwiftUI
 import Foundation
+import KakaoSDKCommon
+import KakaoSDKAuth
 
 @main
 struct MorizeApp: App {
-    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
+//    @UIApplicationDelegateAdaptor(AppDelegate.self) var appDelegate
     @StateObject var userAuth: GoogleDelegate = GoogleDelegate()
+    @StateObject var kakaoAuth: AppDelegate = AppDelegate()
     init() {
         UserDefaults.standard.set("로그인", forKey: "UserName")
         UserDefaults.standard.set(true, forKey: "isFirst")
+        KakaoSDK.initSDK(appKey: "67ccb1551072d256d2a37ebef4b61bfd")
     }
     var body: some Scene {
         WindowGroup {
-            CardMemory()
-//            LoginView()
-//                .environmentObject(self.userAuth)
+            LoginView()
+                .environmentObject(self.userAuth)
+                .environmentObject(self.kakaoAuth)
         }
     }
 }
