@@ -68,6 +68,18 @@ struct MiniGame: View {
                         }
                     }
                 }
+                Text("몇초 만에 완료!")
+                    .padding(.top, 50)
+                Button{
+                    
+                } label: {
+                    Text("돌아가기")
+                }
+                Button{
+                    
+                } label: {
+                    Text("다시하기")
+                }
             }
         }
     }
