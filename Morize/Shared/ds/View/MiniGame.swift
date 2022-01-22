@@ -100,14 +100,10 @@ struct MiniGame: View {
                     .padding(.top, 50)
                 HStack{
                     Button{
-                        self.isPaused = false
-                    } label: {
-                        Text("돌아가기")
-                    }
-                    Button{
                         // 애니메이션 중단
                         self.isPaused = true
                         // 퍼즐 재생성
+                        viewModel.resetGame()
                         // 시간 초기화
                         restartTimer()
                     } label: {

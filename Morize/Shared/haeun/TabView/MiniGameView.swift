@@ -30,6 +30,7 @@ struct MiniGameView: View {
                 }
                 .padding()
             }
+            .navigationBarHidden(true)
         }
     }
 }
