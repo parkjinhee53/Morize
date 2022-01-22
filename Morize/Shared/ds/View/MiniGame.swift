@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Combine
 
 struct MiniGame: View {
     // viewModel
@@ -14,8 +15,32 @@ struct MiniGame: View {
     @State private var time: Double = 0
     // animation paused
     @State private var isPaused: Bool = true
+    @State var connectedTimer: Cancellable? = nil
     
-    let timer = Timer.publish(every: 0.1, on: .main, in: .common).autoconnect()
+    @State var timer: Timer.TimerPublisher = Timer.publish(every: 1, on: .main, in: .common)
+    
+    func instantiateTimer() {
+        self.timer = Timer.publish(every: 0.01, on: .main, in: .common)
+        self.connectedTimer = self.timer.connect()
+        return
+    }
+    
+    func cancelTimer() {
+        self.connectedTimer?.cancel()
+        return
+    }
+    
+    func resetCounter() {
+        self.time = 0
+        return
+    }
+    
+    func restartTimer() {
+        self.time = 0
+        self.cancelTimer()
+        self.instantiateTimer()
+        return
+    }
     var body: some View {
         ZStack{
             LottieView(filename: "fireworks", isPaused: isPaused)
@@ -23,8 +48,11 @@ struct MiniGame: View {
             VStack{
                 Text("\(String(format: "%.2f", time))")
                     .font(.system(size: 30, weight: .bold, design: .monospaced))
+                    .onAppear {
+                        self.instantiateTimer()
+                    }
                     .onReceive(timer) { _ in
-                        time += 0.1
+                        time += 0.01
                     }
                 ForEach(0..<viewModel.level){ i in
                     HStack{
@@ -42,7 +70,7 @@ struct MiniGame: View {
                                         viewModel.buttonArray[viewModel.checkArray[0]] = 2
                                         // 게임이 끝났는지 체크
                                         if viewModel.checkEnd(){
-                                            self.timer.upstream.connect().cancel()
+                                            cancelTimer()
                                             self.isPaused = false
                                         }
                                     }
@@ -72,12 +100,16 @@ struct MiniGame: View {
                     .padding(.top, 50)
                 HStack{
                     Button{
-                        
+                        self.isPaused = false
                     } label: {
                         Text("돌아가기")
                     }
                     Button{
-                        
+                        // 애니메이션 중단
+                        self.isPaused = true
+                        // 퍼즐 재생성
+                        // 시간 초기화
+                        restartTimer()
                     } label: {
                         Text("다시하기")
                     }
