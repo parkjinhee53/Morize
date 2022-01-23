@@ -35,7 +35,7 @@ struct LottieView: UIViewRepresentable {
 
     func updateUIView(_ uiView: UIViewType, context: UIViewRepresentableContext<LottieView>) {
         if isPaused {
-            context.coordinator.parent.animationView.pause()
+            context.coordinator.parent.animationView.currentFrame = 0
         } else {
             context.coordinator.parent.animationView.play()
         }
