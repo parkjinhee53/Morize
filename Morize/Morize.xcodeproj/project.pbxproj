@@ -88,8 +88,8 @@
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		F70721CD27967F7200C6E549 /* MorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70721CC27967F7200C6E549 /* MorizeTests.swift */; };
-		F79D02EB279003EF008A43D6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timer.swift */; };
-		F79D02EC279003EF008A43D6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timer.swift */; };
+		F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
+		F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
 		F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F7AB7CF1278BF91E0039989F /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CF2278BF92A0039989F /* Toeic.swift */; };
@@ -189,7 +189,7 @@
 		D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CA27967F7200C6E549 /* MorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CC27967F7200C6E549 /* MorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorizeTests.swift; sourceTree = "<group>"; };
-		F79D02EA279003EF008A43D6 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F79D02EA279003EF008A43D6 /* Timmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timmer.swift; sourceTree = "<group>"; };
 		F7AB7CE6278BB42D0039989F /* Middle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middle.swift; sourceTree = "<group>"; };
 		F7AB7CEF278BF91E0039989F /* High.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = High.swift; sourceTree = "<group>"; };
 		F7AB7CF2278BF92A0039989F /* Toeic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toeic.swift; sourceTree = "<group>"; };
@@ -387,7 +387,7 @@
 				F7AE674927867D5F007D62FF /* MiddleWord.swift */,
 				F7AE674C27867F0E007D62FF /* HighWord.swift */,
 				F7AE674F27867F3B007D62FF /* ToeicWord.swift */,
-				F79D02EA279003EF008A43D6 /* Timer.swift */,
+				F79D02EA279003EF008A43D6 /* Timmer.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -793,7 +793,7 @@
 				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				2A903A6227969B2700DB774A /* WordView.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
-				F79D02EB279003EF008A43D6 /* Timer.swift in Sources */,
+				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
@@ -851,7 +851,7 @@
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */,
 				2A903A6927969B8E00DB774A /* minigame2.swift in Sources */,
-				F79D02EC279003EF008A43D6 /* Timer.swift in Sources */,
+				F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */,
 				B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */,
 				2A903A6127969B2400DB774A /* TabViewSetting.swift in Sources */,
 				B70968392782CDB0001B0884 /* BottomText.swift in Sources */,
@@ -1089,6 +1089,7 @@
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				SDKROOT = iphoneos;
 				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;

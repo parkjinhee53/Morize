@@ -63,4 +63,11 @@ class MiniGameVM: ObservableObject{
         }
         return true
     }
+    
+    // 게임 리셋
+    func resetGame() {
+        for i in 0..<buttonArray.count {
+            buttonArray[i] = 0
+        }
+    }
 }
