@@ -9,7 +9,6 @@ import SwiftUI
 
 struct CardFlipTutorial: View {
     @ObservedObject var viewModel = CardFlipVM()
-    @Binding var isFirst: Bool
     @State var arrowAnimation = false
     @State var clickAnimation = true
     @State var description = "드래그로 카드를 넘길 수 있습니다."
@@ -71,7 +70,7 @@ struct CardFlipTutorial: View {
             Spacer()
             Button {
                 if buttonText == "확인" {
-                    isFirst = false
+                    UserDefaults.standard.set(false, forKey: "isFirst") 
                 }
                 // 상하 위치 0 으로, 로테이션 180으로, 화살표 애니메이션 false, 클릭 애니메이션 true
                 // 클릭 애니메이션 opacity=1, 화살표 애니메이션 opacity=0
