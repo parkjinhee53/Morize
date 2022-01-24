@@ -17,6 +17,18 @@
 		2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3017BD277AA5FA00369590 /* ContentView.swift */; };
 		2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
 		2A3017E9277AA5FC00369590 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2A3017BE277AA5FC00369590 /* Assets.xcassets */; };
+		2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A0279E38B00020DC74 /* AccountManagement.swift */; };
+		2A3AF3A2279E38B00020DC74 /* AccountManagement.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A0279E38B00020DC74 /* AccountManagement.swift */; };
+		2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A3279E38EB0020DC74 /* NoticeView.swift */; };
+		2A3AF3A5279E38EB0020DC74 /* NoticeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A3279E38EB0020DC74 /* NoticeView.swift */; };
+		2A3AF3A7279E39180020DC74 /* iCloudDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A6279E39180020DC74 /* iCloudDataView.swift */; };
+		2A3AF3A8279E39180020DC74 /* iCloudDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A6279E39180020DC74 /* iCloudDataView.swift */; };
+		2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A9279E39270020DC74 /* CSVDataView.swift */; };
+		2A3AF3AB279E39270020DC74 /* CSVDataView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3A9279E39270020DC74 /* CSVDataView.swift */; };
+		2A3AF3AD279E39AF0020DC74 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3AC279E39AF0020DC74 /* FAQView.swift */; };
+		2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3AC279E39AF0020DC74 /* FAQView.swift */; };
+		2A3AF3B0279E39EB0020DC74 /* SendEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3AF279E39EB0020DC74 /* SendEmailView.swift */; };
+		2A3AF3B1279E39EB0020DC74 /* SendEmailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3AF3AF279E39EB0020DC74 /* SendEmailView.swift */; };
 		2A3C59EE278526BD0005865D /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59ED278526BD0005865D /* LoginView.swift */; };
 		2A3C59FA278530410005865D /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
 		2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
@@ -141,6 +153,12 @@
 		2A3017DC277AA5FC00369590 /* Tests macOS.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Tests macOS.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		2A3017E0277AA5FC00369590 /* Tests_macOS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOS.swift; sourceTree = "<group>"; };
 		2A3017E2277AA5FC00369590 /* Tests_macOSLaunchTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests_macOSLaunchTests.swift; sourceTree = "<group>"; };
+		2A3AF3A0279E38B00020DC74 /* AccountManagement.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountManagement.swift; sourceTree = "<group>"; };
+		2A3AF3A3279E38EB0020DC74 /* NoticeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NoticeView.swift; sourceTree = "<group>"; };
+		2A3AF3A6279E39180020DC74 /* iCloudDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = iCloudDataView.swift; sourceTree = "<group>"; };
+		2A3AF3A9279E39270020DC74 /* CSVDataView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CSVDataView.swift; sourceTree = "<group>"; };
+		2A3AF3AC279E39AF0020DC74 /* FAQView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView.swift; sourceTree = "<group>"; };
+		2A3AF3AF279E39EB0020DC74 /* SendEmailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SendEmailView.swift; sourceTree = "<group>"; };
 		2A3C59ED278526BD0005865D /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 		2A3C59F5278530150005865D /* WordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordView.swift; sourceTree = "<group>"; };
 		2A3C59F9278530410005865D /* WordListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordListView.swift; sourceTree = "<group>"; };
@@ -324,7 +342,6 @@
 			isa = PBXGroup;
 			children = (
 				2AD8C86B279113D40096B483 /* NotificationView.swift */,
-				2AD8C869279113BF0096B483 /* SettingView.swift */,
 				2A3C59FB278530510005865D /* MiniGameView.swift */,
 				2A3C59F9278530410005865D /* WordListView.swift */,
 				2A3C59F5278530150005865D /* WordView.swift */,
@@ -332,6 +349,20 @@
 				2AD8C8672791126C0096B483 /* WordSelectView.swift */,
 			);
 			path = TabView;
+			sourceTree = "<group>";
+		};
+		2AB978EF279E346D00330676 /* SettingView */ = {
+			isa = PBXGroup;
+			children = (
+				2AD8C869279113BF0096B483 /* SettingView.swift */,
+				2A3AF3A3279E38EB0020DC74 /* NoticeView.swift */,
+				2A3AF3A0279E38B00020DC74 /* AccountManagement.swift */,
+				2A3AF3A6279E39180020DC74 /* iCloudDataView.swift */,
+				2A3AF3A9279E39270020DC74 /* CSVDataView.swift */,
+				2A3AF3AC279E39AF0020DC74 /* FAQView.swift */,
+				2A3AF3AF279E39EB0020DC74 /* SendEmailView.swift */,
+			);
+			path = SettingView;
 			sourceTree = "<group>";
 		};
 		2AD3595B278E8A5F00A13F5B /* DTO */ = {
@@ -455,6 +486,7 @@
 		B7D7607C277D984800D50AFA /* haeun */ = {
 			isa = PBXGroup;
 			children = (
+				2AB978EF279E346D00330676 /* SettingView */,
 				2AD3595B278E8A5F00A13F5B /* DTO */,
 				2A3C59EA2785268C0005865D /* LoginView */,
 				B7D7607D277D985600D50AFA /* minigame2.swift */,
@@ -779,12 +811,14 @@
 				B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				2AD8C8682791126C0096B483 /* WordSelectView.swift in Sources */,
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
+				2A3AF3A7279E39180020DC74 /* iCloudDataView.swift in Sources */,
 				2AD8C86A279113BF0096B483 /* SettingView.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */,
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				2A903A6027969B1B00DB774A /* ToeicWord.swift in Sources */,
 				2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */,
+				2A3AF3B0279E39EB0020DC74 /* SendEmailView.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
@@ -795,10 +829,12 @@
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
 				F79D02EB279003EF008A43D6 /* Timer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
+				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
+				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */,
@@ -812,12 +848,14 @@
 				2A903A6427969B4100DB774A /* Middle.swift in Sources */,
 				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
+				2A3AF3AD279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
+				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 				2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */,
@@ -831,15 +869,18 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
+				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
 				F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */,
+				2A3AF3B1279E39EB0020DC74 /* SendEmailView.swift in Sources */,
 				2A903A6C27969B9500DB774A /* SettingView.swift in Sources */,
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
 				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
 				2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */,
 				2A903A6B27969B9300DB774A /* NotificationView.swift in Sources */,
+				2A3AF3A8279E39180020DC74 /* iCloudDataView.swift in Sources */,
 				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
 				2A903A6527969B4F00DB774A /* UserInfo.swift in Sources */,
 				B709682D2782CDB0001B0884 /* Game.swift in Sources */,
@@ -847,7 +888,10 @@
 				F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */,
 				B709683D2782CDB0001B0884 /* ResultsView.swift in Sources */,
 				2A903A6327969B2800DB774A /* WordView.swift in Sources */,
+				2A3AF3AB279E39270020DC74 /* CSVDataView.swift in Sources */,
+				2A3AF3A5279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				F7AB7CF1278BF91E0039989F /* High.swift in Sources */,
+				2A3AF3A2279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */,
 				2A903A6927969B8E00DB774A /* minigame2.swift in Sources */,
