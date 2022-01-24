@@ -38,6 +38,7 @@ struct ResultsViewModel {
         "\(selectionCount.incorrect) ❌"
     }
     
+    // 걸린 시간 
     var totalGameTimeText: String {
         "\(Int(gameEndTime.timeIntervalSince(gameStartTime))) seconds"
     }
