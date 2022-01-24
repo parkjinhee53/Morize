@@ -23,48 +23,40 @@ struct LoginView: View {
             WordSelectView()
         }
         else {
-            VStack{
-                Text("Morize")
-                Text(UserName)
-                // 소셜 로그인 부분
-                
-                HStack{
-                    // kakao login
-                    Button(action : {
-                        kakaodel.kakaocheck()
-                    }){
-                        Image("kakaolink_btn_small")
-                            .resizable()
-                            .frame(width: 50, height: 50)
+            ZStack {
+                // 이미지를 넣는 경우
+//                Image("PaperBackground")
+//                    .resizable()
+//                    .scaledToFill()
+//                    .edgesIgnoringSafeArea(.all)
+                // 색을 넣는 경우
+                Color(hex: "eeeeee")
+                    .ignoresSafeArea()
+                VStack{
+                    Text("Morize")
+                    Text(UserName)
+                    // 소셜 로그인 부분
+                    
+                    HStack{
+                        // kakao login
+                        Button(action : {
+                            kakaodel.kakaocheck()
+                        }){
+                            Image("kakaolink_btn_small")
+                                .resizable()
+                                .frame(width: 50, height: 50)
+                        }
+                        .padding()
+                        
+                        // google login
+                        Button(action: {
+                            googledel.signIn()
+                        }) {
+                            Image("btn_google_light_normal_ios")
+                                .resizable()
+                                .frame(width: 60, height: 60)
+                        }.padding()
                     }
-                    .padding()
-                    
-                    // google login
-                    Button(action: {
-                        googledel.signIn()
-                    }) {
-                        Image("btn_google_light_normal_ios")
-                            .resizable()
-                            .frame(width: 60, height: 60)
-                    }.padding()
-                    
-                    // apple login
-                    //            AppleDelegate(.signIn,
-                    //                onRequest: { (request) in
-                    //                //Set up request
-                    //                },
-                    //                onCompletion: { (result) in
-                    //                switch result {
-                    //                case .success(let authorization):
-                    //                    //Handle autorization
-                    //                    break
-                    //                case .failure(let error):
-                    //                    //Handle error
-                    //                    break
-                    //                }
-                    //
-                    //        }.signInWithAppleButtonStyle(.black)
-                    //        .padding()
                 }
             }
         }
