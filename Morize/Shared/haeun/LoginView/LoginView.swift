@@ -11,6 +11,7 @@ import KakaoSDKUser
 import KakaoSDKAuth
 import GoogleSignIn
 import KakaoSDKCommon
+import Lottie
 
 struct LoginView: View {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
@@ -30,33 +31,112 @@ struct LoginView: View {
 //                    .scaledToFill()
 //                    .edgesIgnoringSafeArea(.all)
                 // 색을 넣는 경우
-                Color(hex: "eeeeee")
+                Color(hex: "eaefe5")
                     .ignoresSafeArea()
-                VStack{
-                    Text("Morize")
-                    Text(UserName)
-                    // 소셜 로그인 부분
-                    
-                    HStack{
-                        // kakao login
-                        Button(action : {
-                            kakaodel.kakaocheck()
-                        }){
-                            Image("kakaolink_btn_small")
-                                .resizable()
-                                .frame(width: 50, height: 50)
+                
+                // 이미지의 경우
+                Image("bookman")
+                    .resizable()
+                    .frame(width: 380, height: 400, alignment: .center)
+                    .padding(.top, 30)
+                    .padding(.trailing, -90)
+                
+//                LottieView(filename: "plant", isPaused: false)
+//                    .frame(width: 300, height: 300, alignment: .trailing)
+//                    .padding(.trailing, -150)
+                
+                VStack(alignment: .leading) {
+                    VStack(alignment: .leading) {
+                        Text("당신이 찾는")
+                            .font(.custom("GodoM", size: 40))
+                        ZStack{
+                            Rectangle()
+                                .frame(width: 120, height: 10, alignment: .center)
+                                .padding(.leading, 120)
+                                .padding(.top, 6)
+                                .foregroundColor(Color.init(hex: "#81C147"))
+                            Text("하나뿐인 단어장")
+                                .font(.custom("GodoM", size: 40))
+                                .padding(.top, -20)
+                                .frame(width: 300, alignment: .leading)
                         }
-                        .padding()
-                        
-                        // google login
-                        Button(action: {
-                            googledel.signIn()
-                        }) {
-                            Image("btn_google_light_normal_ios")
-                                .resizable()
-                                .frame(width: 60, height: 60)
-                        }.padding()
+                        Text("MORIZE")
+                            .font(.custom("GodoB", size: 50))
+                            .padding(.top, 20)
+                            .foregroundColor(Color.init(hex: "#5e9f24"))
                     }
+                    .padding(.top, 50)
+                    .padding(.leading, 20)
+                    .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                    Spacer()
+                    // 1안
+//                    HStack {
+//                        Rectangle()
+//                            .frame(width: 130, height: 2, alignment: .center)
+//                            .padding(.leading, 16)
+//                            .foregroundColor(Color.init(hex: "1b2213"))
+//                        Spacer()
+////                        Text(UserName)
+////                            .font(.custom("GodoM", size: 13))
+//
+//                        Text("소셜로그인")
+//                            .font(.custom("GodoM", size: 15))
+//                        Spacer()
+//                        Rectangle()
+//                            .frame(width: 130, height: 2, alignment: .center)
+//                            .padding(.trailing, 16)
+//                            .foregroundColor(Color.init(hex: "2b3e1d"))
+//                    }
+                    
+                    // 2안
+                    HStack {
+                        VStack(alignment: .leading) {
+                            Text("모리즈와 함께")
+                                .font(.custom("GodoM", size: 20))
+                            Text("영어단어 더욱 쉽게 외워봐요 :)")
+                                .font(.custom("GodoM", size: 20))
+                        }
+                        .padding(.leading, 20)
+                    }
+                    
+                    // 소셜 로그인 부분
+                    VStack(alignment: .center) {
+                        VStack{
+                            // kakao login
+                            Button(action : {
+                                kakaodel.kakaocheck()
+                            }){
+                                VStack {
+                                    ZStack(alignment: .center) {
+                                        Image("kakao_login_large_wide")
+                                            .resizable()
+                                            .frame(height: 55)
+                                        Text("카카오계정으로 시작하기")
+                                            .foregroundColor(.black)
+                                            .padding(.leading, UIScreen.main.bounds.width * 0.05)
+                                    }
+                                }
+                            }
+                            
+                            // google login
+                            Button(action: {
+                                googledel.signIn()
+                            }) {
+                                VStack {
+                                    ZStack(alignment: .center) {
+                                        Image("google_login_large_wide")
+                                            .resizable()
+                                            .frame(height: 55)
+                                        Text("구글 계정으로 시작하기")
+                                            .foregroundColor(.black)
+                                            .padding(.leading, UIScreen.main.bounds.width * 0.05)
+                                    }
+                                }
+                            }
+                        }
+                        .padding(20)
+                    }
+                    .frame(width: UIScreen.main.bounds.width, alignment: .center)
                 }
             }
         }
