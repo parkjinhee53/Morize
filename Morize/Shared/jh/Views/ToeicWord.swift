@@ -11,7 +11,6 @@ struct ToeicWord: View {
     @State var toeiclist = toeic().sortedArray()
     
     var body: some View {
-        NavigationView {
             ScrollView {
                 ForEach(0..<toeiclist.count, id:\.self) { t in
                     HStack{
@@ -35,8 +34,6 @@ struct ToeicWord: View {
                     .padding()
                 }
             }
-            .navigationBarItems(trailing: EditButton())
-        }
     }
     
     // 삭제 
