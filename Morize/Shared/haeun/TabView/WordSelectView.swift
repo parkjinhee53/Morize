@@ -144,7 +144,7 @@ struct WordSelectView: View {
                         .shadow(color: .gray, radius: 1, x: 0, y: 1)
                     }
                     .frame(width: UIScreen.main.bounds.width)
-                    .padding(.bottom, 15)
+                    .padding(.bottom, 100)
                 }
                 else {
                     TabViewSetting(level: $level)
