@@ -34,6 +34,7 @@
 		2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FF278534510005865D /* TabViewSetting.swift */; };
 		2A7C84A37C0872D77AEFE627 /* Pods_Morize__macOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */; };
 		2A7DB83727AAB9BA004D4C0D /* ComposeMailData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DB83627AAB9BA004D4C0D /* ComposeMailData.swift */; };
+		2A7DB83A27AAC511004D4C0D /* minigame2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A7DB83927AAC511004D4C0D /* minigame2View.swift */; };
 		2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* AppDelegate.swift */; };
 		2A903A5E27969AF900DB774A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* AppDelegate.swift */; };
 		2A903A5F27969B1000DB774A /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
@@ -172,6 +173,7 @@
 		2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = "Morize--iOS--Info.plist"; sourceTree = "<group>"; };
 		2A6A37922786727B0068DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7DB83627AAB9BA004D4C0D /* ComposeMailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailData.swift; sourceTree = "<group>"; };
+		2A7DB83927AAC511004D4C0D /* minigame2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2View.swift; sourceTree = "<group>"; };
 		2AD3595C278E8AAB00A13F5B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		2AD8C8672791126C0096B483 /* WordSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSelectView.swift; sourceTree = "<group>"; };
@@ -362,6 +364,15 @@
 			path = TabView;
 			sourceTree = "<group>";
 		};
+		2A7DB83827AAC4D6004D4C0D /* MiniGame2 */ = {
+			isa = PBXGroup;
+			children = (
+				B7D7607D277D985600D50AFA /* minigame2.swift */,
+				2A7DB83927AAC511004D4C0D /* minigame2View.swift */,
+			);
+			path = MiniGame2;
+			sourceTree = "<group>";
+		};
 		2AB978EF279E346D00330676 /* SettingView */ = {
 			isa = PBXGroup;
 			children = (
@@ -500,10 +511,10 @@
 		B7D7607C277D984800D50AFA /* haeun */ = {
 			isa = PBXGroup;
 			children = (
+				2A7DB83827AAC4D6004D4C0D /* MiniGame2 */,
 				2AB978EF279E346D00330676 /* SettingView */,
 				2AD3595B278E8A5F00A13F5B /* DTO */,
 				2A3C59EA2785268C0005865D /* LoginView */,
-				B7D7607D277D985600D50AFA /* minigame2.swift */,
 				2A3C59FE2785327B0005865D /* TabView */,
 			);
 			path = haeun;
@@ -838,6 +849,7 @@
 				B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				2AD8C8682791126C0096B483 /* WordSelectView.swift in Sources */,
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
+				2A7DB83A27AAC511004D4C0D /* minigame2View.swift in Sources */,
 				2A3AF3A7279E39180020DC74 /* iCloudDataView.swift in Sources */,
 				2AD8C86A279113BF0096B483 /* SettingView.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,

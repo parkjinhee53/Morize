@@ -12,9 +12,7 @@ struct SettingView: View {
     @State private var mailData = ComposeMailData(subject: "Morize 개발자에게",
                                                   recipients: ["haeunkim0807@naver.com"])
     @State private var showMailView = false
-    
     var body: some View {
-        
         NavigationView{
             ScrollView {
                 LabelledDivider(label: "계정")
@@ -43,7 +41,7 @@ struct SettingView: View {
                  }
                  .disabled(!SendEmail.canSendMail)
                  .sheet(isPresented: $showMailView) {
-                     SendEmail(data: $mailData) { result in
+                     SendEmail(maildata: $mailData) { result in
                          print(result)
                      }
                  }

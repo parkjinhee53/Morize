@@ -14,12 +14,11 @@ struct WordView: View {
     
     var body: some View {
         HStack {
-            Spacer()
             // View 이름으로 바꿀 것
             Text(UserName + "의 단어장")
-            Spacer()
+                .padding()
             
-            // 설정버튼
+            // 알림버튼
             Button(action: {
                 // View 보여주기
                 showingNotification = true
@@ -33,11 +32,14 @@ struct WordView: View {
             // 설정버튼
             Button(action: {
                 // View 보여주기
-                self.showingSettings.toggle()
+                showingSettings = true
             })
             {
                 Image(systemName: "gearshape")
-            }.fullScreenCover(isPresented: $showingSettings ,content: {SettingView()})
+            }.sheet(isPresented: $showingSettings){
+                SettingView()
+            }.padding(5)
+            
         }
     }
 }
