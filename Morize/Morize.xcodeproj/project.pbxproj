@@ -100,6 +100,10 @@
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
+		B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */; };
+		B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */; };
+		B7DB0BA0279E82D6002A8C2C /* plant.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9F279E82D5002A8C2C /* plant.json */; };
+		B7DB0BA2279E85A2002A8C2C /* fox.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0BA1279E85A2002A8C2C /* fox.json */; };
 		F70721CD27967F7200C6E549 /* MorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70721CC27967F7200C6E549 /* MorizeTests.swift */; };
 		F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
 		F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
@@ -206,6 +210,10 @@
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		B777307B27851FD800123DAD /* CardFlipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipVM.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
+		B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoB.ttf; sourceTree = "<group>"; };
+		B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
+		B7DB0B9F279E82D5002A8C2C /* plant.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = plant.json; sourceTree = "<group>"; };
+		B7DB0BA1279E85A2002A8C2C /* fox.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fox.json; sourceTree = "<group>"; };
 		D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CA27967F7200C6E549 /* MorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CC27967F7200C6E549 /* MorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorizeTests.swift; sourceTree = "<group>"; };
@@ -280,6 +288,7 @@
 		2A3017BB277AA5FA00369590 /* Shared */ = {
 			isa = PBXGroup;
 			children = (
+				B7DB0B98279E4A8F002A8C2C /* Fonts */,
 				B709681E2782CDB0001B0884 /* jh */,
 				B7D7607C277D984800D50AFA /* haeun */,
 				B71FAB1E277D41AB00957C5B /* Utill */,
@@ -430,6 +439,8 @@
 			isa = PBXGroup;
 			children = (
 				B712F9CB277D6F9300E7A3BD /* fireworks.json */,
+				B7DB0B9F279E82D5002A8C2C /* plant.json */,
+				B7DB0BA1279E85A2002A8C2C /* fox.json */,
 				B713F46E278BC7E60040E6A4 /* arrow.json */,
 				B713F46D278BC7E50040E6A4 /* click.json */,
 				B712F9C9277D6DE000E7A3BD /* LottieView.swift */,
@@ -496,6 +507,15 @@
 				2A3C59FE2785327B0005865D /* TabView */,
 			);
 			path = haeun;
+			sourceTree = "<group>";
+		};
+		B7DB0B98279E4A8F002A8C2C /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */,
+				B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */,
+			);
+			path = Fonts;
 			sourceTree = "<group>";
 		};
 		F70721CB27967F7200C6E549 /* MorizeTests */ = {
@@ -687,8 +707,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				B713F46F278BC7E60040E6A4 /* click.json in Resources */,
+				B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */,
 				B713F470278BC7E60040E6A4 /* arrow.json in Resources */,
+				B7DB0BA2279E85A2002A8C2C /* fox.json in Resources */,
+				B7DB0BA0279E82D6002A8C2C /* plant.json in Resources */,
 				B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */,
+				B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */,
 				2A3017E8277AA5FC00369590 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
