@@ -8,13 +8,9 @@
 import SwiftUI
 import MessageUI
 
-struct ComposeMailData {
-    let subject: String
-    let recipients: [String]?
-}
-
 struct SettingView: View {
-    @State private var mailData = ComposeMailData(subject: "Morize 개발자에게", recipients: ["haeunkim0807@naver.com"])
+    @State private var mailData = ComposeMailData(subject: "Morize 개발자에게",
+                                                  recipients: ["haeunkim0807@naver.com"])
     @State private var showMailView = false
     
     var body: some View {
@@ -39,16 +35,15 @@ struct SettingView: View {
                 NavigationLink(destination: FAQView()) {
                     Text("자주 하는 질문")
                 }
-                
                 // Navigation으로 바꿀 방법 찾아보기
                 Button(action: {
                     showMailView.toggle()
                  }) {
                      Text("개발자에게 메일 보내기")
                  }
-                 .disabled(!SendEmailView.canSendMail)
+                 .disabled(!SendEmail.canSendMail)
                  .sheet(isPresented: $showMailView) {
-                     SendEmailView(data: $mailData) { result in
+                     SendEmail(data: $mailData) { result in
                          print(result)
                      }
                  }

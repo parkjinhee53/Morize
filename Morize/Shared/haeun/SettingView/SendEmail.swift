@@ -14,7 +14,7 @@ typealias MailViewCallback = ((Result<MFMailComposeResult, Error>) -> Void)?
 // Email 보내기
 // 코드만 가져옴 분석필요
 
-struct SendEmailView: UIViewControllerRepresentable {
+struct SendEmail: UIViewControllerRepresentable {
     @Environment(\.presentationMode) var presentation
     @Binding var data: ComposeMailData
     let callback: MailViewCallback
@@ -48,7 +48,7 @@ struct SendEmailView: UIViewControllerRepresentable {
         Coordinator(presentation: presentation, data: $data, callback: callback)
     }
     
-    func makeUIViewController(context: UIViewControllerRepresentableContext<SendEmailView>) -> MFMailComposeViewController {
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SendEmail>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
         vc.mailComposeDelegate = context.coordinator
         vc.setSubject(data.subject)
@@ -58,7 +58,7 @@ struct SendEmailView: UIViewControllerRepresentable {
     }
     
     func updateUIViewController(_ uiViewController: MFMailComposeViewController,
-                                context: UIViewControllerRepresentableContext<SendEmailView>) {
+                                context: UIViewControllerRepresentableContext<SendEmail>) {
     }
     
     static var canSendMail: Bool {
