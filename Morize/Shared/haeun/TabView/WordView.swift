@@ -13,31 +13,30 @@ struct WordView: View {
     @State var showingNotification = false
     
     var body: some View {
-        HStack {
+        ZStack {
             Spacer()
             // View 이름으로 바꿀 것
             Text(UserName + "의 단어장")
             Spacer()
             
             // 설정버튼
-            Button(action: {
-                // View 보여주기
+            Button {
                 showingNotification = true
-            }
-            ){
+            } label: {
                 Image(systemName: "bell")
-            }.sheet(isPresented: $showingNotification) {
+            }
+            .padding(.leading, UIScreen.main.bounds.width * 0.75)
+            .sheet(isPresented: $showingNotification) {
                 NotificationView()
             }
             
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
+            Button {
                 self.showingSettings.toggle()
-            })
-            {
+            } label: {
                 Image(systemName: "gearshape")
-            }.fullScreenCover(isPresented: $showingSettings ,content: {SettingView()})
+            }
+            .padding(.leading, UIScreen.main.bounds.width * 0.9)
+            .fullScreenCover(isPresented: $showingSettings, content: {SettingView()})
         }
     }
 }
