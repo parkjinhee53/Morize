@@ -43,6 +43,7 @@ class GoogleDelegate: ObservableObject {
         }
     }
     
+    // 로그인 
     func signIn(){
         guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
         
@@ -59,6 +60,7 @@ class GoogleDelegate: ObservableObject {
         )
     }
     
+    // 로그아웃
     func signOut(){
         GIDSignIn.sharedInstance.signOut()
         self.checkStatus()

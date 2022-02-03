@@ -6,15 +6,63 @@
 //
 
 import SwiftUI
+import UIKit
+import MessageUI
 
-struct SendEmailView: View {
-    var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+typealias MailViewCallback = ((Result<MFMailComposeResult, Error>) -> Void)?
+
+// Email 보내기
+// 코드만 가져옴 분석필요
+
+struct SendEmailView: UIViewControllerRepresentable {
+    @Environment(\.presentationMode) var presentation
+    @Binding var data: ComposeMailData
+    let callback: MailViewCallback
+    
+    class Coordinator: NSObject, MFMailComposeViewControllerDelegate {
+        @Binding var presentation: PresentationMode
+        @Binding var data: ComposeMailData
+        let callback: MailViewCallback
+        
+        init(presentation: Binding<PresentationMode>,
+             data: Binding<ComposeMailData>,
+             callback: MailViewCallback) {
+            _presentation = presentation
+            _data = data
+            self.callback = callback
+        }
+        
+        func mailComposeController(_ controller: MFMailComposeViewController,
+                                   didFinishWith result: MFMailComposeResult,
+                                   error: Error?) {
+            if let error = error {
+                callback?(.failure(error))
+            } else {
+                callback?(.success(result))
+            }
+            $presentation.wrappedValue.dismiss()
+        }
+    }
+    
+    func makeCoordinator() -> Coordinator {
+        Coordinator(presentation: presentation, data: $data, callback: callback)
+    }
+    
+    func makeUIViewController(context: UIViewControllerRepresentableContext<SendEmailView>) -> MFMailComposeViewController {
+        let vc = MFMailComposeViewController()
+        vc.mailComposeDelegate = context.coordinator
+        vc.setSubject(data.subject)
+        vc.setToRecipients(data.recipients)
+        vc.accessibilityElementDidLoseFocus()
+        return vc
+    }
+    
+    func updateUIViewController(_ uiViewController: MFMailComposeViewController,
+                                context: UIViewControllerRepresentableContext<SendEmailView>) {
+    }
+    
+    static var canSendMail: Bool {
+        MFMailComposeViewController.canSendMail()
     }
 }
 
-struct SendEmailView_Previews: PreviewProvider {
-    static var previews: some View {
-        SendEmailView()
-    }
-}
