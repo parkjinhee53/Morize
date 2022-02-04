@@ -15,8 +15,10 @@ import Lottie
 
 struct LoginView: View {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
+    
     @EnvironmentObject var googledel: GoogleDelegate
     @EnvironmentObject var kakaodel: AppDelegate   // kakao AppDelegate 함수 공유
+    
     @AppStorage("UserName") var UserName : String = UserDefaults.standard.string(forKey: "UserName") ?? ""
     @AppStorage("isLogin") var isLogin : Bool = UserDefaults.standard.bool(forKey: "isLogin") 
     var body: some View {
@@ -60,7 +62,8 @@ struct LoginView: View {
                                 .padding(.top, -20)
                                 .frame(width: 300, alignment: .leading)
                         }
-                        Text("MORIZE")
+                        // MORIZE -> Morize로 수정
+                        Text("Morize")
                             .font(.custom("GodoB", size: 50))
                             .padding(.top, 20)
                             .foregroundColor(Color.init(hex: "#5e9f24"))
