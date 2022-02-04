@@ -7,7 +7,7 @@
 
 import SwiftUI
 
-// 설정알림창
+// 공지사항, 이벤트
 struct NoticeView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)

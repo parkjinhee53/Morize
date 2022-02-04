@@ -17,7 +17,7 @@ struct WordView: View {
             Spacer()
             // View 이름으로 바꿀 것
             Text(UserName + "의 단어장")
-            Spacer()
+                .padding()
             
             // 설정버튼
             Button {
