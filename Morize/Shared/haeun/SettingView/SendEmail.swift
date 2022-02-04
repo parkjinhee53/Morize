@@ -50,9 +50,13 @@ struct SendEmail: UIViewControllerRepresentable {
     
     func makeUIViewController(context: UIViewControllerRepresentableContext<SendEmail>) -> MFMailComposeViewController {
         let vc = MFMailComposeViewController()
+        
         vc.mailComposeDelegate = context.coordinator
         vc.setSubject(maildata.subject)
         vc.setToRecipients(maildata.recipients)
+        maildata.attachments?.forEach {
+          vc.addAttachmentData($0.data, mimeType: $0.mimeType, fileName: $0.fileName)
+        }
         vc.accessibilityElementDidLoseFocus()
         return vc
     }

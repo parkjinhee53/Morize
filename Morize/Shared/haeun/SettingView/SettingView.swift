@@ -10,7 +10,10 @@ import MessageUI
 
 struct SettingView: View {
     @State private var mailData = ComposeMailData(subject: "Morize 개발자에게",
-                                                  recipients: ["haeunkim0807@naver.com"])
+                                                  recipients: ["haeunkim0807@naver.com"],
+                                                  attachments: [AttachmentData(data: "Some text".data(using: .utf8)!,
+                                                  mimeType: "text/plain",
+                                                  fileName: "text.txt")])
     @State private var showMailView = false
     var body: some View {
         NavigationView{
@@ -35,7 +38,7 @@ struct SettingView: View {
                 }
                 // Navigation으로 바꿀 방법 찾아보기
                 Button(action: {
-                    showMailView.toggle()
+                    showMailView = true
                  }) {
                      Text("개발자에게 메일 보내기")
                  }

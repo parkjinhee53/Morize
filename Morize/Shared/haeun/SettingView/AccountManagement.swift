@@ -11,8 +11,8 @@ import SwiftUI
 
 struct AccountManagement: View {
     @AppStorage("UserName") var UserName : String = UserDefaults.standard.string(forKey: "UserName") ?? "사용자"
-//    @EnvironmentObject var googledel: GoogleDelegate
-//    @EnvironmentObject var kakaodel: AppDelegate   // kakao AppDelegate 함수 공유
+    @EnvironmentObject var googledel: GoogleDelegate
+    @EnvironmentObject var kakaodel: AppDelegate   // kakao AppDelegate 함수 공유
     
     var body: some View {
         VStack{
@@ -21,10 +21,10 @@ struct AccountManagement: View {
             
             // 로그아웃 클릭할 때 한번에 되는지 확인 필요
             Button(action : {
-//                // kakao 로그아웃
-//                kakaodel.kakaosignout()
-//                // google 로그아웃
-//                googledel.signOut()
+                // kakao 로그아웃
+                kakaodel.kakaosignout()
+                // google 로그아웃
+                googledel.signOut()
             }){
                 Text("로그아웃")
             }
