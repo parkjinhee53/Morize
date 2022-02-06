@@ -48,13 +48,13 @@
 		2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
 		2A903A6827969B5D00DB774A /* AppleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AEA85B92790058C00BE96D9 /* AppleDelegate.swift */; };
 		2A903A6927969B8E00DB774A /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
-		2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C86B279113D40096B483 /* NotificationView.swift */; };
-		2A903A6B27969B9300DB774A /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C86B279113D40096B483 /* NotificationView.swift */; };
 		2A903A6C27969B9500DB774A /* SettingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C869279113BF0096B483 /* SettingView.swift */; };
 		2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
 		2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
 		2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
 		2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
+		2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86B27B023E300858CAE /* NotificationView.swift */; };
+		2AD2D86E27B0243800858CAE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86D27B0243800858CAE /* NotificationManager.swift */; };
 		2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD3595C278E8AAB00A13F5B /* UserInfo.swift */; };
 		2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */; };
 		2AD8C8682791126C0096B483 /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
@@ -174,11 +174,12 @@
 		2A6A37922786727B0068DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7DB83627AAB9BA004D4C0D /* ComposeMailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailData.swift; sourceTree = "<group>"; };
 		2A7DB83927AAC511004D4C0D /* minigame2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2View.swift; sourceTree = "<group>"; };
+		2AD2D86B27B023E300858CAE /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
+		2AD2D86D27B0243800858CAE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2AD3595C278E8AAB00A13F5B /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		2AD35960278E9DEA00A13F5B /* GoogleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GoogleDelegate.swift; sourceTree = "<group>"; };
 		2AD8C8672791126C0096B483 /* WordSelectView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordSelectView.swift; sourceTree = "<group>"; };
 		2AD8C869279113BF0096B483 /* SettingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingView.swift; sourceTree = "<group>"; };
-		2AD8C86B279113D40096B483 /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2AEA85B4278FCAB600BE96D9 /* Morize (iOS).entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Morize (iOS).entitlements"; sourceTree = "<group>"; };
 		2AEA85B92790058C00BE96D9 /* AppleDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppleDelegate.swift; sourceTree = "<group>"; };
 		32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__iOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -354,7 +355,6 @@
 		2A3C59FE2785327B0005865D /* TabView */ = {
 			isa = PBXGroup;
 			children = (
-				2AD8C86B279113D40096B483 /* NotificationView.swift */,
 				2A3C59FB278530510005865D /* MiniGameView.swift */,
 				2A3C59F9278530410005865D /* WordListView.swift */,
 				2A3C59F5278530150005865D /* WordView.swift */,
@@ -385,6 +385,15 @@
 				2A3AF3AF279E39EB0020DC74 /* SendEmail.swift */,
 			);
 			path = SettingView;
+			sourceTree = "<group>";
+		};
+		2AD2D86A27B023C600858CAE /* NotificationView */ = {
+			isa = PBXGroup;
+			children = (
+				2AD2D86B27B023E300858CAE /* NotificationView.swift */,
+				2AD2D86D27B0243800858CAE /* NotificationManager.swift */,
+			);
+			path = NotificationView;
 			sourceTree = "<group>";
 		};
 		2AD3595B278E8A5F00A13F5B /* DTO */ = {
@@ -511,6 +520,7 @@
 		B7D7607C277D984800D50AFA /* haeun */ = {
 			isa = PBXGroup;
 			children = (
+				2AD2D86A27B023C600858CAE /* NotificationView */,
 				2A7DB83827AAC4D6004D4C0D /* MiniGame2 */,
 				2AB978EF279E346D00330676 /* SettingView */,
 				2AD3595B278E8A5F00A13F5B /* DTO */,
@@ -859,6 +869,7 @@
 				2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */,
 				2A3AF3B0279E39EB0020DC74 /* SendEmail.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
+				2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
 				2A903A5F27969B1000DB774A /* High.swift in Sources */,
@@ -890,6 +901,7 @@
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
 				2A3AF3AD279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */,
+				2AD2D86E27B0243800858CAE /* NotificationManager.swift in Sources */,
 				B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
@@ -898,7 +910,6 @@
 				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
-				2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -919,7 +930,6 @@
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
 				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
 				2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */,
-				2A903A6B27969B9300DB774A /* NotificationView.swift in Sources */,
 				2A3AF3A8279E39180020DC74 /* iCloudDataView.swift in Sources */,
 				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
 				2A903A6527969B4F00DB774A /* UserInfo.swift in Sources */,
