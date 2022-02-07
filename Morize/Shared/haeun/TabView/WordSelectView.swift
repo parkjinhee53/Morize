@@ -26,56 +26,6 @@ struct WordSelectView: View {
                         .foregroundColor(Color.init(hex: "1a1e17"))
                         .padding(.leading, 20)
                         .padding(.bottom, 50)
-//                    VStack(alignment: .center) {
-//                        HStack {
-//                            Button(action: {
-//                                UserDefaults.standard.set("middle", forKey: "level")
-//                            }) {
-//                                Text("중등단어")
-//                            }
-//                            .frame(width: 160, height: 160, alignment: .center)
-//                            .background(Color.init(hex: "a4e468"))
-//                            .foregroundColor(.black)
-//                            .font(.custom("GodoM", size: 20))
-//                            .cornerRadius(16)
-//
-//                            Button(action: {
-//                                UserDefaults.standard.set("high", forKey: "level")
-//                            }) {
-//                                Text("고등단어")
-//                            }
-//                            .frame(width: 160, height: 160, alignment: .center)
-//                            .background(Color.init(hex: "8dcd52"))
-//                            .foregroundColor(.black)
-//                            .font(.custom("GodoM", size: 20))
-//                            .cornerRadius(16)
-//                        }.frame(width: UIScreen.main.bounds.width, alignment: .center)
-//                    }
-//
-//                    VStack(alignment: .center) {
-//                        HStack {
-//                            Button(action: {
-//                                UserDefaults.standard.set("toeic", forKey: "level")
-//                            }) {
-//                                Text("토익")
-//                            }
-//                            .frame(width: 160, height: 160, alignment: .center)
-//                            .background(Color.init(hex: "75b73c"))
-//                            .foregroundColor(.black)
-//                            .font(.custom("GodoM", size: 20))
-//                            .cornerRadius(16)
-//
-//                            Button(action: {
-//                            }) {
-//                                Text("준비중")
-//                            }
-//                            .frame(width: 160, height: 160, alignment: .center)
-//                            .background(Color.init(hex: "d7ebc2"))
-//                            .foregroundColor(.black)
-//                            .font(.custom("GodoM", size: 20))
-//                            .cornerRadius(16)
-//                        }.frame(width: UIScreen.main.bounds.width, alignment: .center)
-//                    }
                     Spacer()
                     VStack(alignment: .center) {
                         Button(action: {
