@@ -37,11 +37,11 @@ struct Flashcard<Front, Back>: View where Front: View, Back: View {
             }
         }
         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
-        .font(.system(size: 30, weight: .bold, design: .rounded))
+        .font(.custom("GodoM", size: 35))
         .foregroundColor(.white)
-        .frame(width: 300, height: 250, alignment: .center)
+        .frame(width: 300, height: 180, alignment: .center)
         .background(color)
-        .cornerRadius(30)
+        .cornerRadius(8)
         .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.15), radius: 15, x: 0, y: 0)
         .onTapGesture {
             if canClick{

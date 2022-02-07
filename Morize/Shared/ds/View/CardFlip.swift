@@ -11,6 +11,10 @@ struct CardFlip: View {
     @ObservedObject var viewModel = CardFlipVM()
     var body: some View {
         ZStack{
+            Color(hex: "eaefe5")
+                .ignoresSafeArea()
+                .zIndex(-10)
+            
             ForEach(0..<viewModel.getWordsCount()) { i in
                 Flashcard(front: {
                     Text(viewModel.words[i])
@@ -39,7 +43,7 @@ struct CardFlip: View {
                                 print(viewModel.currentIdx)
                                 viewModel.currentIdx = (viewModel.currentIdx + 1) % 4
                                 withAnimation(Animation.easeOut(duration: 0.2)) {
-                                    viewModel.dragOffset[i] = CGSize(width: 0, height: -250)
+                                    viewModel.dragOffset[i] = CGSize(width: 0, height: -200)
                                 }
                             }
                             // 제자리로
@@ -51,12 +55,6 @@ struct CardFlip: View {
                         }
                 )
             }
-//            Button {
-//                UserDefaults.standard.set(true, forKey: "isFirstTutorial")
-//            } label: {
-//                Text("처음 실행 세팅")
-//                    .padding(.bottom, 600)
-//            }
         }
     }
 }
