@@ -13,31 +13,46 @@ struct WordView: View {
     @State var showingNotification = false
     
     var body: some View {
-        ZStack {
-            Spacer()
-            // View 이름으로 바꿀 것
-            Text(UserName + "의 단어장")
-                .padding()
-            
+        HStack {
             // 설정버튼
             Button {
                 showingNotification = true
             } label: {
-                Image(systemName: "bell")
+                Image(systemName: "bell.fill")
+                    .resizable()
+                    .frame(width: 20, height: 22, alignment: .center)
+                    .foregroundColor(.black)
+                // 알림이 있을 때
+                Circle()
+                    .frame(width: 12, height: 12, alignment: .center)
+                    .foregroundColor(.green)
+                    .padding(.leading, -15)
+                    .padding(.top, -15)
             }
-            .padding(.leading, UIScreen.main.bounds.width * 0.75)
+            .padding(.leading, 16)
             .sheet(isPresented: $showingNotification) {
                 NotificationView()
             }
             
+            Spacer()
+            // View 이름으로 바꿀 것
+            Text(UserName + "의 단어장")
+                .font(.custom("GodoM", size: 20))
+            
+            Spacer()
+            
             Button {
                 self.showingSettings.toggle()
             } label: {
-                Image(systemName: "gearshape")
+                Image(systemName: "gearshape.fill")
+                    .resizable()
+                    .frame(width: 22, height: 22, alignment: .center)
+                    .foregroundColor(.black)
             }
-            .padding(.leading, UIScreen.main.bounds.width * 0.9)
+            .padding(.trailing, 16)
             .fullScreenCover(isPresented: $showingSettings, content: {SettingView()})
         }
+        .padding(.top, 16)
     }
 }
 // 상단 탭 바

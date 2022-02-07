@@ -60,7 +60,7 @@ class NotificationManager {
 //            let request = UNNotificationRequest(identifier: notification.id, content: content, trigger: trigger)
             
             // 일단 누르면 알림이 가게끔 만듦.
-            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: (30*60), repeats: false)
+            let trigger = UNTimeIntervalNotificationTrigger(timeInterval: 60, repeats: false)
             let request = UNNotificationRequest(identifier: notification.id, content: content, trigger: trigger)
             
             UNUserNotificationCenter.current().add(request) { error in

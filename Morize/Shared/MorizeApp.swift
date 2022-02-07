@@ -23,6 +23,7 @@ struct MorizeApp: App {
             LoginView()
                 .environmentObject(self.userAuth)
                 .environmentObject(self.kakaoAuth)
+//            SettingView()
         }
     }
 }
