@@ -11,6 +11,10 @@ struct CardFlip: View {
     @ObservedObject var viewModel = CardFlipVM()
     var body: some View {
         ZStack{
+            Color(hex: "eaefe5")
+                .ignoresSafeArea()
+                .zIndex(-10)
+            
             ForEach(0..<viewModel.getWordsCount()) { i in
                 Flashcard(front: {
                     Text(viewModel.words[i])
@@ -25,22 +29,21 @@ struct CardFlip: View {
                         viewModel.dragOffset[i] = CGSize(width: 0, height: 0)
                     }
                 }))
-                .onTapGesture {
-                    withAnimation {
-                        viewModel.flipped[i].toggle()
-                    }
-                }
+                .disabled(viewModel.currentIdx == i ? false : true)
                 .gesture(
                     DragGesture()
                         .onChanged { gesture in
-                            viewModel.dragOffset[i] = CGSize(width: 0, height: gesture.translation.height)
+                            if viewModel.currentIdx == i {
+                                viewModel.dragOffset[i] = CGSize(width: 0, height: gesture.translation.height)
+                            }
                         }
                         .onEnded { gesture in
                             // 위로 넘어가는 애니메이션
                             if viewModel.dragOffset[i].height <= -100 {
-                                viewModel.currentIdx += 1
+                                print(viewModel.currentIdx)
+                                viewModel.currentIdx = (viewModel.currentIdx + 1) % 4
                                 withAnimation(Animation.easeOut(duration: 0.2)) {
-                                    viewModel.dragOffset[i] = CGSize(width: 0, height: -250)
+                                    viewModel.dragOffset[i] = CGSize(width: 0, height: -200)
                                 }
                             }
                             // 제자리로

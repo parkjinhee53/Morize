@@ -80,4 +80,15 @@ class AppDelegate: ObservableObject {
             }
         }
     }
+    
+    func kakaosignout(){
+        UserApi.shared.logout {(error) in
+            if let error = error {
+                print(error)
+            }
+            else {
+                print("logout() success.")
+            }
+        }
+    }
 }

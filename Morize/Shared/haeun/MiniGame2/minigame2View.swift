@@ -1,20 +1,20 @@
 //
-//  NotificationView.swift
+//  minigame2View.swift
 //  Morize (iOS)
 //
-//  Created by 김하은 on 2022/01/14.
+//  Created by 김하은 on 2022/02/02.
 //
 
 import SwiftUI
 
-struct NotificationView: View {
+struct minigame2View: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-struct NotificationView_Previews: PreviewProvider {
+struct minigame2View_Previews: PreviewProvider {
     static var previews: some View {
-        NotificationView()
+        minigame2View()
     }
 }
