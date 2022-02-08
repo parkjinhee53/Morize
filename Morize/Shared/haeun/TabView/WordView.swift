@@ -14,31 +14,45 @@ struct WordView: View {
     
     var body: some View {
         HStack {
-            Spacer()
-            // View 이름으로 바꿀 것
-            Text(UserName + "의 단어장")
-            Spacer()
-            
             // 설정버튼
-            Button(action: {
-                // View 보여주기
+            Button {
                 showingNotification = true
+            } label: {
+                Image(systemName: "bell.fill")
+                    .resizable()
+                    .frame(width: 20, height: 22, alignment: .center)
+                    .foregroundColor(.black)
+                // 알림이 있을 때
+                Circle()
+                    .frame(width: 12, height: 12, alignment: .center)
+                    .foregroundColor(.green)
+                    .padding(.leading, -15)
+                    .padding(.top, -15)
             }
-            ){
-                Image(systemName: "bell")
-            }.sheet(isPresented: $showingNotification) {
+            .padding(.leading, 16)
+            .sheet(isPresented: $showingNotification) {
                 NotificationView()
             }
             
-            // 설정버튼
-            Button(action: {
-                // View 보여주기
+            Spacer()
+            // View 이름으로 바꿀 것
+            Text(UserName + "의 단어장")
+                .font(.custom("GodoM", size: 20))
+            
+            Spacer()
+            
+            Button {
                 self.showingSettings.toggle()
-            })
-            {
-                Image(systemName: "gearshape")
-            }.fullScreenCover(isPresented: $showingSettings ,content: {SettingView()})
+            } label: {
+                Image(systemName: "gearshape.fill")
+                    .resizable()
+                    .frame(width: 22, height: 22, alignment: .center)
+                    .foregroundColor(.black)
+            }
+            .padding(.trailing, 16)
+            .fullScreenCover(isPresented: $showingSettings, content: {SettingView()})
         }
+        .padding(.top, 16)
     }
 }
 // 상단 탭 바
