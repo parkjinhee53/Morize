@@ -12,7 +12,6 @@ struct HighWord: View {
     @State var highlist = high().sortedArray()
     
     var body: some View {
-        NavigationView {
             ScrollView {
                 ForEach(0..<highlist.count, id:\.self) { h in
                     HStack{
@@ -36,8 +35,6 @@ struct HighWord: View {
                     .padding()
                 }
             }
-            .navigationBarItems(trailing: EditButton())
-        }
     }
     
     // 삭제 
