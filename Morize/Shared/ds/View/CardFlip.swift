@@ -18,9 +18,12 @@ struct CardFlip: View {
             ForEach(0..<viewModel.getWordsCount()) { i in
                 Flashcard(front: {
                     Text(viewModel.words[i])
+                        .foregroundColor(.black)
                 }, back: {
                     Text(viewModel.means[i])
-                }, color: viewModel.getColor(index: i), click: true, tutorial: false)
+                        .foregroundColor(.black)
+                }, color: Color.white, click: true, tutorial: false)
+                .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: i == viewModel.currentIdx ? 0.15 : 0), radius: 8, x: 0, y: 0)
                 .offset(viewModel.dragOffset[i])
                 .zIndex(viewModel.zIndexs[i])
                 .modifier(AnimatableModifierDouble(bindedValue: viewModel.dragOffset[i].height, completion: {
