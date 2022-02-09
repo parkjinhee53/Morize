@@ -42,7 +42,6 @@ struct Flashcard<Front, Back>: View where Front: View, Back: View {
         .frame(width: 300, height: 180, alignment: .center)
         .background(color)
         .cornerRadius(8)
-        .shadow(color: Color(.sRGB, red: 0, green: 0, blue: 0, opacity: 0.15), radius: 15, x: 0, y: 0)
         .onTapGesture {
             if canClick{
                 flipFlashcard()
