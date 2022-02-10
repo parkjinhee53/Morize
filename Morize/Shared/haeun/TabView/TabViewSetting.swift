@@ -19,34 +19,39 @@ struct TabViewSetting: View {
                 // 하단 TabView
                 TabView {
                     CardMemory()
-                        .tabItem{ Text("Word")  }
+                        .tabItem{
+                            Image(systemName: "character.book.closed.fill")
+                        }
                         .navigationBarHidden(false)
                     
                     if level == "middle" {
                         MiddleWord()
                             .tabItem{
-                                Text("List")
+                                Image(systemName: "book")
                             }
                             .navigationBarHidden(false)
                     }
                     else if level == "high" {
                         HighWord()
                             .tabItem{
-                                Text("List")
+                                Image(systemName: "book")
                             }
                             .navigationBarHidden(false)
                     }
                     else if level == "toeic" {
                         ToeicWord()
                             .tabItem{
-                                Text("List")
+                                Image(systemName: "book")
                             }
                             .navigationBarHidden(false)
                     }
                     MiniGameView()
-                        .tabItem{ Text("Game") }
+                        .tabItem{
+                            Image(systemName: "gamecontroller.fill")
+                        }
                         .navigationBarHidden(false)
                 }
+                .accentColor(.black)
             }
         }
     }
