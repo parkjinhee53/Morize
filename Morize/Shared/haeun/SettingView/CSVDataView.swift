@@ -58,15 +58,15 @@ struct CSVDataView: View {
                     
                     Spacer()
                 }
-                List{
-                    Text("도움말")
-                    Section(header: Text("가져오는 방법")){
-                        Text("dddddd")
-                    }
-                    Section(header: Text("내보내는 방법")){
-                        Text("dddddd")
-                    }
-                }.listStyle(SidebarListStyle())
+//                List{
+//                    Text("도움말")
+//                    Section(header: Text("가져오는 방법")){
+//                        Text("dddddd")
+//                    }
+//                    Section(header: Text("내보내는 방법")){
+//                        Text("dddddd")
+//                    }
+//                }.listStyle(SidebarListStyle())
         }
     }
 }
