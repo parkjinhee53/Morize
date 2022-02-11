@@ -9,6 +9,7 @@ import SwiftUI
 
 struct TabViewSetting: View {
     @Binding var level: String
+    
     var body: some View {
         ZStack {
             Color(hex: "eaefe5")
@@ -59,5 +60,22 @@ struct TabViewSetting: View {
 struct TabViewSetting_Previews: PreviewProvider {
     static var previews: some View {
         TabViewSetting(level: .constant("middle"))
+    }
+}
+
+extension UITabBarController {
+    override open func viewDidAppear(_ animated: Bool) {
+        super.viewDidAppear(animated)
+        let appearance = UITabBarAppearance()
+        appearance.configureWithOpaqueBackground()
+
+        appearance.backgroundColor = .white
+        appearance.shadowImage = UIImage()
+        appearance.shadowColor = .gray
+
+//        appearance.stackedLayoutAppearance.normal.iconColor = .black
+        appearance.stackedLayoutAppearance.normal.titleTextAttributes = [NSAttributedString.Key.foregroundColor: UIColor.black]
+
+        self.tabBar.standardAppearance = appearance
     }
 }
