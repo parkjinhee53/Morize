@@ -20,7 +20,7 @@ class MiniGame2VM: ObservableObject{
     // 4*4, 6*6 게임 레벨 변수
     var level = 4
 
-    // 문제 배열
+    // 알파벳 배열
     var alphabet: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     
     // 정답 딕셔너리
