@@ -106,7 +106,8 @@
 		B7DB0BA2279E85A2002A8C2C /* fox.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0BA1279E85A2002A8C2C /* fox.json */; };
 		B7F323E927B0FAD300E22A2F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F323E827B0FAD300E22A2F /* File.swift */; };
 		F70721CD27967F7200C6E549 /* MorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70721CC27967F7200C6E549 /* MorizeTests.swift */; };
-
+  
+  
 		F787461527969B330010A47C /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
 		F787461627969B4F0010A47C /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F787461727969B520010A47C /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
@@ -120,10 +121,8 @@
 		F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD5279E413600557E45 /* ListViewModel.swift */; };
 		F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
 		F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
-
 		F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
 		F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
-
 		F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F7AB7CF1278BF91E0039989F /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CF2278BF92A0039989F /* Toeic.swift */; };
@@ -135,7 +134,6 @@
 		F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
-/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2A3017D1277AA5FC00369590 /* PBXContainerItemProxy */ = {
@@ -237,12 +235,10 @@
 		D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CA27967F7200C6E549 /* MorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CC27967F7200C6E549 /* MorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorizeTests.swift; sourceTree = "<group>"; };
-
+		F79D02EA279003EF008A43D6 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
 		F7A63AD5279E413600557E45 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		F7A63AD8279E416E00557E45 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-
 		F79D02EA279003EF008A43D6 /* Timmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timmer.swift; sourceTree = "<group>"; };
-
 		F7AB7CE6278BB42D0039989F /* Middle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middle.swift; sourceTree = "<group>"; };
 		F7AB7CEF278BF91E0039989F /* High.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = High.swift; sourceTree = "<group>"; };
 		F7AB7CF2278BF92A0039989F /* Toeic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toeic.swift; sourceTree = "<group>"; };
@@ -473,9 +469,7 @@
 				F7AE674927867D5F007D62FF /* MiddleWord.swift */,
 				F7AE674C27867F0E007D62FF /* HighWord.swift */,
 				F7AE674F27867F3B007D62FF /* ToeicWord.swift */,
-
 				F79D02EA279003EF008A43D6 /* Timmer.swift */,
-
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -921,10 +915,8 @@
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
 				2A7DB83727AAB9BA004D4C0D /* ComposeMailData.swift in Sources */,
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
-
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
-
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
@@ -950,11 +942,8 @@
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
 				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
-
 				2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */,
-
 				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
-
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -965,10 +954,8 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
-
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
-
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
 				F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */,
