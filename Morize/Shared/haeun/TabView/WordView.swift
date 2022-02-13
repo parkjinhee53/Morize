@@ -30,9 +30,7 @@ struct WordView: View {
                     .padding(.top, -15)
             }
             .padding(.leading, 16)
-            .sheet(isPresented: $showingNotification) {
-                NotificationView()
-            }
+            .fullScreenCover(isPresented: $showingNotification, content: {NotificationView()})
             
             Spacer()
             // View 이름으로 바꿀 것
