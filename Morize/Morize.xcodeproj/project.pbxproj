@@ -94,11 +94,16 @@
 		B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F471278BD7050040E6A4 /* CardMemory.swift */; };
 		B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = B71FAB1F277D41EC00957C5B /* Extension+Color.swift */; };
 		B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */; };
+		B744F14927BA8E7B00A2D1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */; };
+		B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */; };
+		B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */; };
+		B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */; };
 		B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B45BD278D96E2001140D9 /* Extension+View.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
+		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */; };
 		B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */; };
@@ -106,23 +111,19 @@
 		B7DB0BA2279E85A2002A8C2C /* fox.json in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0BA1279E85A2002A8C2C /* fox.json */; };
 		B7F323E927B0FAD300E22A2F /* File.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7F323E827B0FAD300E22A2F /* File.swift */; };
 		F70721CD27967F7200C6E549 /* MorizeTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F70721CC27967F7200C6E549 /* MorizeTests.swift */; };
-  
-  
 		F787461527969B330010A47C /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
 		F787461627969B4F0010A47C /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F787461727969B520010A47C /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F787461827969BA40010A47C /* WordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F5278530150005865D /* WordView.swift */; };
 		F787461927969BA80010A47C /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
-		F787461A27969BAA0010A47C /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C86B279113D40096B483 /* NotificationView.swift */; };
+		F787461A27969BAA0010A47C /* (null) in Sources */ = {isa = PBXBuildFile; };
 		F787461B27969BB00010A47C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A6A37922786727B0068DD0B /* AppDelegate.swift */; };
-		F79D02EB279003EF008A43D6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timer.swift */; };
-		F79D02EC279003EF008A43D6 /* Timer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timer.swift */; };
+		F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
+		F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
 		F7A63AD6279E413600557E45 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD5279E413600557E45 /* ListViewModel.swift */; };
 		F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD5279E413600557E45 /* ListViewModel.swift */; };
 		F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
 		F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
-		F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
-		F79D02EC279003EF008A43D6 /* Timmer.swift in Sources */ = {isa = PBXBuildFile; fileRef = F79D02EA279003EF008A43D6 /* Timmer.swift */; };
 		F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F7AB7CF1278BF91E0039989F /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CF2278BF92A0039989F /* Toeic.swift */; };
@@ -134,6 +135,7 @@
 		F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
+/* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
 		2A3017D1277AA5FC00369590 /* PBXContainerItemProxy */ = {
@@ -221,6 +223,8 @@
 		B713F471278BD7050040E6A4 /* CardMemory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardMemory.swift; sourceTree = "<group>"; };
 		B71FAB1F277D41EC00957C5B /* Extension+Color.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+Color.swift"; sourceTree = "<group>"; };
 		B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierDouble.swift; sourceTree = "<group>"; };
+		B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTest.swift; sourceTree = "<group>"; };
 		B74B45BD278D96E2001140D9 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
@@ -235,10 +239,9 @@
 		D08E710964522B10A991B9E6 /* Pods_Morize__macOS_.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_Morize__macOS_.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CA27967F7200C6E549 /* MorizeTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MorizeTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		F70721CC27967F7200C6E549 /* MorizeTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MorizeTests.swift; sourceTree = "<group>"; };
-		F79D02EA279003EF008A43D6 /* Timer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timer.swift; sourceTree = "<group>"; };
+		F79D02EA279003EF008A43D6 /* Timmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timmer.swift; sourceTree = "<group>"; };
 		F7A63AD5279E413600557E45 /* ListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListViewModel.swift; sourceTree = "<group>"; };
 		F7A63AD8279E416E00557E45 /* ListModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListModel.swift; sourceTree = "<group>"; };
-		F79D02EA279003EF008A43D6 /* Timmer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Timmer.swift; sourceTree = "<group>"; };
 		F7AB7CE6278BB42D0039989F /* Middle.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Middle.swift; sourceTree = "<group>"; };
 		F7AB7CEF278BF91E0039989F /* High.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = High.swift; sourceTree = "<group>"; };
 		F7AB7CF2278BF92A0039989F /* Toeic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Toeic.swift; sourceTree = "<group>"; };
@@ -255,6 +258,9 @@
 			files = (
 				B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */,
 				7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */,
+				B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */,
+				B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */,
+				B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -293,6 +299,7 @@
 		2A3017B6277AA5F900369590 = {
 			isa = PBXGroup;
 			children = (
+				B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */,
 				2AEA85B4278FCAB600BE96D9 /* Morize (iOS).entitlements */,
 				2A6A3791278671880068DD0B /* Morize--iOS--Info.plist */,
 				2A3017BB277AA5FA00369590 /* Shared */,
@@ -463,7 +470,6 @@
 				B70968292782CDB0001B0884 /* WelcomeView.swift */,
 				B70968272782CDB0001B0884 /* TimerGame.swift */,
 				B70968282782CDB0001B0884 /* ResultsView.swift */,
-				F79D02EA279003EF008A43D6 /* Timer.swift */,
 				B70968262782CDB0001B0884 /* BottomText.swift */,
 				F7F7E130278415BB008FF432 /* WordList.swift */,
 				F7AE674927867D5F007D62FF /* MiddleWord.swift */,
@@ -497,9 +503,18 @@
 			path = Utill;
 			sourceTree = "<group>";
 		};
+		B744F14D27BA944200A2D1F8 /* Firebase */ = {
+			isa = PBXGroup;
+			children = (
+				B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */,
+			);
+			path = Firebase;
+			sourceTree = "<group>";
+		};
 		B774CEFA277BECAD00A9B368 /* ds */ = {
 			isa = PBXGroup;
 			children = (
+				B744F14D27BA944200A2D1F8 /* Firebase */,
 				B712F9C8277D6DD500E7A3BD /* Animation */,
 				B774CEFF277BECEF00A9B368 /* Model */,
 				B774CEFE277BECE200A9B368 /* ViewModel */,
@@ -611,6 +626,9 @@
 			name = "Morize (iOS)";
 			packageProductDependencies = (
 				B712F9C6277D6D8700E7A3BD /* Lottie */,
+				B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */,
+				B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */,
+				B7984F0927BA990A00231CFE /* FirebaseFirestore */,
 			);
 			productName = "Morize (iOS)";
 			productReference = 2A3017C3277AA5FC00369590 /* Morize.app */;
@@ -730,6 +748,7 @@
 			mainGroup = 2A3017B6277AA5F900369590;
 			packageReferences = (
 				B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
+				B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2A3017C4277AA5FC00369590 /* Products */;
 			projectDirPath = "";
@@ -751,6 +770,7 @@
 			files = (
 				B713F46F278BC7E60040E6A4 /* click.json in Resources */,
 				B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */,
+				B744F14927BA8E7B00A2D1F8 /* GoogleService-Info.plist in Resources */,
 				B713F470278BC7E60040E6A4 /* arrow.json in Resources */,
 				B7DB0BA2279E85A2002A8C2C /* fox.json in Resources */,
 				B7DB0BA0279E82D6002A8C2C /* plant.json in Resources */,
@@ -881,7 +901,7 @@
 				B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				F7A63AD6279E413600557E45 /* ListViewModel.swift in Sources */,
 				F787461827969BA40010A47C /* WordView.swift in Sources */,
-				F787461A27969BAA0010A47C /* NotificationView.swift in Sources */,
+				F787461A27969BAA0010A47C /* (null) in Sources */,
 				2AD8C8682791126C0096B483 /* WordSelectView.swift in Sources */,
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
 				2A7DB83A27AAC511004D4C0D /* MiniGame2View.swift in Sources */,
@@ -909,6 +929,7 @@
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
+				B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */,
 				F787461B27969BB00010A47C /* AppDelegate.swift in Sources */,
@@ -942,8 +963,6 @@
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
 				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
-				2A903A6A27969B9200DB774A /* NotificationView.swift in Sources */,
-				B70968322782CDB0001B0884 /* MyTimer.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -955,7 +974,6 @@
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
-				B70968332782CDB0001B0884 /* MyTimer.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
 				F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */,
@@ -1470,6 +1488,14 @@
 				minimumVersion = 3.0.0;
 			};
 		};
+		B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 8.0.0;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -1477,6 +1503,21 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
+		};
+		B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseDatabase;
+		};
+		B7984F0927BA990A00231CFE /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};

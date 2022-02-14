@@ -8,6 +8,7 @@
 import SwiftUI
 import MessageUI
 
+
 struct SettingView: View {
     @Environment(\.presentationMode) var presentationmode
     @State private var mailData = ComposeMailData(subject: "Morize 개발자에게",
