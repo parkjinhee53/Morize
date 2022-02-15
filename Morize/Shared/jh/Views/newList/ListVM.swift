@@ -6,6 +6,8 @@
 //
 
 import Foundation
+import Firebase
+import FirebaseFirestore
 
 class ListVM {
     var wordList: [[String]] = [
@@ -15,5 +17,22 @@ class ListVM {
     
     func wordListCount() -> Int {
         return wordList.count
+    }
+    
+    func saveToDB(word: String, mean: String) {
+        let arr = [word, mean, "명사"]
+        wordList.append(arr)
+        
+        let db = Firestore.firestore()
+        
+        db.collection("users").document("ds").setData([
+            String(wordList.count): arr
+        ], merge: true) { err in
+            if let err = err {
+                print(err)
+            } else {
+                print("Success")
+            }
+        }
     }
 }

@@ -108,6 +108,8 @@
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
 		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
+		B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
+		B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */; };
 		B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */; };
@@ -236,6 +238,7 @@
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		B777307B27851FD800123DAD /* CardFlipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipVM.swift; sourceTree = "<group>"; };
+		B7B3D66927BBE8D900B4A741 /* ListAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddView.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 		B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoB.ttf; sourceTree = "<group>"; };
 		B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
@@ -523,6 +526,7 @@
 			children = (
 				B7498E3327BBDA3200C46344 /* ListView.swift */,
 				B7498E3727BBDF8000C46344 /* ListVM.swift */,
+				B7B3D66927BBE8D900B4A741 /* ListAddView.swift */,
 			);
 			path = newList;
 			sourceTree = "<group>";
@@ -978,6 +982,7 @@
 				2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
+				B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */,
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
 				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
@@ -992,6 +997,7 @@
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
 				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
+				B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */,
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
