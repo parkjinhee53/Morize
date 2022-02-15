@@ -13,22 +13,25 @@ struct FirebaseTest: View {
     let db = Firestore.firestore()
     var body: some View {
         Button {
-            var ref: DocumentReference? = nil
-            ref = db.collection("users").addDocument(data: [
-                "first": "Ada",
-                "last": "Lovelace",
-                "born": 1815
+            // document (사용자) 이름으로 단어장 배열이 저장됨
+            db.collection("users").document("ds").setData([
+                "words": [
+                    "apple",
+                    "banana",
+                    "carrot",
+                    "desert"
+                ]
             ]) { err in
                 if let err = err {
-                    print("Error adding document: \(err)")
+                    print(err)
                 } else {
-                    print("Document added with ID: \(ref!.documentID)")
+                    print("Success")
                 }
             }
         } label: {
             Text("데이터 추가")
         }
-
+        
     }
 }
 

@@ -98,6 +98,10 @@
 		B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */; };
 		B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */; };
 		B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */; };
+		B7498E3427BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
+		B7498E3527BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
+		B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
+		B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
 		B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B45BD278D96E2001140D9 /* Extension+View.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
@@ -225,6 +229,8 @@
 		B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatableModifierDouble.swift; sourceTree = "<group>"; };
 		B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FirebaseTest.swift; sourceTree = "<group>"; };
+		B7498E3327BBDA3200C46344 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
+		B7498E3727BBDF8000C46344 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		B74B45BD278D96E2001140D9 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
@@ -467,6 +473,7 @@
 		B70968242782CDB0001B0884 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				B7498E3627BBDF6D00C46344 /* newList */,
 				B70968292782CDB0001B0884 /* WelcomeView.swift */,
 				B70968272782CDB0001B0884 /* TimerGame.swift */,
 				B70968282782CDB0001B0884 /* ResultsView.swift */,
@@ -509,6 +516,15 @@
 				B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */,
 			);
 			path = Firebase;
+			sourceTree = "<group>";
+		};
+		B7498E3627BBDF6D00C46344 /* newList */ = {
+			isa = PBXGroup;
+			children = (
+				B7498E3327BBDA3200C46344 /* ListView.swift */,
+				B7498E3727BBDF8000C46344 /* ListVM.swift */,
+			);
+			path = newList;
 			sourceTree = "<group>";
 		};
 		B774CEFA277BECAD00A9B368 /* ds */ = {
@@ -938,6 +954,7 @@
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
+				B7498E3427BBDA3300C46344 /* ListView.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
@@ -950,6 +967,7 @@
 				2A3017E4277AA5FC00369590 /* MorizeApp.swift in Sources */,
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */,
+				B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */,
 				2A903A6427969B4100DB774A /* Middle.swift in Sources */,
 				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
@@ -973,6 +991,7 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
+				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
@@ -1008,6 +1027,7 @@
 				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
+				B7498E3527BBDA3300C46344 /* ListView.swift in Sources */,
 				F7F7E132278415BB008FF432 /* WordList.swift in Sources */,
 				F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */,
 				2A903A5E27969AF900DB774A /* AppDelegate.swift in Sources */,
