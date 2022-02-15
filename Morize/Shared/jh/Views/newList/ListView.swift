@@ -28,7 +28,8 @@ struct Row: View {
 }
 
 struct ListView: View {
-    var vm = ListVM()
+    @ObservedObject var vm = ListVM()
+    
     var body: some View {
         NavigationView {
             SwiftUI.List {
@@ -38,7 +39,7 @@ struct ListView: View {
             }
             .toolbar {
                 NavigationLink(destination: {
-                    ListAddView()
+                    ListAddView(vm: vm)
                 }, label: {
                     Image(systemName: "plus")
                 })

@@ -8,10 +8,11 @@
 import SwiftUI
 
 struct ListAddView: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @State var name: String = ""
     @State var mean: String = ""
     
-    var vm = ListVM()
+    @ObservedObject var vm: ListVM
     
     var body: some View {
         VStack {
@@ -30,9 +31,10 @@ struct ListAddView: View {
             Spacer()
             
             Button {
+                vm.wordList.append([name, mean, "명사"])
                 // 클릭 시 단어 리스트에 반영하고 db에 올리기
                 vm.saveToDB(word: name, mean: mean)
-                
+                self.presentationMode.wrappedValue.dismiss()
             } label: {
                 Text("단어 생성하기")
                     .frame(width: UIScreen.main.bounds.width - 100)
@@ -48,8 +50,8 @@ struct ListAddView: View {
     }
 }
 
-struct ListAddView_Previews: PreviewProvider {
-    static var previews: some View {
-        ListAddView()
-    }
-}
+//struct ListAddView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ListAddView()
+//    }
+//}

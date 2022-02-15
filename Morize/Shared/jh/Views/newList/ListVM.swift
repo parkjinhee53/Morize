@@ -9,8 +9,8 @@ import Foundation
 import Firebase
 import FirebaseFirestore
 
-class ListVM {
-    var wordList: [[String]] = [
+class ListVM: ObservableObject {
+    @Published var wordList: [[String]] = [
         ["apple", "사과", "명사"],
         ["banana", "바나나", "명사"]
     ]
@@ -21,7 +21,7 @@ class ListVM {
     
     func saveToDB(word: String, mean: String) {
         let arr = [word, mean, "명사"]
-        wordList.append(arr)
+//        wordList.append(arr)
         
         let db = Firestore.firestore()
         
