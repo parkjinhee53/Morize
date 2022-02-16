@@ -47,6 +47,12 @@ struct MiniGame2View: View {
             }
         }.padding()
         GroupBox{
+            // mapboard를 클릭하면(숫자를 클릭하면) 그에 맞는 한글 뜻이 나와야 됨.
+            for i in range viewM.answer{
+                Text(i)
+            }
+        }
+        GroupBox{
             ForEach(0..<2){ i in
                 HStack{
                     ForEach(0..<6){ j in
