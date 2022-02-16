@@ -19,21 +19,25 @@ class MiniGame2VM: ObservableObject{
     // MARK: - 변수
     // 4-5단어, 6-7단어 게임 레벨 변수
     var level = 4
-
+    
     // 알파벳 배열
     var alphabet: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     
+    // 클릭해야 할 알파벳 배열 2*6
+    @Published var alphaboard: [Int] = [0, 0, 0, 0, 0, 0,
+                                        0, 0, 0, 0, 0, 0]
+    
     // 게임보드 배열 4*5, 0: 비어있는 상태, 1: 작성해야되는 칸, 2: 정답을 맞춘 상태,
-    var gameboard: [Int] = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
-                            0, 0, 0, 0, 1, 1, 1, 1, 0, 0,
-                            0, 0, 0, 0, 1, 0, 0, 1, 0, 0,
-                            0, 1, 1, 1, 1, 0, 0, 1, 0, 0,
-                            0, 1, 0, 0, 0, 0, 1, 1, 1, 1,
-                            0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
-                            0, 1, 1, 1, 1, 0, 1, 0, 0, 0,
-                            0, 0, 0, 0, 1, 0, 1, 0, 0, 0,
-                            0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
-                            0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
+    @Published var gameboard: [Int] = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+                                       0, 0, 0, 0, 1, 1, 1, 1, 0, 0,
+                                       0, 0, 0, 0, 1, 0, 0, 1, 0, 0,
+                                       0, 1, 1, 1, 1, 0, 0, 1, 0, 0,
+                                       0, 1, 0, 0, 0, 0, 1, 1, 1, 1,
+                                       0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
+                                       0, 1, 1, 1, 1, 0, 1, 0, 0, 0,
+                                       0, 0, 0, 0, 1, 0, 1, 0, 0, 0,
+                                       0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+                                       0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
     
     // 정답 딕셔너리
     var answer: [String: String] = ["사과": "apple",
@@ -50,10 +54,12 @@ class MiniGame2VM: ObservableObject{
     // 체크 배열
     var checkArray: [Int] = []
     
-    // 버튼 disable 배열, 0: 기본상태 1: 대기상태, 2: 사라진상태
-    @Published var buttonArray: [Int] = [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+    var checkboard: [Int] = []
+    
     // MARK: - 메소드
-    // 선택된 2개의 단어가 맞는지 체크
+    // 선택된 단어가 맞는지 체크
+    // 선택하는 단어가 4개이상이면 반복문으로 돌려야되는지?
+    
     func check(a: String, b: String) -> Bool{
         if answer[a] == b || answer[b] == a{
             print("맞았어요!")
@@ -72,7 +78,8 @@ class MiniGame2VM: ObservableObject{
     
     // 게임이 끝났는지 검사
     func checkEnd() -> Bool {
-        if buttonArray.contains(1) || buttonArray.contains(0) {
+        // 게임보드에 2와 0이 있으면 게임 완료
+        if gameboard.contains(2) || gameboard.contains(0) {
             return false
         }
         return true
@@ -80,8 +87,15 @@ class MiniGame2VM: ObservableObject{
     
     // 게임 리셋
     func resetGame() {
-        for i in 0..<buttonArray.count {
-            buttonArray[i] = 0
-        }
+        gameboard = [1, 1, 1, 1, 1, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 1, 1, 1, 1, 0, 0,
+                     0, 0, 0, 0, 1, 0, 0, 1, 0, 0,
+                     0, 1, 1, 1, 1, 0, 0, 1, 0, 0,
+                     0, 1, 0, 0, 0, 0, 1, 1, 1, 1,
+                     0, 1, 0, 0, 0, 0, 1, 0, 0, 0,
+                     0, 1, 1, 1, 1, 0, 1, 0, 0, 0,
+                     0, 0, 0, 0, 1, 0, 1, 0, 0, 0,
+                     0, 0, 0, 0, 1, 0, 0, 0, 0, 0,
+                     0, 0, 0, 0, 1, 0, 0, 0, 0, 0]
     }
 }
