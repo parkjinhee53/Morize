@@ -7,6 +7,7 @@
 
 import SwiftUI
 import Combine
+import Lottie
 
 struct MiniGame2View: View {
     @ObservedObject var viewM = MiniGame2VM()
@@ -19,15 +20,24 @@ struct MiniGame2View: View {
                     HStack{
                         ForEach(0..<10){ j in
                             Button {
-                                if viewM.gameboard[i] == 1 {
-                                    viewM.checkboard = [i]
+                                // 단어별로 숫자를 다르게 해서 저장 -> 보드의 숫자를 다르게
+                                // 단어를 저장해서 1자리에 넣기 
+                                if viewM.gameboard[i][j] == 1 {
+                                    // 입력가능
+                                    
+                                }
+                                else if viewM.gameboard[i][j] == 2 {
+                                    // 정답
+                                }
+                                else {
+                                    // 벽
                                 }
                             }
                         label: {
                             Text("")
                                 .frame(width: 30, height: 30, alignment: .center)
                         }
-                        .background(viewM.gameboard[(i * 2) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
+                        .background(viewM.gameboard[i][j] == 1 ? Color(hex: "4E9F3D") : Color.clearColor)
                         .font(.system(size: 10, weight: .bold, design: .monospaced))
                         .foregroundColor(.black)
                         .cornerRadius(9)
