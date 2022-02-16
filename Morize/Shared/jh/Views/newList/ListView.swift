@@ -29,7 +29,9 @@ struct Row: View {
 
 struct ListView: View {
     @ObservedObject var vm = ListVM()
-    
+    init() {
+        vm.wordList = WordStorage.shared.wordArr
+    }
     var body: some View {
         NavigationView {
             SwiftUI.List {

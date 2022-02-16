@@ -10,10 +10,9 @@ import Firebase
 import FirebaseFirestore
 
 class ListVM: ObservableObject {
-    @Published var wordList: [[String]] = [
-        ["apple", "사과", "명사"],
-        ["banana", "바나나", "명사"]
-    ]
+    private let db = Firestore.firestore()
+    
+    @Published var wordList: [[String]] = []
     
     func wordListCount() -> Int {
         return wordList.count
@@ -22,8 +21,6 @@ class ListVM: ObservableObject {
     func saveToDB(word: String, mean: String) {
         let arr = [word, mean, "명사"]
 //        wordList.append(arr)
-        
-        let db = Firestore.firestore()
         
         db.collection("users").document("ds").setData([
             String(wordList.count): arr
