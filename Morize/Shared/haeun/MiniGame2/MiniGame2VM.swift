@@ -23,6 +23,8 @@ class MiniGame2VM: ObservableObject{
     // 알파벳 배열
     var alphabet: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"]
     
+    var word: [String] = ["A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z", "apple", "ebon", "coin", "code", "edit", "tell", "like", "bear", "bill", "bark"]
+    
     // 클릭해야 할 알파벳 배열 2*6
     @Published var alphaboard: [Int] = [0, 0, 0, 0, 0, 0,
                                         0, 0, 0, 0, 0, 0]

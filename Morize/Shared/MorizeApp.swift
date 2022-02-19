@@ -20,10 +20,9 @@ struct MorizeApp: App {
     }
     var body: some Scene {
         WindowGroup {
-//            LoginView()
-//                .environmentObject(self.userAuth)
-//                .environmentObject(self.kakaoAuth)
-            MiniGame2View()
+            LoginView()
+                .environmentObject(self.userAuth)
+                .environmentObject(self.kakaoAuth)
         }
     }
 }

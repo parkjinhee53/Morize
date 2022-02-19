@@ -9,13 +9,16 @@ import SwiftUI
 
 struct NotificationView: View {
     var body: some View {
-        Text("알림설정")
-        List {
-            Section(header: Text("알림 설정")){
-                GroupedRow()
-            }
-        }.listStyle(GroupedListStyle)
-//            Button(action: { self.setNotification() }) {
+        VStack{
+            Text("알림설정")
+            SwiftUI.List{
+                Section(header: Text("알림 설정")){
+                    GroupedRow()
+                }
+            }.listStyle(.grouped)
+                
+        }
+            //            Button(action: { self.setNotification() }) {
 //                Text("알림을 보내주세요")
 //            }
     }
