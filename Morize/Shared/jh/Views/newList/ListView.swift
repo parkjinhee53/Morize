@@ -30,13 +30,17 @@ struct Row: View {
 struct ListView: View {
     @ObservedObject var vm = ListVM()
     init() {
-        vm.wordList = WordStorage.shared.wordArr
+        vm.wordList = Array(WordStorage.shared.wordArr.keys)
+        vm.meanList = Array(WordStorage.shared.wordArr.values)
     }
     var body: some View {
         NavigationView {
             SwiftUI.List {
-                ForEach(vm.wordList, id: \.self) { i in
-                    Row(word: i[0], mean: i[1], partsOfSpeech: i[2])
+                ForEach(vm.wordList.indices, id: \.self) { index in
+                    Row(word: vm.wordList[index], mean: vm.meanList[index], partsOfSpeech: "명사")
+                }
+                .onDelete { (indexSet) in
+                    self.vm.deleteToDB(index: indexSet)
                 }
             }
             .toolbar {

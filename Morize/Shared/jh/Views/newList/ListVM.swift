@@ -10,26 +10,28 @@ import Firebase
 import FirebaseFirestore
 
 class ListVM: ObservableObject {
-    private let db = Firestore.firestore()
+    var ref: DatabaseReference!
     
-    @Published var wordList: [[String]] = []
+    @Published var wordList: [String] = []
+    @Published var meanList: [String] = []
     
     func wordListCount() -> Int {
         return wordList.count
     }
     
     func saveToDB(word: String, mean: String) {
-        let arr = [word, mean, "명사"]
-//        wordList.append(arr)
+        ref = Database.database().reference()
+        wordList.append(word)
+        meanList.append(mean)
         
-        db.collection("users").document("ds").setData([
-            String(wordList.count): arr
-        ], merge: true) { err in
-            if let err = err {
-                print(err)
-            } else {
-                print("Success")
-            }
-        }
+        ref.child("users/ds/\(word)").setValue("\(mean)")
+    }
+    
+    func deleteToDB(index: IndexSet) {
+        ref = Database.database().reference()
+        
+        ref.child("users/ds/\(wordList[index.first!])").removeValue()
+        wordList.remove(atOffsets: index)
+        meanList.remove(atOffsets: index)
     }
 }

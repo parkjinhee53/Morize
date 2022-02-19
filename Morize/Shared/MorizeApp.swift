@@ -21,25 +21,28 @@ struct MorizeApp: App {
     
     init() {
         FirebaseApp.configure() // 코드 추가
+        getFirebaseDB()
         UserDefaults.standard.set("로그인", forKey: "UserName")
         KakaoSDK.initSDK(appKey: "67ccb1551072d256d2a37ebef4b61bfd")
-        getFirebaseDB()
     }
     
     func getFirebaseDB() {
-        let db = Firestore.firestore()
-        // db이름의 로그인한 사람 도큐먼트
-        let docRef = db.collection("users").document("ds")
-
-        docRef.getDocument { (document, error) in
-            if let document = document, document.exists {
-                let dataDescription = document.data()
-                let temp: [[String]] = (dataDescription?.values.map{ $0 as! [String] })!
-                wordStorage.wordArr = temp
-            } else {
-                print("Document does not exist")
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        
+        //        ref.child("users").child("ds").setValue(["apple": "사과"])
+        //        ref.child("users/ds/banana").setValue("바나나")
+        
+        ref.child("users/ds").getData(completion:  { error, snapshot in
+            guard error == nil else {
+                print(error!.localizedDescription)
+                return
             }
-        }
+            let arr = snapshot.value as? [String: String] ?? [:]
+            wordStorage.wordArr = arr
+            print(arr)
+        });
     }
     
     var body: some Scene {

@@ -31,7 +31,6 @@ struct ListAddView: View {
             Spacer()
             
             Button {
-                vm.wordList.append([name, mean, "명사"])
                 // 클릭 시 단어 리스트에 반영하고 db에 올리기
                 vm.saveToDB(word: name, mean: mean)
                 self.presentationMode.wrappedValue.dismiss()

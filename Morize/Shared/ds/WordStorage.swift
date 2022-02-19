@@ -9,8 +9,8 @@ import SwiftUI
 
 class WordStorage: ObservableObject {
     static let shared = WordStorage()
-
-    @Published var wordArr: [[String]] = []
+    
+    @Published var wordArr: [String: String] = [:]
 
     private init() { }
 }
