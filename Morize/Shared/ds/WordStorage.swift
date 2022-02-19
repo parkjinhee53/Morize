@@ -12,5 +12,16 @@ class WordStorage: ObservableObject {
     
     @Published var wordArr: [String: String] = [:]
 
+    func getRandomWords(count: Int) -> [String: String] {
+        var tempDic: [String: String] = [:]
+        for _ in 0...count {
+            let tempEle = wordArr.randomElement()
+            if tempDic[tempEle!.key] == nil {
+                tempDic[tempEle!.key] = tempEle!.value
+            }
+        }
+        return tempDic
+    }
+    
     private init() { }
 }

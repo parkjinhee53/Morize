@@ -22,7 +22,6 @@ class CardFlipVM: ObservableObject {
     var means: [String] = ["사과", "바나나", "당근", "디저트"]
     var zindexsArr: [[Double]] = []
     func setZindexArr() {
-        print(zindexsArr)
         for _ in 0..<words.count {
             zindexsArr.append(zIndexs)
             let temp = zIndexs.popLast()!

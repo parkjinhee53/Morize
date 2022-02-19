@@ -41,7 +41,6 @@ struct MorizeApp: App {
             }
             let arr = snapshot.value as? [String: String] ?? [:]
             wordStorage.wordArr = arr
-            print(arr)
         });
     }
     
