@@ -55,6 +55,8 @@
 		2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
 		2ABE296A27BE010100EDA3E3 /* MiniGame2B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */; };
 		2ABE296C27BE06AC00EDA3E3 /* MiniGame2BVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */; };
+		2ABE296E27C3E3F600EDA3E3 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296D27C3E3F600EDA3E3 /* test.swift */; };
+		2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */; };
 		2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86B27B023E300858CAE /* NotificationView.swift */; };
 		2AD2D86E27B0243800858CAE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86D27B0243800858CAE /* NotificationManager.swift */; };
 		2AD2D87027B20DC500858CAE /* MiniGame2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */; };
@@ -188,6 +190,8 @@
 		2A7DB83927AAC511004D4C0D /* MiniGame2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2View.swift; sourceTree = "<group>"; };
 		2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2B.swift; sourceTree = "<group>"; };
 		2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2BVM.swift; sourceTree = "<group>"; };
+		2ABE296D27C3E3F600EDA3E3 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		2AD2D86B27B023E300858CAE /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2AD2D86D27B0243800858CAE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2VM.swift; sourceTree = "<group>"; };
@@ -388,6 +392,8 @@
 				2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */,
 				2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */,
 				2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */,
+				2ABE296D27C3E3F600EDA3E3 /* test.swift */,
+				2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */,
 			);
 			path = MiniGame2;
 			sourceTree = "<group>";
@@ -884,6 +890,7 @@
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
 				2A7DB83A27AAC511004D4C0D /* MiniGame2View.swift in Sources */,
 				2A3AF3A7279E39180020DC74 /* iCloudDataView.swift in Sources */,
+				2ABE296E27C3E3F600EDA3E3 /* test.swift in Sources */,
 				2AD8C86A279113BF0096B483 /* SettingView.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				2AD2D87027B20DC500858CAE /* MiniGame2VM.swift in Sources */,
@@ -917,6 +924,7 @@
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
+				2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */,

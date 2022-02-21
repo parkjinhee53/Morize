@@ -12,79 +12,29 @@ struct MiniGame2B: View {
     // viewModel
     @ObservedObject var viewM = MiniGame2BVM()
     // timer
-//    @State private var time: Double = 0
-    @State var countt: Int = 0
-    var counto: Int = 10
+    //    @State private var time: Double = 0
+    @State private var sliderValue: Double = 0
+    private let maxValue: Double = 10
     
     // animation paused
     @State private var isPaused: Bool = true
     @State var connectedTimer: Cancellable? = nil
-
-//    let answerCount: (correct: Int, incorrect: Int)
+    
+    //    let answerCount: (correct: Int, incorrect: Int)
     
     var body: some View {
         ZStack{
             VStack{
-                // 타이머
-//                Text("\(String(format: "%.2f", time))")
-//                    .font(.system(size: 30, weight: .bold, design: .monospaced))
-//                    .onAppear {
-//                        self.instantiateTimer()
-//                    }
-//                    .onReceive(timer) { _ in
-//                        time += 0.01
-//                    }
-                ZStack{
-                    TimerTrack()
-                    TimerBar(counterr: countt, countToo: counto)
-                }.onReceive(timerr) { time in
-                    if (self.countt < self.counto) {
-                        self.countt += 1
-                    }
-                }
+                // 타이머 바
+                TimerBar(value: $sliderValue.wrappedValue,
+                         maxValue: self.maxValue,
+                         foregroundColor: .green)
+                    .frame(height: 10)
+                // countdown 타이머로 바꾸기 (지금은 슬라이드)
+                Slider(value: $sliderValue,
+                       in: 0...maxValue)
                 
-                ForEach(0..<viewM.level){ i in
-                    HStack{
-                        ForEach(0..<viewM.level){ j in
-                            Button {
-                                if viewM.checkArray.isEmpty{
-                                    viewM.add(pos: (i * 4) + (j))
-                                    viewM.buttonArray[(i * 4) + (j)] = 1
-                                    print(viewM.checkArray)
-                                }
-                                else{
-                                    // 단어와 뜻이 맞으면 disable
-                                    if viewM.check(a: viewM.wordFour[viewM.checkArray[0]], b: viewM.wordFour[(i * 4) + (j)]) {
-                                        viewM.buttonArray[(i * 4) + (j)] = 2
-                                        viewM.buttonArray[viewM.checkArray[0]] = 2
-                                        // 게임이 끝났는지 체크
-                                        if viewM.checkEnd(){
-                                            cancelTimer()
-                                            self.isPaused = false
-                                        }
-                                    }
-                                    // 단어와 뜻이 다르면
-                                    else {
-                                        for i in viewM.checkArray{
-                                            viewM.buttonArray[i] = 0
-                                        }
-                                    }
-                                    viewM.checkArray.removeAll()
-                                }
-                            } label: {
-                                Text(viewM.wordFour[(i * 4) + (j)])
-                                    .frame(width: 70, height: 70, alignment: .center)
-                            }
-                            .background(viewM.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
-                            .font(.system(size: 12, weight: .bold, design: .monospaced))
-                            .foregroundColor(.black)
-                            .cornerRadius(8)
-                            // Disable Animation
-                            .scaleEffect(viewM.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
-                            .animation(.easeInOut(duration: 0.3), value: viewM.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
-                        }
-                    }
-                }
+                
                 Text("몇초 만에 완료!")
                     .padding(.top, 50)
                 HStack{
@@ -103,55 +53,60 @@ struct MiniGame2B: View {
 }
 
 // MARK: - Timer Bar
+// Minigame2BVM으로 옮기기
 
 // 타이머 로직
 let timerr = Timer
     .publish(every: 1, on: .main, in: .common)
     .autoconnect()
 
-//
-struct TimerTrack: View {
-    var body: some View {
-        Capsule()
-            .fill(Color.clear)
-            .frame(width: 250, height: 250)
-            .overlay(
-                Capsule().stroke(Color.gray, lineWidth: 15)
-            )
-    }
-}
-
+// 타이머 바 costum
 struct TimerBar: View {
-    var counterr: Int
-    var countToo: Int
+    private let value: Double
+    private let maxValue: Double
+    private let backgroundEnabled: Bool
+    private let backgroundColor: Color
+    private let foregroundColor: Color
+    
+    init(value: Double,
+         maxValue: Double,
+         backgroundEnabled: Bool = true,
+         backgroundColor: Color = Color(UIColor(red: 245/255,
+                                                green: 245/255,
+                                                blue: 245/255,
+                                                alpha: 1.0)),
+         foregroundColor: Color = Color.black) {
+        self.value = value
+        self.maxValue = maxValue
+        self.backgroundEnabled = backgroundEnabled
+        self.backgroundColor = backgroundColor
+        self.foregroundColor = foregroundColor
+    }
     
     var body: some View {
-        Capsule()
-            .fill(Color.clear)
-            .frame(width: 250, height: 250)
-            .overlay(
-                Capsule().trim(from:0, to: progress())
-                    .stroke(
-                        style: StrokeStyle(
-                            lineWidth: 15,
-                            lineCap: .round,
-                            lineJoin:.round
-                        )
-                    )
-                    .foregroundColor(
-                        (completed() ? Color.yellow : Color.green)
-                    ).animation(
-                        .easeInOut(duration: 0.2)
-                    )
-            )
+        ZStack {
+            GeometryReader { geometryReader in
+                
+                if self.backgroundEnabled {
+                    Capsule()
+                        .foregroundColor(self.backgroundColor)
+                }
+                
+                Capsule()
+                    .frame(width: self.progress(value: self.value,
+                                                maxValue: self.maxValue,
+                                                width: geometryReader.size.width)) // 5
+                    .foregroundColor(self.foregroundColor) // 6
+                    .animation(.easeIn) // 7
+            }
+        }
     }
     
-    func completed() -> Bool {
-        return progress() == 1
-    }
-    
-    func progress() -> CGFloat {
-        return (CGFloat(counterr) / CGFloat(countToo))
+    private func progress(value: Double,
+                          maxValue: Double,
+                          width: CGFloat) -> CGFloat {
+        let percentage = value / maxValue
+        return width *  CGFloat(percentage)
     }
 }
 
