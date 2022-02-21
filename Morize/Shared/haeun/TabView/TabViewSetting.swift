@@ -25,27 +25,33 @@ struct TabViewSetting: View {
                         }
                         .navigationBarHidden(false)
                     
-                    if level == "middle" {
-                        MiddleWord()
-                            .tabItem{
-                                Image(systemName: "book")
-                            }
-                            .navigationBarHidden(false)
-                    }
-                    else if level == "high" {
-                        HighWord()
-                            .tabItem{
-                                Image(systemName: "book")
-                            }
-                            .navigationBarHidden(false)
-                    }
-                    else if level == "toeic" {
-                        ToeicWord()
-                            .tabItem{
-                                Image(systemName: "book")
-                            }
-                            .navigationBarHidden(false)
-                    }
+                    ListView()
+                        .tabItem{
+                            Image(systemName: "book")
+                       }
+                       .navigationBarHidden(false)
+                    
+//                    if level == "middle" {
+//                        MiddleWord()
+//                            .tabItem{
+//                                Image(systemName: "book")
+//                            }
+//                            .navigationBarHidden(false)
+//                    }
+//                    else if level == "high" {
+//                        HighWord()
+//                            .tabItem{
+//                                Image(systemName: "book")
+//                            }
+//                            .navigationBarHidden(false)
+//                    }
+//                    else if level == "toeic" {
+//                        ToeicWord()
+//                            .tabItem{
+//                                Image(systemName: "book")
+//                            }
+//                            .navigationBarHidden(false)
+//                    }
                     MiniGameView()
                         .tabItem{
                             Image(systemName: "gamecontroller.fill")
