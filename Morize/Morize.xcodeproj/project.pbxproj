@@ -103,11 +103,14 @@
 		B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
 		B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
 		B74B45BE278D96E2001140D9 /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = B74B45BD278D96E2001140D9 /* Extension+View.swift */; };
+		B765AAB727BD4176000F249C /* WordStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = B765AAB627BD4176000F249C /* WordStorage.swift */; };
 		B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CEFB277BECC900A9B368 /* MiniGame.swift */; };
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
 		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
+		B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
+		B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */; };
 		B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */; };
@@ -232,10 +235,12 @@
 		B7498E3327BBDA3200C46344 /* ListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListView.swift; sourceTree = "<group>"; };
 		B7498E3727BBDF8000C46344 /* ListVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListVM.swift; sourceTree = "<group>"; };
 		B74B45BD278D96E2001140D9 /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
+		B765AAB627BD4176000F249C /* WordStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordStorage.swift; sourceTree = "<group>"; };
 		B774CEFB277BECC900A9B368 /* MiniGame.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame.swift; sourceTree = "<group>"; };
 		B774CF00277BEDD500A9B368 /* MiniGameVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameVM.swift; sourceTree = "<group>"; };
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		B777307B27851FD800123DAD /* CardFlipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipVM.swift; sourceTree = "<group>"; };
+		B7B3D66927BBE8D900B4A741 /* ListAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddView.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 		B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoB.ttf; sourceTree = "<group>"; };
 		B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
@@ -523,6 +528,7 @@
 			children = (
 				B7498E3327BBDA3200C46344 /* ListView.swift */,
 				B7498E3727BBDF8000C46344 /* ListVM.swift */,
+				B7B3D66927BBE8D900B4A741 /* ListAddView.swift */,
 			);
 			path = newList;
 			sourceTree = "<group>";
@@ -535,6 +541,7 @@
 				B774CEFF277BECEF00A9B368 /* Model */,
 				B774CEFE277BECE200A9B368 /* ViewModel */,
 				B774CEFD277BECDA00A9B368 /* View */,
+				B765AAB627BD4176000F249C /* WordStorage.swift */,
 			);
 			path = ds;
 			sourceTree = "<group>";
@@ -934,6 +941,7 @@
 				2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */,
 				B71FAB20277D41EC00957C5B /* Extension+Color.swift in Sources */,
 				B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */,
+				B765AAB727BD4176000F249C /* WordStorage.swift in Sources */,
 				2A903A5F27969B1000DB774A /* High.swift in Sources */,
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				F787461727969B520010A47C /* High.swift in Sources */,
@@ -978,6 +986,7 @@
 				2A903A6D27969B9900DB774A /* MiniGameView.swift in Sources */,
 				2A3C59EE278526BD0005865D /* LoginView.swift in Sources */,
 				B713F472278BD7050040E6A4 /* CardMemory.swift in Sources */,
+				B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */,
 				2AEA85BA2790058C00BE96D9 /* AppleDelegate.swift in Sources */,
 				2A3AF3A1279E38B00020DC74 /* AccountManagement.swift in Sources */,
 				2AD3595D278E8AAB00A13F5B /* UserInfo.swift in Sources */,
@@ -992,6 +1001,7 @@
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
 				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
+				B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */,
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
