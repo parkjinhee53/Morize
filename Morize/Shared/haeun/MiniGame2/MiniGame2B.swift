@@ -10,89 +10,78 @@ import Combine
 
 struct MiniGame2B: View {
     // viewModel
-    @ObservedObject var viewModel = MiniGame2BVM()
+    @ObservedObject var viewM = MiniGame2BVM()
     // timer
-    @State private var time: Double = 0
+//    @State private var time: Double = 0
+    @State var countt: Int = 0
+    var counto: Int = 10
+    
     // animation paused
     @State private var isPaused: Bool = true
     @State var connectedTimer: Cancellable? = nil
+
+//    let answerCount: (correct: Int, incorrect: Int)
     
-    @State var timer: Timer.TimerPublisher = Timer.publish(every: 1, on: .main, in: .common)
-    
-    func instantiateTimer() {
-        self.timer = Timer.publish(every: 0.01, on: .main, in: .common)
-        self.connectedTimer = self.timer.connect()
-        return
-    }
-    
-    func cancelTimer() {
-        self.connectedTimer?.cancel()
-        return
-    }
-    
-    func resetCounter() {
-        self.time = 0
-        return
-    }
-    
-    func restartTimer() {
-        self.time = 0
-        self.cancelTimer()
-        self.instantiateTimer()
-        return
-    }
     var body: some View {
         ZStack{
-            LottieView(filename: "fireworks", isPaused: isPaused)
-                .frame(width: 400, height: 400, alignment: .center)
             VStack{
-                Text("\(String(format: "%.2f", time))")
-                    .font(.system(size: 30, weight: .bold, design: .monospaced))
-                    .onAppear {
-                        self.instantiateTimer()
+                // 타이머
+//                Text("\(String(format: "%.2f", time))")
+//                    .font(.system(size: 30, weight: .bold, design: .monospaced))
+//                    .onAppear {
+//                        self.instantiateTimer()
+//                    }
+//                    .onReceive(timer) { _ in
+//                        time += 0.01
+//                    }
+                ZStack{
+                    TimerTrack()
+                    TimerBar(counterr: countt, countToo: counto)
+                }.onReceive(timerr) { time in
+                    if (self.countt < self.counto) {
+                        self.countt += 1
                     }
-                    .onReceive(timer) { _ in
-                        time += 0.01
-                    }
-                ForEach(0..<viewModel.level){ i in
+                }
+                
+                ForEach(0..<viewM.level){ i in
                     HStack{
-                        ForEach(0..<viewModel.level){ j in
+                        ForEach(0..<viewM.level){ j in
                             Button {
-                                if viewModel.checkArray.isEmpty{
-                                    viewModel.add(pos: (i * 4) + (j))
-                                    viewModel.buttonArray[(i * 4) + (j)] = 1
-                                    print(viewModel.checkArray)
+                                if viewM.checkArray.isEmpty{
+                                    viewM.add(pos: (i * 4) + (j))
+                                    viewM.buttonArray[(i * 4) + (j)] = 1
+                                    print(viewM.checkArray)
                                 }
                                 else{
                                     // 단어와 뜻이 맞으면 disable
-                                    if viewModel.check(a: viewModel.wordFour[viewModel.checkArray[0]], b: viewModel.wordFour[(i * 4) + (j)]) {
-                                        viewModel.buttonArray[(i * 4) + (j)] = 2
-                                        viewModel.buttonArray[viewModel.checkArray[0]] = 2
+                                    if viewM.check(a: viewM.wordFour[viewM.checkArray[0]], b: viewM.wordFour[(i * 4) + (j)]) {
+                                        viewM.buttonArray[(i * 4) + (j)] = 2
+                                        viewM.buttonArray[viewM.checkArray[0]] = 2
                                         // 게임이 끝났는지 체크
-                                        if viewModel.checkEnd(){
+                                        if viewM.checkEnd(){
                                             cancelTimer()
                                             self.isPaused = false
                                         }
                                     }
                                     // 단어와 뜻이 다르면
                                     else {
-                                        for i in viewModel.checkArray{
-                                            viewModel.buttonArray[i] = 0
+                                        for i in viewM.checkArray{
+                                            viewM.buttonArray[i] = 0
                                         }
                                     }
-                                    viewModel.checkArray.removeAll()
+                                    viewM.checkArray.removeAll()
                                 }
                             } label: {
-                                Text(viewModel.wordFour[(i * 4) + (j)])
+                                Text(viewM.wordFour[(i * 4) + (j)])
                                     .frame(width: 70, height: 70, alignment: .center)
                             }
-                            .background(viewModel.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
+                            .background(viewM.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
                             .font(.system(size: 12, weight: .bold, design: .monospaced))
                             .foregroundColor(.black)
                             .cornerRadius(8)
                             // Disable Animation
-                            .scaleEffect(viewModel.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
-                            .animation(.easeInOut(duration: 0.3), value: viewModel.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
+                            .scaleEffect(viewM.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
+                            .animation(.easeInOut(duration: 0.3), value: viewM.buttonArray[(i * 4) + (j)] == 2 ? 0 : 1)
                         }
                     }
                 }
@@ -103,15 +92,66 @@ struct MiniGame2B: View {
                         // 애니메이션 중단
                         self.isPaused = true
                         // 퍼즐 재생성
-                        viewModel.resetGame()
-                        // 시간 초기화
-                        restartTimer()
+                        viewM.resetGame()
                     } label: {
                         Text("다시하기")
                     }
                 }
             }
         }
+    }
+}
+
+// MARK: - Timer Bar
+
+// 타이머 로직
+let timerr = Timer
+    .publish(every: 1, on: .main, in: .common)
+    .autoconnect()
+
+//
+struct TimerTrack: View {
+    var body: some View {
+        Capsule()
+            .fill(Color.clear)
+            .frame(width: 250, height: 250)
+            .overlay(
+                Capsule().stroke(Color.gray, lineWidth: 15)
+            )
+    }
+}
+
+struct TimerBar: View {
+    var counterr: Int
+    var countToo: Int
+    
+    var body: some View {
+        Capsule()
+            .fill(Color.clear)
+            .frame(width: 250, height: 250)
+            .overlay(
+                Capsule().trim(from:0, to: progress())
+                    .stroke(
+                        style: StrokeStyle(
+                            lineWidth: 15,
+                            lineCap: .round,
+                            lineJoin:.round
+                        )
+                    )
+                    .foregroundColor(
+                        (completed() ? Color.yellow : Color.green)
+                    ).animation(
+                        .easeInOut(duration: 0.2)
+                    )
+            )
+    }
+    
+    func completed() -> Bool {
+        return progress() == 1
+    }
+    
+    func progress() -> CGFloat {
+        return (CGFloat(counterr) / CGFloat(countToo))
     }
 }
 
