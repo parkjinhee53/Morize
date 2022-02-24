@@ -49,7 +49,8 @@ struct MorizeApp: App {
             LoginView()
                 .environmentObject(self.userAuth)
                 .environmentObject(self.kakaoAuth)
-            //            FirebaseTest()
+//            MiniGame2B(currentPage: .constant(Pages.GamePage),savePhotos:.constant(false))
+            
         }
     }
 }
