@@ -30,7 +30,7 @@ struct GroupedRow: View {
         manager.requestPermission()
         manager.addNotification(title: "Morize")
         manager.schedule()
-//        manager.scheduleNotifications()
+        //        manager.scheduleNotifications()
     }
     
     @State var toggleIsOn: Bool = false
