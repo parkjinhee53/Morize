@@ -53,6 +53,10 @@
 		2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59FB278530510005865D /* MiniGameView.swift */; };
 		2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2A3C59F9278530410005865D /* WordListView.swift */; };
 		2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD8C8672791126C0096B483 /* WordSelectView.swift */; };
+		2ABE296A27BE010100EDA3E3 /* MiniGame2B.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */; };
+		2ABE296C27BE06AC00EDA3E3 /* MiniGame2BVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */; };
+		2ABE296E27C3E3F600EDA3E3 /* test.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296D27C3E3F600EDA3E3 /* test.swift */; };
+		2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */; };
 		2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86B27B023E300858CAE /* NotificationView.swift */; };
 		2AD2D86E27B0243800858CAE /* NotificationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86D27B0243800858CAE /* NotificationManager.swift */; };
 		2AD2D87027B20DC500858CAE /* MiniGame2VM.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */; };
@@ -197,6 +201,10 @@
 		2A6A37922786727B0068DD0B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2A7DB83627AAB9BA004D4C0D /* ComposeMailData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ComposeMailData.swift; sourceTree = "<group>"; };
 		2A7DB83927AAC511004D4C0D /* MiniGame2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2View.swift; sourceTree = "<group>"; };
+		2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2B.swift; sourceTree = "<group>"; };
+		2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2BVM.swift; sourceTree = "<group>"; };
+		2ABE296D27C3E3F600EDA3E3 /* test.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = test.swift; sourceTree = "<group>"; };
+		2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Vocabulary.swift; sourceTree = "<group>"; };
 		2AD2D86B27B023E300858CAE /* NotificationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationView.swift; sourceTree = "<group>"; };
 		2AD2D86D27B0243800858CAE /* NotificationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationManager.swift; sourceTree = "<group>"; };
 		2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGame2VM.swift; sourceTree = "<group>"; };
@@ -406,6 +414,10 @@
 				B7D7607D277D985600D50AFA /* minigame2.swift */,
 				2A7DB83927AAC511004D4C0D /* MiniGame2View.swift */,
 				2AD2D86F27B20DC500858CAE /* MiniGame2VM.swift */,
+				2ABE296927BE010100EDA3E3 /* MiniGame2B.swift */,
+				2ABE296B27BE06AC00EDA3E3 /* MiniGame2BVM.swift */,
+				2ABE296D27C3E3F600EDA3E3 /* test.swift */,
+				2ABE296F27C3E48D00EDA3E3 /* Vocabulary.swift */,
 			);
 			path = MiniGame2;
 			sourceTree = "<group>";
@@ -929,6 +941,7 @@
 				B70968382782CDB0001B0884 /* BottomText.swift in Sources */,
 				2A7DB83A27AAC511004D4C0D /* MiniGame2View.swift in Sources */,
 				2A3AF3A7279E39180020DC74 /* iCloudDataView.swift in Sources */,
+				2ABE296E27C3E3F600EDA3E3 /* test.swift in Sources */,
 				2AD8C86A279113BF0096B483 /* SettingView.swift in Sources */,
 				B774CEFC277BECC900A9B368 /* MiniGame.swift in Sources */,
 				2AD2D87027B20DC500858CAE /* MiniGame2VM.swift in Sources */,
@@ -936,6 +949,7 @@
 				B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */,
 				2A903A6027969B1B00DB774A /* ToeicWord.swift in Sources */,
 				2A903A5D27969AE600DB774A /* AppDelegate.swift in Sources */,
+				2ABE296A27BE010100EDA3E3 /* MiniGame2B.swift in Sources */,
 				2A3AF3B0279E39EB0020DC74 /* SendEmail.swift in Sources */,
 				B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */,
 				2AD2D86C27B023E300858CAE /* NotificationView.swift in Sources */,
@@ -964,11 +978,13 @@
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				B7498E3427BBDA3300C46344 /* ListView.swift in Sources */,
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
+				2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
 				2A3C59FA278530410005865D /* WordListView.swift in Sources */,
 				B713F46C278BC3C70040E6A4 /* Flashcard.swift in Sources */,
 				B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2AD35961278E9DEA00A13F5B /* GoogleDelegate.swift in Sources */,
+				2ABE296C27BE06AC00EDA3E3 /* MiniGame2BVM.swift in Sources */,
 				2A3C5A00278534510005865D /* TabViewSetting.swift in Sources */,
 				B7F323E927B0FAD300E22A2F /* File.swift in Sources */,
 				B777307A27851BA000123DAD /* CardFlip.swift in Sources */,
