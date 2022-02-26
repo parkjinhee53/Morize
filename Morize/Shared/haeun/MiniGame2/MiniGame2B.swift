@@ -244,7 +244,6 @@ struct MiniGame2B: View {
 }
 
 // MARK: - Timer Bar
-// Minigame2BVM으로 옮기기
 
 // 타이머 로직
 let timerr = Timer
