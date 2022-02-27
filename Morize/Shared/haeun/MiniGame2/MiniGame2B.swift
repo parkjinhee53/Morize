@@ -23,6 +23,8 @@ struct MiniGame2B: View {
     @ObservedObject var viewM = MiniGame2BVM()
     // timer
     //    @State private var time: Double = 0
+    
+    // sliderValue를 타이머값으로 넣어야될 듯
     @State private var sliderValue: Double = 0
     private let maxValue: Double = 10
     
@@ -95,10 +97,12 @@ struct MiniGame2B: View {
         ZStack{
             VStack{
                 // 타이머 바
+                // value를 타이머 값으로
                 TimerBar(value: $sliderValue.wrappedValue,
                          maxValue: self.maxValue,
                          foregroundColor: .green)
                     .frame(height: 10)
+                
                 // countdown 타이머로 바꾸기 (지금은 슬라이드)
                 Slider(value: $sliderValue,
                        in: 0...maxValue)
