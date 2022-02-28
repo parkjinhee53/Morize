@@ -16,13 +16,16 @@ struct Row: View {
         HStack {
             Text(word)
                 .frame(width: 80, alignment: .leading)
+                .font(.custom("NotoSansKR-Regular", size: 15))
             Text(partsOfSpeech)
                 .foregroundColor(.white)
                 .padding(EdgeInsets(top: 0, leading: 10, bottom: 0, trailing: 10))
-                .background(Color.init(hex: "#b7b1f5"))
+                .background(Color.init(hex: "#008E00"))
                 .cornerRadius(8)
+                .font(.custom("NotoSansKR-Regular", size: 15))
             Text(mean)
                 .padding(.leading, 30)
+                .font(.custom("NotoSansKR-Regular", size: 15))
         }
     }
 }
@@ -32,6 +35,8 @@ struct ListView: View {
     init() {
         vm.wordList = Array(WordStorage.shared.wordArr.keys)
         vm.meanList = Array(WordStorage.shared.wordArr.values)
+        
+        UITableView.appearance().backgroundColor = .white // Uses UIColor
     }
     var body: some View {
         NavigationView {
@@ -43,13 +48,16 @@ struct ListView: View {
                     self.vm.deleteToDB(index: indexSet)
                 }
             }
+            .padding(.top, -50)
+            .background(.white)
             .toolbar {
                 NavigationLink(destination: {
                     ListAddView(vm: vm)
                 }, label: {
-                    Image(systemName: "plus")
+//                    Image(systemName: "plus")
+                    Text("추가")
                 })
-                .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 10))
+                    .padding(EdgeInsets(top: 0, leading: 0, bottom: 0, trailing: 15))
             }
             .navigationBarTitleDisplayMode(.inline)
         }

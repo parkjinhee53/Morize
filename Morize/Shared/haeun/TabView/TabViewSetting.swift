@@ -35,7 +35,6 @@ struct TabViewSetting: View {
                     .navigationBarHidden(false)
             }
             .accentColor(Color(hex: "008E00"))
-            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
         }
     }
 }
