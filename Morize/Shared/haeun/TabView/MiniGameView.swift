@@ -21,7 +21,7 @@ struct MiniGameView: View {
                     Text("카드 맞추기")
                 }
                 .padding()
-                NavigationLink(destination: minigame2()) {
+                NavigationLink(destination: MiniGame2B(currentPage: .constant(Pages.GamePage),savePhotos:.constant(false))) {
                     Text("가로세로 낱말")
                 }
                 .padding()
