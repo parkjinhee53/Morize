@@ -11,55 +11,31 @@ struct TabViewSetting: View {
     @Binding var level: String
     
     var body: some View {
-        ZStack {
-            Color(hex: "eaefe5")
-                .ignoresSafeArea()
-            VStack {
-                // 상단 TabView
-                WordView()
-                // 하단 TabView
-                TabView {
-                    CardMemory()
-                        .tabItem{
-                            Image(systemName: "character.book.closed.fill")
-                        }
-                        .navigationBarHidden(false)
-                    
-                    ListView()
-                        .tabItem{
-                            Image(systemName: "book")
-                       }
-                       .navigationBarHidden(false)
-                    
-//                    if level == "middle" {
-//                        MiddleWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-//                    else if level == "high" {
-//                        HighWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-//                    else if level == "toeic" {
-//                        ToeicWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-                    MiniGameView()
-                        .tabItem{
-                            Image(systemName: "gamecontroller.fill")
-                        }
-                        .navigationBarHidden(false)
-                }
-                .accentColor(.black)
+        VStack {
+            // 상단 TabView
+            WordView()
+            // 하단 TabView
+            TabView {
+                CardMemory()
+                    .tabItem{
+                        Image(systemName: "note.text")
+                    }
+                    .navigationBarHidden(false)
+                
+                ListView()
+                    .tabItem{
+                        Image(systemName: "book")
+                   }
+                   .navigationBarHidden(false)
+                
+                MiniGameView()
+                    .tabItem{
+                        Image(systemName: "gamecontroller")
+                    }
+                    .navigationBarHidden(false)
             }
+            .accentColor(Color(hex: "008E00"))
+            .padding(EdgeInsets(top: 0, leading: 15, bottom: 0, trailing: 15))
         }
     }
 }

@@ -117,6 +117,7 @@ struct LoginView: View {
                                         Text("카카오계정으로 시작하기")
                                             .foregroundColor(.black)
                                             .padding(.leading, UIScreen.main.bounds.width * 0.05)
+                                            .font(.custom("NotoSansKR-Medium", size: 16))
                                     }
                                 }
                             }
@@ -133,6 +134,7 @@ struct LoginView: View {
                                         Text("구글 계정으로 시작하기")
                                             .foregroundColor(.black)
                                             .padding(.leading, UIScreen.main.bounds.width * 0.05)
+                                            .font(.custom("NotoSansKR-Medium", size: 16))
                                     }
                                 }
                             }
