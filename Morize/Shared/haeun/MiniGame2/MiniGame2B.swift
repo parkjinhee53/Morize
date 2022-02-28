@@ -26,13 +26,17 @@ struct MiniGame2B: View {
     
     // sliderValue를 타이머값으로 넣어야될 듯
     @State private var sliderValue: Double = 0
-    private let maxValue: Double = 10
+    private let maxValue: Double = 5
+    
+    @State private var timeRemaining:Double = 5
+    private let minValue: Double = 0
+    let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     
     // animation paused
     @State private var isPaused: Bool = true
     @State var connectedTimer: Cancellable? = nil
     
-    //    let answerCount: (correct: Int, incorrect: Int)
+//    let answerCount: (correct: Int, incorrect: Int)
     
     
     @Binding var currentPage:Pages
@@ -65,7 +69,7 @@ struct MiniGame2B: View {
     
     func initialGame(){
         vocabularyOrder.removeAll()
-        //playRoundCount = 0
+//        playRoundCount = 0
         for i in 0...vocabularyDataSet.count-1{
             vocabularyOrder.append(i)
         }
@@ -96,17 +100,8 @@ struct MiniGame2B: View {
     var body: some View {
         ZStack{
             VStack{
-                // 타이머 바
-                // value를 타이머 값으로
-                TimerBar(value: $sliderValue.wrappedValue,
-                         maxValue: self.maxValue,
-                         foregroundColor: .green)
-                    .frame(height: 10)
-                
                 // countdown 타이머로 바꾸기 (지금은 슬라이드)
-                Slider(value: $sliderValue,
-                       in: 0...maxValue)
-                
+                // Slider(value: $sliderValue, in: 0...maxValue)
                 ZStack{
                     if(roundChanging){
                         Text("Round \(roundCount+0)")
@@ -114,10 +109,17 @@ struct MiniGame2B: View {
                     }
                     else{
                         VStack{
+                            // 타이머 바
+                            // value를 타이머 값으로
+                            TimerBar(value: timeRemaining,
+                                     maxValue: self.maxValue,
+                                     foregroundColor: .green)
+                                .frame(height: 10)
+                            
                             // 뜻과 예문 나타내는 설명창
                             HStack{
                                 Rectangle()
-                                    .size(width: 10, height: 10)
+                                    .size(width: 50, height: 50)
                             }.padding(30)
                             
                             // 글자를 선택하는 부분
@@ -242,6 +244,11 @@ struct MiniGame2B: View {
                 .onDisappear{
         //            self.timer?.invalidate()
                 }
+                .onReceive(timer) { time in
+                    if timeRemaining > 0 {
+                        timeRemaining -= 1
+                    }
+                }
             }
         }
     }
@@ -300,6 +307,8 @@ struct TimerBar: View {
                           maxValue: Double,
                           width: CGFloat) -> CGFloat {
         let percentage = value / maxValue
+        print(percentage)
+        print(width)
         return width *  CGFloat(percentage)
     }
 }
