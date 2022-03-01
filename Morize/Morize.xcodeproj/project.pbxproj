@@ -74,8 +74,6 @@
 		B70968312782CDB0001B0884 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968212782CDB0001B0884 /* Question.swift */; };
 		B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968232782CDB0001B0884 /* GameViewModel.swift */; };
 		B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968232782CDB0001B0884 /* GameViewModel.swift */; };
-		B70968362782CDB0001B0884 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968252782CDB0001B0884 /* MainTabView.swift */; };
-		B70968372782CDB0001B0884 /* MainTabView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968252782CDB0001B0884 /* MainTabView.swift */; };
 		B70968382782CDB0001B0884 /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968262782CDB0001B0884 /* BottomText.swift */; };
 		B70968392782CDB0001B0884 /* BottomText.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968262782CDB0001B0884 /* BottomText.swift */; };
 		B709683A2782CDB0001B0884 /* TimerGame.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968272782CDB0001B0884 /* TimerGame.swift */; };
@@ -84,8 +82,6 @@
 		B709683D2782CDB0001B0884 /* ResultsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968282782CDB0001B0884 /* ResultsView.swift */; };
 		B709683E2782CDB0001B0884 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968292782CDB0001B0884 /* WelcomeView.swift */; };
 		B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968292782CDB0001B0884 /* WelcomeView.swift */; };
-		B70968402782CDB0001B0884 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682A2782CDB0001B0884 /* ControlsView.swift */; };
-		B70968412782CDB0001B0884 /* ControlsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682A2782CDB0001B0884 /* ControlsView.swift */; };
 		B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
 		B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
 		B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B712F9C6277D6D8700E7A3BD /* Lottie */; };
@@ -222,12 +218,10 @@
 		B70968202782CDB0001B0884 /* GameColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		B70968212782CDB0001B0884 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B70968232782CDB0001B0884 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
-		B70968252782CDB0001B0884 /* MainTabView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainTabView.swift; sourceTree = "<group>"; };
 		B70968262782CDB0001B0884 /* BottomText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
 		B70968272782CDB0001B0884 /* TimerGame.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TimerGame.swift; sourceTree = "<group>"; };
 		B70968282782CDB0001B0884 /* ResultsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsView.swift; sourceTree = "<group>"; };
 		B70968292782CDB0001B0884 /* WelcomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = WelcomeView.swift; sourceTree = "<group>"; };
-		B709682A2782CDB0001B0884 /* ControlsView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ControlsView.swift; sourceTree = "<group>"; };
 		B709682B2782CDB0001B0884 /* ResultsViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultsViewModel.swift; sourceTree = "<group>"; };
 		B712F9C9277D6DE000E7A3BD /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
 		B712F9CB277D6F9300E7A3BD /* fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = fireworks.json; sourceTree = "<group>"; };
@@ -477,8 +471,6 @@
 		B709681E2782CDB0001B0884 /* jh */ = {
 			isa = PBXGroup;
 			children = (
-				B70968252782CDB0001B0884 /* MainTabView.swift */,
-				B709682A2782CDB0001B0884 /* ControlsView.swift */,
 				F7F7E12F2784155D008FF432 /* ViewModels */,
 				F7F7E12E2784153F008FF432 /* Models */,
 				B70968242782CDB0001B0884 /* Views */,
@@ -966,9 +958,12 @@
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
+<<<<<<< HEAD
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
+=======
+>>>>>>> main
 				F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */,
 				F787461B27969BB00010A47C /* AppDelegate.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
@@ -976,7 +971,10 @@
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
+<<<<<<< HEAD
 				B7498E3427BBDA3300C46344 /* ListView.swift in Sources */,
+=======
+>>>>>>> main
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
@@ -1016,8 +1014,11 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
+<<<<<<< HEAD
 				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
 				B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */,
+=======
+>>>>>>> main
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
@@ -1025,10 +1026,8 @@
 				2A3AF3B1279E39EB0020DC74 /* SendEmail.swift in Sources */,
 				2A903A6C27969B9500DB774A /* SettingView.swift in Sources */,
 				2A3017E7277AA5FC00369590 /* ContentView.swift in Sources */,
-				B70968372782CDB0001B0884 /* MainTabView.swift in Sources */,
 				2A903A7027969BA200DB774A /* WordSelectView.swift in Sources */,
 				2A3AF3A8279E39180020DC74 /* iCloudDataView.swift in Sources */,
-				B70968412782CDB0001B0884 /* ControlsView.swift in Sources */,
 				2A903A6527969B4F00DB774A /* UserInfo.swift in Sources */,
 				B709682D2782CDB0001B0884 /* Game.swift in Sources */,
 				2A903A6827969B5D00DB774A /* AppleDelegate.swift in Sources */,
