@@ -59,7 +59,7 @@ struct WordView: View {
             }
             .fullScreenCover(isPresented: $showingSettings, content: {SettingView()})
         }
-        .padding(EdgeInsets(top: 25, leading: 25, bottom: 0, trailing: 30))
+        .padding(EdgeInsets(top: 10, leading: 25, bottom: 0, trailing: 30))
     }
 }
 // 상단 탭 바
