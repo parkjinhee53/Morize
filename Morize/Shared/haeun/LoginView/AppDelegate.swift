@@ -30,6 +30,9 @@ class AppDelegate: ObservableObject {
                     UserDefaults.standard.set(true, forKey: "isLogin")
                     print(UserDefaults.standard.string(forKey: "UserName")!)
                 }
+                // UserID 저장
+                print(user?.id!)
+                UserDefaults.standard.set(user?.id!, forKey: "UserID")
             }
         }
     }
@@ -55,16 +58,13 @@ class AppDelegate: ObservableObject {
             _ = user
 //                self.member.username = (user?.kakaoAccount?.profile?.nickname)!!
             let userName = user?.kakaoAccount?.profile?.nickname
+            
             UserDefaults.standard.set(userName, forKey: "UserName")
-            
-            print(UserDefaults.standard.string(forKey: "UserName"))
-            
-            print("bbbb")
         }
     }
     
     func kakaosignIn(){
-        guard let presentingViewController = (UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController else {return}
+        guard ((UIApplication.shared.connectedScenes.first as? UIWindowScene)?.windows.first?.rootViewController) != nil else {return}
         
         if (UserApi.isKakaoTalkLoginAvailable()) {
             UserApi.shared.loginWithKakaoTalk {(oauthToken, error) in

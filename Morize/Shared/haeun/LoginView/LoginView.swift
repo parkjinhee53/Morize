@@ -46,6 +46,7 @@ struct LoginView: View {
                         .font(.custom("NotoSansKR-Bold", size: 18))
                         .foregroundColor(Color.init(hex: "008E00"))
                     }
+                    .frame(width: 300)
                     .multilineTextAlignment(.center)
                 }
                 Spacer()
