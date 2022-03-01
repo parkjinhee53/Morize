@@ -1,36 +1,36 @@
 //
-//  test.swift
-//  Morize (iOS)
+////  test.swift
+////  Morize (iOS)
+////
+////  Created by 김하은 on 2022/02/22.
 //
-//  Created by 김하은 on 2022/02/22.
 //
-
 //import SwiftUI
 //import AVFoundation
 //
-//enum Pages{
-//    case HomePage, GamePage, SavePhotoPage//, GameOverPage, ScorePage
-//}
+////enum Pages{
+////    case HomePage, GamePage, SavePhotoPage//, GameOverPage, ScorePage
+////}
+////
+////class alphabet:ObservableObject{
+////    @Published var pos = [CGRect]()
+////    @Published var correct = [Bool]()
+////}
 //
-//class alphabet:ObservableObject{
-//    @Published var pos = [CGRect]()
-//    @Published var correct = [Bool]()
-//}
-
 //extention MiniGame2B {
 //    @Binding var currentPage:Pages
 //    @Binding var savePhotos:Bool
 //    let color: [Color] = [.gray,.green]
-////    let timeMax:CGFloat = 300
+//    let timeMax:CGFloat = 300
 //    let maxPlayRounds:Int = 10
-////    let synthesizer = AVSpeechSynthesizer()
+//    let synthesizer = AVSpeechSynthesizer()
 //    //@State var playerItem = AVPlayerItem(url : Bundle.main.url(forResource: "crrect_answer", withExtension: "mp3")!)
-////    var correctPlayer: AVPlayer{ AVPlayer.sharedCorrectPlayer }
-////    var errorPlayer:   AVPlayer{ AVPlayer.sharedErrorPlayer }
+//    var correctPlayer: AVPlayer{ AVPlayer.sharedCorrectPlayer }
+//    var errorPlayer:   AVPlayer{ AVPlayer.sharedErrorPlayer }
 //    @State         var showScorePage:Bool = false
 //    @State private var showAns:Bool = false
 //    //@State private var scorePageSelect:Int = 0
-////    @State         var username = String()
+//    @State         var username = String()
 //    @State private var vocabularyOrder = [Int]()
 //    @State private var fgColor: Color = .white
 //    @State private var offset = [CGSize]()
@@ -45,10 +45,10 @@
 //    @State private var currentVoca = Vocabulary()
 //    @State private var roundChanging:Bool = false
 //    @State private var roundCount = Int()
-    
+//    
 //    @State private var timer: Timer?
 //    @State         var timeClock = CGFloat()
-    
+//    
 //    var dragGesture: some Gesture {
 //            DragGesture(coordinateSpace: .global)
 //                .onChanged({ value in
@@ -60,7 +60,7 @@
 //                    newPosition = offset
 //                })
 //        }
-    
+//    
 //    func initialGame(){
 //        vocabularyOrder.removeAll()
 //        //playRoundCount = 0
@@ -68,18 +68,18 @@
 //            vocabularyOrder.append(i)
 //        }
 //        vocabularyOrder.shuffle()
-////        timeClock = timeMax
+//        timeClock = timeMax
 //        roundCount = 0
 //        gamePlay()
 //        print("initialGame end")
 //    }
 //
 //    func initialRound(){
-////        username = ""
+//        username = ""
 //        showAns = false
 //        currentVoca = vocabularyDataSet[vocabularyOrder.removeLast()]
 //        vocabularyInit(voca:currentVoca.English)
-////        strSpeacker(str:"")
+//        strSpeacker(str:"")
 //    }
 //
 //    func gamePlay(){
@@ -90,7 +90,7 @@
 //        nextRoundDelay()
 //        initialRound()
 //    }
-    
+//    
 //    var body: some View{
 //        ZStack{
 //            if(roundChanging){
@@ -135,7 +135,7 @@
 //                                                    if(ans.correct[index]){ return }
 //                                                    if(!vocaSpeak[index]){
 //                                                        vocaSpeak[index] = true
-////                                                        strSpeacker(str:ansChars[index])
+//                                                        strSpeacker(str:ansChars[index])
 //                                                    }
 //                                                    offset[index].width = value.translation.width + newPosition[index].width
 //                                                    offset[index].height = value.translation.height + newPosition[index].height
@@ -159,7 +159,7 @@
 //
 //                                                                ans.correct[index] = true
 //                                                                ques.correct[i] = true
-////                                                                correctPlayer.playFromStart()
+//                                                                correctPlayer.playFromStart()
 //                                                                break
 //                                                            }
 //                                                        }
@@ -167,7 +167,7 @@
 //                                                    if(!ans.correct[index]){
 //                                                        offset[index] = .zero
 //                                                        newPosition[index] = .zero
-////                                                        errorPlayer.playFromStart()
+//                                                        errorPlayer.playFromStart()
 //                                                    }
 //                                                    var pass = true
 //                                                    for i in ans.correct{
@@ -175,8 +175,8 @@
 //                                                        if(!pass){ break }
 //                                                    }
 //                                                    if(pass){
-////                                                        self.timer?.invalidate()
-////                                                        strSpeacker(str:currentVoca.Korean)
+//                                                        self.timer?.invalidate()
+//                                                        strSpeacker(str:currentVoca.Korean)
 //                                                        DispatchQueue.main.asyncAfter(deadline: .now() + 2){
 //                                                            gamePlay()
 //                                                        }
@@ -225,12 +225,12 @@
 //            initialGame()
 //        }
 //        .onDisappear{
-////            self.timer?.invalidate()
+//            self.timer?.invalidate()
 //        }
 //        .onAppear(perform:{initialGame()})
 //    }
 //}
-
+//
 //extension MiniGame2B{
 //    func cmpDistance(dic:CGFloat,A:CGRect,Asize:CGFloat,B:CGRect,Bsize:CGFloat)->Bool{
 //        let Dis = pow(dic,2)
@@ -246,18 +246,18 @@
 //        return false
 //    }
 //
-////    func strSpeacker(str:String,rate:Float=0.05){
-////        let tmp = AVSpeechUtterance(string: str)
-////        tmp.voice = AVSpeechSynthesisVoice(language: "de-DE")
-////        tmp.rate = rate
-////        synthesizer.speak(tmp)
-////    }
+//    func strSpeacker(str:String,rate:Float=0.05){
+//        let tmp = AVSpeechUtterance(string: str)
+//        tmp.voice = AVSpeechSynthesisVoice(language: "de-DE")
+//        tmp.rate = rate
+//        synthesizer.speak(tmp)
+//    }
 //
-////    func soundEffectPlayer(/*str:String="crrect_answer"*/){
-////        //
-////    }
+//    func soundEffectPlayer(/*str:String="crrect_answer"*/){
+//        //
+//    }
 //    func scorePageSelect()->Bool{
-////        self.timer?.invalidate()
+//        self.timer?.invalidate()
 //        if(vocabularyOrder.count <= 0){
 //            return true//scarepage
 //        }
@@ -297,11 +297,11 @@
 //        roundCount += 1
 //        print("roundCount:\(roundCount)")
 //        roundChanging = true
-////        timerController()
+//        timerController()
 //        DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
-////            strSpeacker(str:currentVoca.Korean)
+//            strSpeacker(str:currentVoca.Korean)
 //            roundChanging = false
-////            timerController()
+//            timerController()
 //        }
 //    }
 //    func imageExist(inName: String) -> Bool {
@@ -314,7 +314,7 @@
 //    }
 //    var vocabularyImage:some View{
 //        Button(action: {
-////            strSpeacker(str: currentVoca.Korean,rate:0.025)
+//            strSpeacker(str: currentVoca.Korean,rate:0.025)
 //        }, label: {
 //            Image(currentVoca.fileName == "" ? "default" : currentVoca.fileName)
 //                .resizable()
@@ -331,7 +331,7 @@
 //extension MiniGame2B{
 //    var GameOverView:some View{
 //        ZStack{
-////            backGround(imgName: .constant("background_01"),opacity: .constant(1))
+//            backGround(imgName: .constant("background_01"),opacity: .constant(1))
 //
 //            Text("GameOver")
 //                .font(.system(size:60, weight: .semibold,design: .monospaced))
@@ -358,20 +358,20 @@
 //
 //    var ScorePage:some View{
 //        ZStack{
-////            backGround(imgName: .constant("background_00"),opacity: .constant(0.75))
+//            backGround(imgName: .constant("background_00"),opacity: .constant(0.75))
 //            VStack{
 //                //Text("Your record time :  600.0")
 //                Text("Congratulations!😄💪🐥")
 //                    .font(.system(size:55,design: .monospaced))
 //                    .foregroundColor(.black)
-////                Text("Your record time : "+String(format:"%.1f", timeClock))
-////                    .font(.system(size:30,design: .monospaced))
-////                    .foregroundColor(.blue)
+//                Text("Your record time : "+String(format:"%.1f", timeClock))
+//                    .font(.system(size:30,design: .monospaced))
+//                    .foregroundColor(.blue)
 //
-////                TextField("Your Name", text: $username)
-////                    .frame(width:300)
-////                    .textFieldStyle(RoundedBorderTextFieldStyle())
-////                     //.keyboardType(.numberPad)
+//                TextField("Your Name", text: $username)
+//                    .frame(width:300)
+//                    .textFieldStyle(RoundedBorderTextFieldStyle())
+//                     //.keyboardType(.numberPad)
 //            }
 //        }
 //        .onAppear{

@@ -44,11 +44,11 @@ struct MorizeApp: App {
     
     var body: some Scene {
         WindowGroup {
-            LoginView()
-                .environmentObject(self.userAuth)
-                .environmentObject(self.kakaoAuth)
-//            MiniGame2B(currentPage: .constant(Pages.GamePage),savePhotos:.constant(false))
-            
+//            LoginView()
+//                .environmentObject(self.userAuth)
+//                .environmentObject(self.kakaoAuth)
+//            MiniGame2B(currentPage: .constant(Pages.GamePage))
+            MiniGame2B()
         }
     }
 }
