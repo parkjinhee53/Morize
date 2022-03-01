@@ -36,12 +36,14 @@ class AppDelegate: ObservableObject {
                 }
                 // UserID 저장
                 UserDefaults.standard.set(user?.id!, forKey: "UserID")
+                
+                WordStorage.shared.getFirebaseDB()
             }
         }
     }
     
     func check() {
-        UserApi.shared.accessTokenInfo { (_, error) in
+        UserApi.shared.accessTokenInfo { [self] (_, error) in
             if let error = error {
                 if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true {
                     print("로그인 필요")
@@ -52,24 +54,7 @@ class AppDelegate: ObservableObject {
             }
             else {
                 print("토큰 유효성 체크 성공")
-                UserApi.shared.me { user, error in
-                    if let error = error {
-                        print(error)
-                    }
-                    else {
-                        if user?.kakaoAccount?.profile?.nickname != nil {
-                            let user = user?.kakaoAccount?.profile?.nickname!
-                            guard let user = user else { return }
-                            let userName = user
-                            UserDefaults.standard.set(userName, forKey: "UserName")
-                            UserDefaults.standard.set(true, forKey: "isLogin")
-                            print(UserDefaults.standard.string(forKey: "UserName")!)
-                        }
-                        // UserID 저장
-                        print(user?.id!)
-                        UserDefaults.standard.set(user?.id!, forKey: "UserID")
-                    }
-                }
+                kakaocheckStatus()
             }
         }
     }
