@@ -18,46 +18,58 @@ struct CSVDataView: View {
             //            GroupBox(label: Text("Message:")) {
             //                TextEditor(text: $document.message)
             //            }
-                Text("CSV 백업 및 복원")
-                    .padding(10)
-                HStack {
-                    Spacer()
-                    Button(action: { isImporting = true }, label: {
-                        Text("CSV 파일로\n 단어 가져오기")
-                    }).fileImporter(
-                        isPresented: $isImporting,
-                        allowedContentTypes: [.plainText],
-                        allowsMultipleSelection: false
-                    ) { result in
-                        do {
-                            guard let selectedFile: URL = try result.get().first else { return }
-                            guard let message = String(data: try Data(contentsOf: selectedFile), encoding: .utf8) else { return }
-                            
-                            document.message = message
-                        } catch {
-                            // Handle failure.
-                        }
+            Text("CSV 백업 및 복원")
+                .padding(10)
+            HStack {
+                Spacer()
+                Button(action: { isImporting = true }, label: {
+                    Text("CSV 파일로\n 단어 가져오기")
+                }).fileImporter(
+                    isPresented: $isImporting,
+                    allowedContentTypes: [.plainText],
+                    allowsMultipleSelection: false
+                ) { result in
+                    do {
+                        guard let selectedFile: URL = try result.get().first else { return }
+                        guard let message = String(data: try Data(contentsOf: selectedFile), encoding: .utf8) else { return }
+                        
+                        document.message = message
+                    } catch {
+                        // Handle failure.
                     }
-                    
-                    Spacer()
-                    
-                    Button(action: { isExporting = true }, label: {
-                        Text("CSV파일로\n 단어 내보내기")
-                    }).fileExporter(
-                        isPresented: $isExporting,
-                        document: document,
-                        contentType: .plainText,
-                        defaultFilename: "Message"
-                    ) { result in
-                        if case .success = result {
-                            // Handle success.
-                        } else {
-                            // Handle failure.
-                        }
-                    }
-                    
-                    Spacer()
                 }
+<<<<<<< HEAD
+                
+                Spacer()
+                
+                Button(action: { isExporting = true }, label: {
+                    Text("CSV파일로\n 단어 내보내기")
+                }).fileExporter(
+                    isPresented: $isExporting,
+                    document: document,
+                    contentType: .plainText,
+                    defaultFilename: "Message"
+                ) { result in
+                    if case .success = result {
+                        // Handle success.
+                    } else {
+                        // Handle failure.
+                    }
+                }
+                
+                Spacer()
+            }
+            
+//            List{
+//                Text("도움말")
+//                Section(header: Text("가져오는 방법")){
+//                    Text("dddddd")
+//                }
+//                Section(header: Text("내보내는 방법")){
+//                    Text("dddddd")
+//                }
+//            }.listStyle(SidebarListStyle())
+=======
 //                List{
 //                    Text("도움말")
 //                    Section(header: Text("가져오는 방법")){
@@ -67,6 +79,7 @@ struct CSVDataView: View {
 //                        Text("dddddd")
 //                    }
 //                }.listStyle(SidebarListStyle())
+>>>>>>> main
         }
     }
 }
