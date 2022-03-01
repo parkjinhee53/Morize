@@ -15,6 +15,10 @@ import KakaoSDKUser
 class AppDelegate: ObservableObject {
     @State var member = UserInfo.init()    // 로그인 관련 init 파일
     
+    init() {
+        check()
+    }
+    
     // google userInfo
     func kakaocheckStatus(){
         UserApi.shared.me { user, error in
@@ -31,8 +35,41 @@ class AppDelegate: ObservableObject {
                     print(UserDefaults.standard.string(forKey: "UserName")!)
                 }
                 // UserID 저장
-                print(user?.id!)
                 UserDefaults.standard.set(user?.id!, forKey: "UserID")
+            }
+        }
+    }
+    
+    func check() {
+        UserApi.shared.accessTokenInfo { (_, error) in
+            if let error = error {
+                if let sdkError = error as? SdkError, sdkError.isInvalidTokenError() == true {
+                    print("로그인 필요")
+                }
+                else {
+                    print("기타 에러")
+                }
+            }
+            else {
+                print("토큰 유효성 체크 성공")
+                UserApi.shared.me { user, error in
+                    if let error = error {
+                        print(error)
+                    }
+                    else {
+                        if user?.kakaoAccount?.profile?.nickname != nil {
+                            let user = user?.kakaoAccount?.profile?.nickname!
+                            guard let user = user else { return }
+                            let userName = user
+                            UserDefaults.standard.set(userName, forKey: "UserName")
+                            UserDefaults.standard.set(true, forKey: "isLogin")
+                            print(UserDefaults.standard.string(forKey: "UserName")!)
+                        }
+                        // UserID 저장
+                        print(user?.id!)
+                        UserDefaults.standard.set(user?.id!, forKey: "UserID")
+                    }
+                }
             }
         }
     }
