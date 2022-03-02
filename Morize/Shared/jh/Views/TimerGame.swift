@@ -14,7 +14,7 @@ let ttimer = Timer
 struct TimerGame: View {
     @StateObject var viewModel = GameViewModel()
     @State var counter: Int = 0
-    var countTo: Int = 120
+    var countTo: Int = 5
     
     var body: some View {
         ZStack {
