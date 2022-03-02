@@ -39,9 +39,9 @@ struct Flashcard<Front, Back>: View where Front: View, Back: View {
         .rotation3DEffect(.degrees(contentRotation), axis: (x: 0, y: 1, z: 0))
         .font(.custom("GodoM", size: 35))
         .foregroundColor(.white)
-        .frame(width: 300, height: 180, alignment: .center)
-        .background(color)
-        .cornerRadius(8)
+        .frame(width: 250, height: 180, alignment: .center)
+        .background(Color.init(hex: "008E00"))
+        .cornerRadius(16)
         .onTapGesture {
             if canClick{
                 flipFlashcard()
