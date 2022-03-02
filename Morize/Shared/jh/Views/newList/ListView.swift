@@ -33,8 +33,8 @@ struct Row: View {
 struct ListView: View {
     @ObservedObject var vm = ListVM()
     init() {
-        vm.wordList = Array(WordStorage.shared.wordArr.keys)
-        vm.meanList = Array(WordStorage.shared.wordArr.values)
+        vm.wordList = Array(WordStorage.shared.wordArr.keys).sorted()
+        vm.meanList = vm.wordList.map { WordStorage.shared.wordArr[$0]! }
         
         UITableView.appearance().backgroundColor = .white // Uses UIColor
     }

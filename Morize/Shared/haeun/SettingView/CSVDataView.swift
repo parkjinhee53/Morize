@@ -38,7 +38,6 @@ struct CSVDataView: View {
                         // Handle failure.
                     }
                 }
-<<<<<<< HEAD
                 
                 Spacer()
                 
@@ -69,7 +68,6 @@ struct CSVDataView: View {
 //                    Text("dddddd")
 //                }
 //            }.listStyle(SidebarListStyle())
-=======
 //                List{
 //                    Text("도움말")
 //                    Section(header: Text("가져오는 방법")){
@@ -79,7 +77,6 @@ struct CSVDataView: View {
 //                        Text("dddddd")
 //                    }
 //                }.listStyle(SidebarListStyle())
->>>>>>> main
         }
     }
 }
