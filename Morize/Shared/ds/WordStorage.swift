@@ -13,7 +13,13 @@ class WordStorage: ObservableObject {
     static let shared = WordStorage()
     
     @Published var wordArr: [String: String] = [:]
-
+    // card flip 변수
+    @Published var word: [String] = []
+    @Published var mean: [String] = []
+    @Published var dragOffset: [CGSize] = []
+    @Published var zIndexs: [Double] = []
+    @Published var flipped: [Bool] = []
+    
     func getRandomWords(count: Int) -> [String: String] {
         var tempDic: [String: String] = [:]
         for _ in 0...count {
@@ -38,8 +44,28 @@ class WordStorage: ObservableObject {
                 }
                 let arr = snapshot.value as? [String: String] ?? [:]
                 self.wordArr = arr
+                
+                self.getUserWord()
+                self.setting()
             });
         }
+    }
+    
+    func setting() {
+        for i in 0..<self.word.count {
+            zIndexs.append(Double((i + 1) * -1))
+            flipped.append(false)
+            dragOffset.append(CGSize.zero)
+        }
+    }
+    
+    func getUserWord() {
+        let keys = Array(wordArr.keys).sorted()
+        let values = keys.map { wordArr[$0]! }
+        word = keys
+        mean = values
+        print(keys)
+        print(values)
     }
     
     func setBasedWords() {

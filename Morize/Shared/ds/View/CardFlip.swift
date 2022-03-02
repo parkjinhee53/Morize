@@ -9,9 +9,14 @@ import SwiftUI
 
 struct CardFlip: View {
     @ObservedObject var viewModel = CardFlipVM()
+    
+    init() {
+//        viewModel.setZindexArr()
+    }
+    
     var body: some View {
         ZStack{
-            ForEach(0..<viewModel.getWordsCount()) { i in
+            ForEach(viewModel.words.indices, id: \.self) { i in
                 Flashcard(front: {
                     Text(viewModel.words[i])
                         .foregroundColor(.white)
@@ -26,7 +31,7 @@ struct CardFlip: View {
                     .zIndex(viewModel.zIndexs[i])
                     .modifier(AnimatableModifierDouble(bindedValue: viewModel.dragOffset[i].height, completion: {
                         withAnimation(Animation.easeIn(duration: 0.2)) {
-                            viewModel.zIndexs = viewModel.zindexsArr[(viewModel.currentIdx % 4)]
+                            viewModel.zIndexs = viewModel.zindexsArr[(viewModel.currentIdx % viewModel.words.count)]
                             viewModel.dragOffset[i] = CGSize(width: 0, height: 0)
                         }
                     }))
@@ -42,7 +47,7 @@ struct CardFlip: View {
                                 // 위로 넘어가는 애니메이션
                                 if viewModel.dragOffset[i].height <= -100 {
                                     print(viewModel.currentIdx)
-                                    viewModel.currentIdx = (viewModel.currentIdx + 1) % 4
+                                    viewModel.currentIdx = (viewModel.currentIdx + 1) % viewModel.words.count
                                     withAnimation(Animation.easeOut(duration: 0.2)) {
                                         viewModel.dragOffset[i] = CGSize(width: 0, height: -200)
                                     }
