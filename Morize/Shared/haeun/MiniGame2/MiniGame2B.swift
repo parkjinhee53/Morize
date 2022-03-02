@@ -70,7 +70,7 @@ struct MiniGame2B: View {
                                     .size(width: 500, height: 500)
                             }.padding(30)
                             
-                            // 글자를 선택하는 부분
+                            // 글자를 선택하는 부분 -> 분석필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
                                     ForEach(ansChars.indices,id:\.self){
@@ -152,7 +152,7 @@ struct MiniGame2B: View {
                                 }
                             }
                             Spacer()
-                            // 답을 입력하는 부분
+                            // 답을 입력하는 부분 -> 분석 필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
                                     ForEach(quesChars.indices,id:\.self){
