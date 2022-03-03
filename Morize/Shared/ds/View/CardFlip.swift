@@ -10,10 +10,6 @@ import SwiftUI
 struct CardFlip: View {
     @ObservedObject var viewModel = CardFlipVM()
     
-    init() {
-//        viewModel.setZindexArr()
-    }
-    
     var body: some View {
         ZStack{
             ForEach(viewModel.words.indices, id: \.self) { i in

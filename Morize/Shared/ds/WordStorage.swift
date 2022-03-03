@@ -21,6 +21,7 @@ class WordStorage: ObservableObject {
     @Published var zIndexs: [Double] = []
     @Published var flipped: [Bool] = []
     
+    
     func getRandomWords(count: Int) -> [String: [Any]] {
         var tempDic: [String: [Any]] = [:]
         for _ in 0...count {
@@ -61,13 +62,14 @@ class WordStorage: ObservableObject {
     }
     
     func getUserWord() {
-        let keys = Array(wordArr.keys).sorted()
-        let values = keys.map { wordArr[$0]! }
-        word = keys
-        mean = values.map{ ($0[0] as? String)! }
-        liked = values.map{ ($0[1] as? Bool)! }
-        print(keys)
-        print(values)
+        word = []
+        mean = []
+        for i in wordArr {
+            if i.value[1] as! Bool {
+                word.append(i.key)
+                mean.append(i.value[0] as! String)
+            }
+        }
     }
     
     func setBasedWords() {
