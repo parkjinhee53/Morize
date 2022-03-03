@@ -70,6 +70,7 @@ class WordStorage: ObservableObject {
                 mean.append(i.value[0] as! String)
             }
         }
+        print("dd")
     }
     
     func setBasedWords() {

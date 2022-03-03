@@ -37,6 +37,8 @@ class ListVM: ObservableObject {
         if id != "nil" {
             ref = Database.database().reference()
             ref.child("users/\(id)/\(word)").setValue(["\(mean)", like])
+            
+            WordStorage.shared.getFirebaseDB()
         }
     }
     

@@ -9,7 +9,7 @@ import SwiftUI
 
 struct CardFlip: View {
     @ObservedObject var viewModel = CardFlipVM()
-    
+    @Binding var card: [String]
     var body: some View {
         ZStack{
             ForEach(viewModel.words.indices, id: \.self) { i in
@@ -63,6 +63,6 @@ struct CardFlip: View {
 
 struct CardFlip_Previews: PreviewProvider {
     static var previews: some View {
-        CardFlip()
+        CardFlip(card: .constant([""]))
     }
 }

@@ -38,6 +38,8 @@ struct Row: View {
                     ref = Database.database().reference()
                     ref.child("users/\(id)/\(word)").setValue(["\(mean)", vmLike])
                 }
+                
+                WordStorage.shared.getFirebaseDB()
             } label: {
                 Image(systemName: self.liked == false ? "star" : "star.fill")
                     .foregroundColor(Color.init(hex: "008E00"))
