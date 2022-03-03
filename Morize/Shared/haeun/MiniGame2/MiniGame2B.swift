@@ -36,8 +36,9 @@ struct MiniGame2B: View {
     @State private var newPosition = [CGSize]()     // 선택하는 단어의 새로운 위치를 나타내는 변수 (답을 입력하는 칸의 위치)
     @State var ans = alphabet()                     // alphabet()를 사용하는 변수 ans(선택하는 부분의 위치)
     @State var ques = alphabet()                    // alphabet()를 사용하는 변수 ques(답을 입력하는 부분의 위치)
-    @State private var ansChars = [String]()        // 선택하는 부분의 단어 (Char)
-    @State private var quesChars = [String]()       // 답을 입력하는 부분의 단어 (Char)
+    @State private var ansChars = [String]()        // 선택하는 부분의 단어(글자) (Char)
+    @State private var quesChars = [String]()       // 답을 입력하는 부분의 단어(글자) (Char)
+    @State private var koreanString = [String]()    // 뜻을 나타낼 변수 (한글 뜻)
     // 게임을 진행할 단어를 꾸미는 변수
     let color: [Color] = [.gray,.green]
     @State private var fgColor: Color = .white      // 선택하는 단어 색 고르는 변수
@@ -47,6 +48,8 @@ struct MiniGame2B: View {
     // 단어를 읽는 부분 -> 나중에 구현될 부분
     @State private var vocaSpeak = [Bool]()
     let synthesizer = AVSpeechSynthesizer()
+    
+    var kWord: [String]
 
     var body: some View {
         ZStack{
@@ -63,18 +66,26 @@ struct MiniGame2B: View {
                                      maxValue: self.maxValue,
                                      foregroundColor: .green)
                                 .frame(height: 10)
-                            
-                            // 뜻과 예문 나타내는 설명창
-                            HStack{
-                                Rectangle()
-                                    .size(width: 500, height: 500)
-                            }.padding(30)
-                            
+                            ZStack{
+                                // 뜻과 예문 나타내는 설명창
+                                Spacer(minLength: 50)
+                                ForEach(0..<quesChars){ index in
+                                    kWord += index
+                                }
+                                Text("\(quesChars[kWord])")
+                                    .font(.headline)
+                                    .padding()
+                                    .foregroundColor(.white)
+                                    .background(Color.blue)
+                                    .cornerRadius(40)
+                            }.padding(80)
+                            Spacer()
                             // 글자를 선택하는 부분 -> 분석필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
                                     ForEach(ansChars.indices,id:\.self){
                                         (index) in
+                                        
                                         Text("\(ansChars[index])")
                                             .font(.system(size:15,design: .monospaced))
                                             .foregroundColor(.blue)
@@ -219,6 +230,7 @@ extension MiniGame2B {
         showAns = false             // 초기화 하기위해 round조건을 false로 만듦.
         vocaVM = vocabularyDataSet[vocabularyOrder.removeLast()]    // DataSet에서 제공한 단어를 삭제(가장 마지막 요소를 제거) +가장 마지막 요소를 제거한 데이터 셋이 VM이다.
         vocabularyInit(voca:vocaVM.English)     // 영어 단어로 단어생성자에 넣기
+        
 //        strSpeacker(str:"")
     }
     // 게임 시작
@@ -266,6 +278,7 @@ extension MiniGame2B {
         vocaSpeak.removeAll()
         ansChars.removeAll()
         quesChars.removeAll()
+        koreanString.removeAll()
         offset.removeAll()
         newPosition.removeAll()
         ans.correct.removeAll()
@@ -284,6 +297,7 @@ extension MiniGame2B {
         let charSh = chars.shuffled()
         for i in charSh{ ansChars.append(String(i)) }
         for i in chars{ quesChars.append(String(i)) }
+        for i in chars{ koreanString.append(String(i))  }
     }
     // 단어의 위치를 갱신하는 함수
     func updatePos(geometry:GeometryProxy,ptr:UnsafeMutablePointer<CGRect>){
@@ -296,6 +310,7 @@ extension MiniGame2B {
         print("roundCount:\(roundCount)")
         roundChanging = true
         // ‼️‼️‼️시간 관련 메소드 불러오기
+        // 시간을 다시 초기화 해야됨 -> 다음 라운드에 단어 초기화
 //        timerController()
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
 //            strSpeacker(str:vocaVM.English)
