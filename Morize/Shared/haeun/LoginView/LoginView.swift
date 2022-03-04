@@ -89,6 +89,7 @@ struct LoginView: View {
                         // google login
                         Button(action: {
                             googledel.signIn()
+                            WordStorage.shared.setBasedWords()
                         }) {
                             VStack {
                                 ZStack(alignment: .center) {

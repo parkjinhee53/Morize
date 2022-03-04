@@ -39,7 +39,7 @@ struct MorizeApp: App {
                     print(error!.localizedDescription)
                     return
                 }
-                let arr = snapshot.value as? [String: String] ?? [:]
+                let arr = snapshot.value as? [String: [Any]] ?? [:]
                 wordStorage.wordArr = arr
             });
         }
