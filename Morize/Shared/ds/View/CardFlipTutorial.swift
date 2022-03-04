@@ -32,7 +32,7 @@ struct CardFlipTutorial: View {
                 click: false, tutorial: false)
                     .padding(.top, 150)
                     .offset(CGSize(width: 0, height: animationAmount))
-                    .zIndex(viewModel.zIndexs[0])
+                    .zIndex(WordStorage.shared.zIndexs[0])
                     .onAppear(perform: {
                         if !arrowAnimation {
                             animationAmount = -50
@@ -51,8 +51,8 @@ struct CardFlipTutorial: View {
                     Text("바나나")
                 }, color: viewModel.getColor(index: 1), click: false, tutorial: arrowAnimation)
                     .padding(.top, 150)
-                    .offset(viewModel.dragOffset[1])
-                    .zIndex(viewModel.zIndexs[1])
+                    .offset(WordStorage.shared.dragOffset[1])
+                    .zIndex(WordStorage.shared.zIndexs[1])
                     .rotation3DEffect(.degrees(rotationAmount), axis: (x: 0, y: 1, z: 0))
                     
                 
@@ -80,7 +80,7 @@ struct CardFlipTutorial: View {
                 arrowOpacity = 0
                 description = "클릭으로 카드를 뒤집을 수 있습니다."
                 buttonText = "확인"
-                viewModel.zIndexs[0] = -1
+                WordStorage.shared.zIndexs[0] = -1
             } label: {
                 Text(buttonText)
                     .font(.system(size: 20, weight: .bold, design: .rounded))

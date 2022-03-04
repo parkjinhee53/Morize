@@ -994,12 +994,9 @@
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
-<<<<<<< HEAD
 				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */,
 				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
-=======
->>>>>>> main
 				F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */,
 				F787461B27969BB00010A47C /* AppDelegate.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
@@ -1007,10 +1004,7 @@
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
-<<<<<<< HEAD
 				B7498E3427BBDA3300C46344 /* ListView.swift in Sources */,
-=======
->>>>>>> main
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
@@ -1050,11 +1044,8 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
-<<<<<<< HEAD
 				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
 				B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */,
-=======
->>>>>>> main
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
