@@ -13,44 +13,53 @@ struct WordView: View {
     @State var showingNotification = false
     
     var body: some View {
-        HStack {
-            // 설정버튼
-            Button {
-                showingNotification = true
-            } label: {
-                Image(systemName: "bell.fill")
-                    .resizable()
-                    .frame(width: 20, height: 22, alignment: .center)
-                    .foregroundColor(.black)
-                // 알림이 있을 때
-                Circle()
-                    .frame(width: 12, height: 12, alignment: .center)
-                    .foregroundColor(.green)
-                    .padding(.leading, -15)
-                    .padding(.top, -15)
-            }
-            .padding(.leading, 16)
-            .fullScreenCover(isPresented: $showingNotification, content: {NotificationView()})
+        HStack(alignment: .center) {
+//            Button {
+//                showingNotification = true
+//            } label: {
+//                Image(systemName: "bell.fill")
+//                    .resizable()
+//                    .frame(width: 20, height: 22, alignment: .center)
+//                    .foregroundColor(.black)
+//                // 알림이 있을 때
+//                Circle()
+//                    .frame(width: 12, height: 12, alignment: .center)
+//                    .foregroundColor(.green)
+//                    .padding(.leading, -15)
+//                    .padding(.top, -15)
+//            }
+//            .padding(.leading, 16)
+//            .fullScreenCover(isPresented: $showingNotification, content: {NotificationView()})
             
-            Spacer()
             // View 이름으로 바꿀 것
-            Text(UserName + "의 단어장")
-                .font(.custom("GodoM", size: 20))
+            VStack(alignment: .leading) {
+                HStack {
+                    Text(UserName)
+                        .font(.custom("NotoSansKR-Bold", size: 23))
+                        .foregroundColor(Color.init(hex: "008E00"))
+                    Text("'s")
+                        .font(.custom("NotoSansKR-Bold", size: 23))
+                        .foregroundColor(Color.init(hex: "333333"))
+                }
+                Text("Vocabulary")
+                    .font(.custom("NotoSansKR-Bold", size: 20))
+                    .foregroundColor(Color.init(hex: "333333"))
+            }
             
             Spacer()
             
+            // 설정버튼
             Button {
                 self.showingSettings.toggle()
             } label: {
                 Image(systemName: "gearshape.fill")
                     .resizable()
                     .frame(width: 22, height: 22, alignment: .center)
-                    .foregroundColor(.black)
+                    .foregroundColor(Color.init(hex: "008E00"))
             }
-            .padding(.trailing, 16)
             .fullScreenCover(isPresented: $showingSettings, content: {SettingView()})
         }
-        .padding(.top, 16)
+        .padding(EdgeInsets(top: 10, leading: 25, bottom: 0, trailing: 30))
     }
 }
 // 상단 탭 바

@@ -20,18 +20,23 @@ class ListVM: ObservableObject {
     }
     
     func saveToDB(word: String, mean: String) {
-        ref = Database.database().reference()
-        wordList.append(word)
-        meanList.append(mean)
-        
-        ref.child("users/ds/\(word)").setValue("\(mean)")
+        let id = UserDefaults.standard.string(forKey: "UserID")!
+        if id != "nil" {
+            ref = Database.database().reference()
+            wordList.append(word)
+            meanList.append(mean)
+            ref.child("users/\(id)/\(word)").setValue("\(mean)")
+        }
     }
     
     func deleteToDB(index: IndexSet) {
-        ref = Database.database().reference()
-        
-        ref.child("users/ds/\(wordList[index.first!])").removeValue()
-        wordList.remove(atOffsets: index)
-        meanList.remove(atOffsets: index)
+        let id = UserDefaults.standard.string(forKey: "UserID")!
+            if id != "nil" {
+            ref = Database.database().reference()
+            
+            ref.child("users/\(id)/\(wordList[index.first!])").removeValue()
+            wordList.remove(atOffsets: index)
+            meanList.remove(atOffsets: index)
+        }
     }
 }

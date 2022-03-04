@@ -6,6 +6,8 @@
 //
 
 import SwiftUI
+import Firebase
+import FirebaseFirestore
 
 class WordStorage: ObservableObject {
     static let shared = WordStorage()
@@ -21,6 +23,23 @@ class WordStorage: ObservableObject {
             }
         }
         return tempDic
+    }
+    
+    func getFirebaseDB() {
+        var ref: DatabaseReference!
+        
+        ref = Database.database().reference()
+        let id = UserDefaults.standard.string(forKey: "UserID")!
+        if id != "nil" {
+            ref.child("users/\(id)").getData(completion:  { error, snapshot in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                let arr = snapshot.value as? [String: String] ?? [:]
+                self.wordArr = arr
+            });
+        }
     }
     
     private init() { }

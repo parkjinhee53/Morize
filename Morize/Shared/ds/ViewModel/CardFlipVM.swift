@@ -11,6 +11,7 @@ import SwiftUI
 class CardFlipVM: ObservableObject {
     init() {
         setZindexArr()
+        
     }
     
     @Published var dragOffset: [CGSize] = [CGSize.zero, CGSize.zero, CGSize.zero, CGSize.zero]
@@ -35,5 +36,13 @@ class CardFlipVM: ObservableObject {
     
     func getColor(index: Int) -> Color {
         return colors[index]
+    }
+    
+    func getUserWord() {
+        let wordDic = WordStorage.shared.getRandomWords(count: WordStorage.shared.wordArr.count)
+        let keys = wordDic.keys.map{ String($0) }
+        let values = wordDic.values.map{ String($0) }
+        print(keys)
+        print(values)
     }
 }
