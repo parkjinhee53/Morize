@@ -21,6 +21,8 @@ struct MiniGame2B: View {
     private let maxValue: Double = 5                // 5초 간격으로 넘어가기
     @State private var timeRemaining:Double = 5     // 5초 간격으로 넘어가기
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var countingRound: Int = 0               // 라운드별로 맞추면 count하기
+    @State var maxCount: Int = 5                    // 문제의 갯수
     // animation paused
     @State private var isPaused: Bool = true
     @State var connectedTimer: Cancellable? = nil
@@ -31,6 +33,8 @@ struct MiniGame2B: View {
     @State private var showAns:Bool = false         // 답을 가리기 위한 조건 (삼항 조건 연산자에서 쓰임 question ? answer1 : answer2 구조)
     // 단어 제공
     @State private var vocabularyOrder = [Int]()
+    // 한글 뜻을 나타낼 변수
+    @State var kWord: String = ""
     // 게임을 진행할 단어의 위치 사용, 저장하는 변수
     @State private var offset = [CGSize]()          // 선택하는 단어 위치 나타내는 변수
     @State private var newPosition = [CGSize]()     // 선택하는 단어의 새로운 위치를 나타내는 변수 (답을 입력하는 칸의 위치)
@@ -49,7 +53,6 @@ struct MiniGame2B: View {
     @State private var vocaSpeak = [Bool]()
     let synthesizer = AVSpeechSynthesizer()
     
-    var kWord: [String]
 
     var body: some View {
         ZStack{
@@ -62,23 +65,22 @@ struct MiniGame2B: View {
                     else{
                         VStack{
                             // 타이머 바
+                            Text("\(countingRound)/\(maxCount)")
                             TimerBar(value: timeRemaining,
                                      maxValue: self.maxValue,
                                      foregroundColor: .green)
                                 .frame(height: 10)
+                            Spacer()
                             ZStack{
                                 // 뜻과 예문 나타내는 설명창
-                                Spacer(minLength: 50)
-                                ForEach(0..<quesChars){ index in
-                                    kWord += index
-                                }
-                                Text("\(quesChars[kWord])")
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.green)
+                                    .frame(width: 300, height: 220)
+                                Text("\(kWord)")
                                     .font(.headline)
-                                    .padding()
+                                    .padding(30)
                                     .foregroundColor(.white)
-                                    .background(Color.blue)
-                                    .cornerRadius(40)
-                            }.padding(80)
+                            }
                             Spacer()
                             // 글자를 선택하는 부분 -> 분석필요
                             HStack(alignment: .center,spacing:15){
@@ -162,7 +164,7 @@ struct MiniGame2B: View {
                                     }
                                 }
                             }
-                            Spacer()
+//                            Spacer()
                             // 답을 입력하는 부분 -> 분석 필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
@@ -229,7 +231,8 @@ extension MiniGame2B {
     func initialRound(){
         showAns = false             // 초기화 하기위해 round조건을 false로 만듦.
         vocaVM = vocabularyDataSet[vocabularyOrder.removeLast()]    // DataSet에서 제공한 단어를 삭제(가장 마지막 요소를 제거) +가장 마지막 요소를 제거한 데이터 셋이 VM이다.
-        vocabularyInit(voca:vocaVM.English)     // 영어 단어로 단어생성자에 넣기
+        vocabularyInit(voca:vocaVM.English)     // 영어 단어로 단어생성자에 넣기(초기화)
+        kWord = vocaVM.Korean                   // 한글 단어로 초기화
         
 //        strSpeacker(str:"")
     }
