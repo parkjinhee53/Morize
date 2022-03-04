@@ -33,7 +33,6 @@ class WordStorage: ObservableObject {
         return tempDic
     }
     
-    // 주석추가
     func getFirebaseDB() {
         var ref: DatabaseReference!
         
