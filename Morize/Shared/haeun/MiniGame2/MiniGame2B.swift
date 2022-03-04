@@ -58,6 +58,7 @@ struct MiniGame2B: View {
         ZStack{
             VStack{
                 ZStack{
+                    // 라운드가 바뀌고있으면
                     if(roundChanging){
                         Text("Round \(roundCount+0)")
                             .font(.system(size:50,design: .monospaced))
