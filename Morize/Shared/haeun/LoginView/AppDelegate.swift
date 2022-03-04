@@ -42,6 +42,29 @@ class AppDelegate: ObservableObject {
         }
     }
     
+    func firstLoggin() {
+        UserApi.shared.me { user, error in
+            if let error = error {
+                print(error)
+            }
+            else {
+                if user?.kakaoAccount?.profile?.nickname != nil {
+                    let user = user?.kakaoAccount?.profile?.nickname!
+                    guard let user = user else { return }
+                    let userName = user
+                    UserDefaults.standard.set(userName, forKey: "UserName")
+                    UserDefaults.standard.set(true, forKey: "isLogin")
+                    print(UserDefaults.standard.string(forKey: "UserName")!)
+                }
+                // UserID 저장
+                UserDefaults.standard.set(user?.id!, forKey: "UserID")
+                
+                WordStorage.shared.setBasedWords()
+                WordStorage.shared.getFirebaseDB()
+            }
+        }
+    }
+    
     func check() {
         UserApi.shared.accessTokenInfo { [self] (_, error) in
             if let error = error {
@@ -65,7 +88,7 @@ class AppDelegate: ObservableObject {
                 print(error)
             }
             
-            self.kakaocheckStatus()
+            self.firstLoggin()
         }
     }
     

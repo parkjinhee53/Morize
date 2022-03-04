@@ -15,7 +15,7 @@ struct CardMemory: View {
             CardFlipTutorial()
         }
         else {
-            CardFlip()
+//            CardFlip()
         }
     }
 }
