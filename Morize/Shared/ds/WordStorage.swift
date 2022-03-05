@@ -54,6 +54,9 @@ class WordStorage: ObservableObject {
     }
     
     func setting() {
+        zIndexs = []
+        flipped = []
+        dragOffset = []
         for i in 0..<self.word.count {
             zIndexs.append(Double((i + 1) * -1))
             flipped.append(false)
@@ -70,7 +73,6 @@ class WordStorage: ObservableObject {
                 mean.append(i.value[0] as! String)
             }
         }
-        print("dd")
     }
     
     func setBasedWords() {
