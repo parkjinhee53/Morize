@@ -26,32 +26,86 @@ struct SettingView: View {
                 } label: {
                     Image(systemName: "arrow.backward")
                 }
+                .foregroundColor(Color.init(hex: "008E00"))
                 .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 0))
                 Spacer()
-                ScrollView {
-                    LabelledDivider(label: "계정")
+                ScrollView() {
+                    Text("Settings")
+                        .font(.custom("NotoSansKR-Bold", size: 25))
+                        .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                        .padding(EdgeInsets(top: 15, leading: 16, bottom: 15, trailing: 0))
+                    
+                    LabelledDivider(label: "계정", image: "person")
                     NavigationLink(destination: AccountManagement()) {
-                        Text("계정관리")
+                        HStack {
+                            Text("계정관리")
+                                .font(.custom("NotoSansKR-Regular", size: 16))
+                                .foregroundColor(Color.init(hex: "666666"))
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color.init(hex: "666666"))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                     }
-                    LabelledDivider(label: "지원")
+                    LabelledDivider(label: "지원", image: "megaphone")
                     NavigationLink(destination: NoticeView()) {
-                        Text("공지사항 / 이벤트")
+                        HStack {
+                            Text("공지사항 / 이벤트")
+                                .font(.custom("NotoSansKR-Regular", size: 16))
+                                .foregroundColor(Color.init(hex: "666666"))
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color.init(hex: "666666"))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                     }
                     NavigationLink(destination: iCloudDataView()) {
-                        Text("iCloud 동기화")
+                        HStack {
+                            Text("iCloud 동기화")
+                                .font(.custom("NotoSansKR-Regular", size: 16))
+                                .foregroundColor(Color.init(hex: "666666"))
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color.init(hex: "666666"))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                     }
                     NavigationLink(destination: CSVDataView()) {
-                        Text("CSV 파일 가져오기 / 내보내기")
+                        HStack {
+                            Text("CSV 파일 가져오기 / 내보내기")
+                                .font(.custom("NotoSansKR-Regular", size: 16))
+                                .foregroundColor(Color.init(hex: "666666"))
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color.init(hex: "666666"))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                     }
-                    LabelledDivider(label: "문의")
+                    LabelledDivider(label: "문의", image: "questionmark.circle")
                     NavigationLink(destination: FAQView()) {
-                        Text("자주 하는 질문")
+                        HStack {
+                            Text("자주 하는 질문")
+                                .font(.custom("NotoSansKR-Regular", size: 16))
+                                .foregroundColor(Color.init(hex: "666666"))
+                            Spacer()
+                            Image(systemName: "chevron.right")
+                                .foregroundColor(Color.init(hex: "666666"))
+                        }
+                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                     }
                     // Navigation으로 바꿀 방법 찾아보기
                     Button(action: {
                         showMailView = true
                      }) {
-                         Text("개발자에게 메일 보내기")
+                         HStack {
+                             Text("개발자에게 메일 보내기")
+                                 .font(.custom("NotoSansKR-Regular", size: 16))
+                                 .foregroundColor(Color.init(hex: "666666"))
+                             Spacer()
+                             Image(systemName: "chevron.right")
+                                 .foregroundColor(Color.init(hex: "666666"))
+                         }
+                         .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
                      }
                      .disabled(!SendEmail.canSendMail)
                      .sheet(isPresented: $showMailView) {
@@ -70,25 +124,37 @@ struct SettingView: View {
 struct LabelledDivider: View {
     
     let label: String
+    let image: String
     let horizontalPadding: CGFloat
     let color: Color
     
-    init(label: String, horizontalPadding: CGFloat = 20, color: Color = .black) {
+    init(label: String, image: String, horizontalPadding: CGFloat = 20, color: Color = .black) {
         self.label = label
         self.horizontalPadding = horizontalPadding
         self.color = color
+        self.image = image
     }
     
     var body: some View {
-        HStack {
+        VStack(alignment: .leading) {
+            HStack {
+                Image(systemName: image)
+                    .resizable()
+                    .foregroundColor(Color.init(hex: "008E00"))
+                    .frame(width: 18, height: 18, alignment: .center)
+                    .padding(.trailing, 5)
+                Text(label).foregroundColor(color)
+                    .font(.custom("NotoSansKR-Bold", size: 18))
+            }
+            .frame(height: 23)
             line
-            Text(label).foregroundColor(color)
-            line
+                .background(.green)
         }
+        .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
     }
     
     var line: some View {
-        VStack { Divider().background(color) }.padding(horizontalPadding)
+        VStack { Divider().background(color) }.padding(0)
     }
 }
 
