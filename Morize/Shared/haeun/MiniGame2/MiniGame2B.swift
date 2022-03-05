@@ -311,6 +311,7 @@ extension MiniGame2B {
     // 다음Round로 준비하는 함수
     func nextRoundDelay(){
         roundCount += 1
+        countingRound += 1
         print("roundCount:\(roundCount)")
         roundChanging = true
         // ‼️‼️‼️시간 관련 메소드 불러오기
