@@ -16,7 +16,7 @@ struct AccountManagement: View {
     
     var body: some View {
         VStack{
-            LabelledDivider(label: UserName)
+            LabelledDivider(label: UserName, image: "person.circle")
             //로그인 정보가 들어있는 값에 따라서 카카오, 구글, 애플중에 고르기
             
             // 로그아웃 클릭할 때 한번에 되는지 확인 필요
