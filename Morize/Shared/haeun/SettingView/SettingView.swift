@@ -27,13 +27,13 @@ struct SettingView: View {
                     Image(systemName: "arrow.backward")
                 }
                 .foregroundColor(Color.init(hex: "008E00"))
-                .padding(EdgeInsets(top: 20, leading: 16, bottom: 0, trailing: 0))
+                .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
                 Spacer()
                 ScrollView() {
                     Text("Settings")
                         .font(.custom("NotoSansKR-Bold", size: 25))
                         .frame(width: UIScreen.main.bounds.width, alignment: .leading)
-                        .padding(EdgeInsets(top: 15, leading: 16, bottom: 15, trailing: 0))
+                        .padding(EdgeInsets(top: 15, leading: 20, bottom: 15, trailing: 0))
                     
                     LabelledDivider(label: "계정", image: "person")
                     NavigationLink(destination: AccountManagement()) {
@@ -45,7 +45,7 @@ struct SettingView: View {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(Color.init(hex: "666666"))
                         }
-                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                        .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                     }
                     LabelledDivider(label: "지원", image: "megaphone")
                     NavigationLink(destination: NoticeView()) {
@@ -57,7 +57,7 @@ struct SettingView: View {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(Color.init(hex: "666666"))
                         }
-                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                        .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                     }
                     NavigationLink(destination: iCloudDataView()) {
                         HStack {
@@ -68,7 +68,7 @@ struct SettingView: View {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(Color.init(hex: "666666"))
                         }
-                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                        .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                     }
                     NavigationLink(destination: CSVDataView()) {
                         HStack {
@@ -79,7 +79,7 @@ struct SettingView: View {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(Color.init(hex: "666666"))
                         }
-                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                        .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                     }
                     LabelledDivider(label: "문의", image: "questionmark.circle")
                     NavigationLink(destination: FAQView()) {
@@ -91,7 +91,7 @@ struct SettingView: View {
                             Image(systemName: "chevron.right")
                                 .foregroundColor(Color.init(hex: "666666"))
                         }
-                        .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                        .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                     }
                     // Navigation으로 바꿀 방법 찾아보기
                     Button(action: {
@@ -105,7 +105,7 @@ struct SettingView: View {
                              Image(systemName: "chevron.right")
                                  .foregroundColor(Color.init(hex: "666666"))
                          }
-                         .padding(EdgeInsets(top: 5, leading: 16, bottom: 0, trailing: 16))
+                         .padding(EdgeInsets(top: 5, leading: 20, bottom: 0, trailing: 20))
                      }
                      .disabled(!SendEmail.canSendMail)
                      .sheet(isPresented: $showMailView) {
@@ -150,7 +150,7 @@ struct LabelledDivider: View {
             line
                 .background(.green)
         }
-        .padding(EdgeInsets(top: 16, leading: 16, bottom: 0, trailing: 16))
+        .padding(EdgeInsets(top: 16, leading: 20, bottom: 0, trailing: 20))
     }
     
     var line: some View {
