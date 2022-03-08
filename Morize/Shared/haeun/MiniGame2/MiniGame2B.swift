@@ -65,9 +65,10 @@ struct MiniGame2B: View {
                     }
                     else{
                         VStack{
-                            // 타이머 바
+                            // count
                             Text("\(countingRound)/\(maxCount)")
                                 .frame(alignment: .leading)
+                            // 타이머 바
                             TimerBar(value: timeRemaining,
                                      maxValue: self.maxValue,
                                      foregroundColor: .green)
