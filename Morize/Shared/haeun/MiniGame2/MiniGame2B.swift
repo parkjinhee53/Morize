@@ -19,7 +19,7 @@ struct MiniGame2B: View {
     @State private var vocaVM = MiniGame2BVM() // ViewModel MiniGame2BVM()를 사용하는 변수
     // timer
     private let maxValue: Double = 5                // 5초 간격으로 넘어가기
-    @State private var timeRemaining:Double = 5     // 5초 간격으로 넘어가기
+    @State private var timeRemaining: Double = 5    // 5초 간격으로 넘어가기
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var countingRound: Int = 0               // 라운드별로 맞추면 count하기
     @State var maxCount: Int = 5                    // 문제의 갯수
@@ -69,7 +69,7 @@ struct MiniGame2B: View {
                             Text("\(countingRound)/\(maxCount)")
                                 .frame(alignment: .leading)
                             // 타이머 바
-                            TimerBar(value: timeRemaining,
+                            TimerBar(value: self.timeRemaining,
                                      maxValue: self.maxValue,
                                      foregroundColor: .green)
                                 .frame(height: 10)
@@ -319,6 +319,7 @@ extension MiniGame2B {
         // ‼️‼️‼️시간 관련 메소드 불러오기
         // 시간을 다시 초기화 해야됨 -> 다음 라운드에 단어 초기화
 //        timerController()
+        timeRemaining = 6
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
 //            strSpeacker(str:vocaVM.English)
 //            strSpeacker(str:vocaVM.Korean)
