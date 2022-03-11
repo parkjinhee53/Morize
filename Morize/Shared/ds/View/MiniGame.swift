@@ -20,7 +20,12 @@ struct MiniGame: View {
     
     @State var timer: Timer.TimerPublisher = Timer.publish(every: 1, on: .main, in: .common)
     
+    func setWord() {
+        self.viewModel.setGame(count: 8)
+    }
+    
     func instantiateTimer() {
+        setWord()
         self.timer = Timer.publish(every: 0.1, on: .main, in: .common)
         self.connectedTimer = self.timer.connect()
         return
