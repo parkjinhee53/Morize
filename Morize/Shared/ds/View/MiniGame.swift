@@ -21,7 +21,7 @@ struct MiniGame: View {
     @State var timer: Timer.TimerPublisher = Timer.publish(every: 1, on: .main, in: .common)
     
     func instantiateTimer() {
-        self.timer = Timer.publish(every: 0.01, on: .main, in: .common)
+        self.timer = Timer.publish(every: 0.1, on: .main, in: .common)
         self.connectedTimer = self.timer.connect()
         return
     }
@@ -60,42 +60,45 @@ struct MiniGame: View {
                 }
                 .frame(width: UIScreen.main.bounds.width, alignment: .leading)
                 Spacer()
-                Text("\(String(format: "%.2f", time))")
+                Text("Time: \(String(format: "%.1f", time))")
                     .foregroundColor(.black)
                     .font(.system(size: 30, weight: .bold, design: .monospaced))
                     .onAppear {
                         self.instantiateTimer()
                     }
                     .onReceive(timer) { _ in
-                        time += 0.01
+                        time += 0.1
                     }
+                Spacer()
                 ForEach(0..<viewModel.level){ i in
                     HStack{
                         ForEach(0..<viewModel.level){ j in
                             Button {
-                                if viewModel.checkArray.isEmpty{
-                                    viewModel.add(pos: (i * 4) + (j))
-                                    viewModel.buttonArray[(i * 4) + (j)] = 1
-                                    print(viewModel.checkArray)
-                                }
-                                else{
-                                    // 단어와 뜻이 맞으면 disable
-                                    if viewModel.check(a: viewModel.wordFour[viewModel.checkArray[0]], b: viewModel.wordFour[(i * 4) + (j)]) {
-                                        viewModel.buttonArray[(i * 4) + (j)] = 2
-                                        viewModel.buttonArray[viewModel.checkArray[0]] = 2
-                                        // 게임이 끝났는지 체크
-                                        if viewModel.checkEnd(){
-                                            cancelTimer()
-                                            self.isPaused = false
-                                        }
+                                if viewModel.buttonArray[(i * 4) + (j)] != 2 {
+                                    if viewModel.checkArray.isEmpty{
+                                        viewModel.add(pos: (i * 4) + (j))
+                                        viewModel.buttonArray[(i * 4) + (j)] = 1
+                                        print(viewModel.checkArray)
                                     }
-                                    // 단어와 뜻이 다르면
-                                    else {
-                                        for i in viewModel.checkArray{
-                                            viewModel.buttonArray[i] = 0
+                                    else{
+                                        // 단어와 뜻이 맞으면 disable
+                                        if viewModel.check(a: viewModel.wordFour[viewModel.checkArray[0]], b: viewModel.wordFour[(i * 4) + (j)]) {
+                                            viewModel.buttonArray[(i * 4) + (j)] = 2
+                                            viewModel.buttonArray[viewModel.checkArray[0]] = 2
+                                            // 게임이 끝났는지 체크
+                                            if viewModel.checkEnd(){
+                                                cancelTimer()
+                                                self.isPaused = false
+                                            }
                                         }
+                                        // 단어와 뜻이 다르면
+                                        else {
+                                            for i in viewModel.checkArray{
+                                                viewModel.buttonArray[i] = 0
+                                            }
+                                        }
+                                        viewModel.checkArray.removeAll()
                                     }
-                                    viewModel.checkArray.removeAll()
                                 }
                             } label: {
                                 Text(viewModel.wordFour[(i * 4) + (j)])
@@ -113,23 +116,27 @@ struct MiniGame: View {
                         }
                     }
                 }
-                Text("몇초 만에 완료!")
-                    .foregroundColor(.black)
-                    .padding(.top, 50)
-                HStack{
-                    Button{
-                        // 애니메이션 중단
-                        self.isPaused = true
-                        // 퍼즐 재생성
-                        viewModel.resetGame()
-                        // 시간 초기화
-                        restartTimer()
-                    } label: {
-                        Text("다시하기")
-                            .foregroundColor(.black)
+                VStack {
+                    Text("\(String(format: "%.1f", time)) 만에 완료!")
+                        .foregroundColor(.black)
+                        .padding(.top, 50)
+                        .padding(.bottom, 10)
+                    
+                    HStack{
+                        Button{
+                            // 애니메이션 중단
+                            self.isPaused = true
+                            // 퍼즐 재생성
+                            viewModel.resetGame()
+                            // 시간 초기화
+                            restartTimer()
+                        } label: {
+                            Text("다시하기")
+                                .foregroundColor(Color.init(hex: "008E00"))
+                        }
                     }
                 }
-                
+                .opacity(viewModel.checkEnd() ? 1 : 0 )
                 Spacer()
             }
         }
