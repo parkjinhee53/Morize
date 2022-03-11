@@ -9,6 +9,7 @@ import SwiftUI
 import Combine
 
 struct MiniGame: View {
+    @Environment(\.presentationMode) var presentationMode
     // viewModel
     @ObservedObject var viewModel = MiniGameVM()
     // timer
@@ -45,8 +46,22 @@ struct MiniGame: View {
         ZStack{
             LottieView(filename: "fireworks", isPaused: isPaused)
                 .frame(width: 400, height: 400, alignment: .center)
-            VStack{
+            VStack(alignment: .center){
+                VStack(alignment: .leading){
+                    Button {
+                        presentationMode.wrappedValue.dismiss()
+                    } label: {
+                        Image(systemName: "arrow.backward")
+                            .resizable()
+                    }
+                    .frame(width: 19, height: 16)
+                    .foregroundColor(.black)
+                    .padding(EdgeInsets(top: 20, leading: 20, bottom: 0, trailing: 0))
+                }
+                .frame(width: UIScreen.main.bounds.width, alignment: .leading)
+                Spacer()
                 Text("\(String(format: "%.2f", time))")
+                    .foregroundColor(.black)
                     .font(.system(size: 30, weight: .bold, design: .monospaced))
                     .onAppear {
                         self.instantiateTimer()
@@ -85,8 +100,10 @@ struct MiniGame: View {
                             } label: {
                                 Text(viewModel.wordFour[(i * 4) + (j)])
                                     .frame(width: 70, height: 70, alignment: .center)
+                                    .foregroundColor(Color.white)
+                                    .font(.custom("NotoSansKR-Regular", size: 14))
                             }
-                            .background(viewModel.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "4E9F3D") : Color(hex: "D8E9A8"))
+                            .background(viewModel.buttonArray[(i * 4) + (j)] == 0 ? Color(hex: "008E00") : Color(hex: "D8E9A8"))
                             .font(.system(size: 12, weight: .bold, design: .monospaced))
                             .foregroundColor(.black)
                             .cornerRadius(8)
@@ -97,6 +114,7 @@ struct MiniGame: View {
                     }
                 }
                 Text("몇초 만에 완료!")
+                    .foregroundColor(.black)
                     .padding(.top, 50)
                 HStack{
                     Button{
@@ -108,8 +126,11 @@ struct MiniGame: View {
                         restartTimer()
                     } label: {
                         Text("다시하기")
+                            .foregroundColor(.black)
                     }
                 }
+                
+                Spacer()
             }
         }
     }

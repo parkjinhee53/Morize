@@ -111,6 +111,7 @@
 		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
 		B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
+		B7BB219527DB8EE7006358EC /* MiniGameIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB219427DB8EE7006358EC /* MiniGameIntro.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
 		B7DB0B9B279E4AAC002A8C2C /* GodoB.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */; };
 		B7DB0B9C279E4AAC002A8C2C /* GodoM.ttf in Resources */ = {isa = PBXBuildFile; fileRef = B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */; };
@@ -255,6 +256,7 @@
 		B777307927851BA000123DAD /* CardFlip.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlip.swift; sourceTree = "<group>"; };
 		B777307B27851FD800123DAD /* CardFlipVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CardFlipVM.swift; sourceTree = "<group>"; };
 		B7B3D66927BBE8D900B4A741 /* ListAddView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListAddView.swift; sourceTree = "<group>"; };
+		B7BB219427DB8EE7006358EC /* MiniGameIntro.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiniGameIntro.swift; sourceTree = "<group>"; };
 		B7D7607D277D985600D50AFA /* minigame2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = minigame2.swift; sourceTree = "<group>"; };
 		B7DB0B99279E4AAC002A8C2C /* GodoB.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoB.ttf; sourceTree = "<group>"; };
 		B7DB0B9A279E4AAC002A8C2C /* GodoM.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = GodoM.ttf; sourceTree = "<group>"; };
@@ -576,6 +578,7 @@
 				B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */,
 				B713F471278BD7050040E6A4 /* CardMemory.swift */,
 				B7F323E827B0FAD300E22A2F /* File.swift */,
+				B7BB219427DB8EE7006358EC /* MiniGameIntro.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -994,12 +997,11 @@
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
-				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */,
-				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
 				F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */,
 				F787461B27969BB00010A47C /* AppDelegate.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
+				B7BB219527DB8EE7006358EC /* MiniGameIntro.swift in Sources */,
 				2A7DB83727AAB9BA004D4C0D /* ComposeMailData.swift in Sources */,
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
