@@ -22,12 +22,12 @@ class WordStorage: ObservableObject {
     @Published var flipped: [Bool] = []
     
     
-    func getRandomWords(count: Int) -> [String: [Any]] {
-        var tempDic: [String: [Any]] = [:]
-        for _ in 0...count {
+    func getRandomWords(count: Int) -> [String: String] {
+        var tempDic: [String: String] = [:]
+        while tempDic.count < count {
             let tempEle = wordArr.randomElement()
             if tempDic[tempEle!.key] == nil {
-                tempDic[tempEle!.key] = tempEle!.value
+                tempDic[tempEle!.key] = (tempEle!.value[0] as AnyObject).description
             }
         }
         return tempDic
