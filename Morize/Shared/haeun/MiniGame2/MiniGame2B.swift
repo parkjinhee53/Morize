@@ -19,7 +19,7 @@ struct MiniGame2B: View {
     @State private var vocaVM = MiniGame2BVM() // ViewModel MiniGame2BVM()를 사용하는 변수
     // timer
     private let maxValue: Double = 5                // 5초 간격으로 넘어가기
-    @State private var timeRemaining: Double = 5    // 5초 간격으로 넘어가기
+    @State private var timeRemaining: Double = 15    // 5초 간격으로 넘어가기
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var countingRound: Int = 0               // 라운드별로 맞추면 count하기
     @State var maxCount: Int = 5                    // 문제의 갯수
@@ -95,7 +95,7 @@ struct MiniGame2B: View {
                                             .font(.system(size:15,design: .monospaced))
                                             .foregroundColor(.blue)
                                             .frame(width: ansTextSize, height: ansTextSize)
-                                            .background(fgColor)
+                                            .background(.white)
                                             .cornerRadius(50)
                                             .overlay(RoundedRectangle(cornerRadius: 50)
                                                         .stroke(Color.yellow,lineWidth: 2))
@@ -108,7 +108,7 @@ struct MiniGame2B: View {
                                                 print("newPosition[\(index)]:\(newPosition[index])")
                                                 print("ansPos[\(index)]:\(ans.pos[index])")
                                                 print("(\(ans.pos[index].origin.x-newPosition[index].width),\(ans.pos[index].origin.y-newPosition[index].height))")
-                                                fgColor = color.randomElement()!
+//                                                fgColor = color.randomElement()!
                                             }
                                             .offset(offset[index])
                                             .gesture(DragGesture()
@@ -121,7 +121,7 @@ struct MiniGame2B: View {
                                                 offset[index].width = value.translation.width + newPosition[index].width
                                                 offset[index].height = value.translation.height + newPosition[index].height
                                             })
-                                                        .onEnded({ value in
+                                            .onEnded({ value in
                                                 if(ans.correct[index]){ return }
                                                 vocaSpeak[index] = false
                                                 newPosition[index].width = offset[index].width
@@ -140,7 +140,7 @@ struct MiniGame2B: View {
                                                             
                                                             ans.correct[index] = true
                                                             ques.correct[i] = true
-                                                            //                                                                correctPlayer.playFromStart()
+//                                                                correctPlayer.playFromStart()
                                                             break
                                                         }
                                                     }
@@ -148,7 +148,7 @@ struct MiniGame2B: View {
                                                 if(!ans.correct[index]){
                                                     offset[index] = .zero
                                                     newPosition[index] = .zero
-                                                    //                                                        errorPlayer.playFromStart()
+//                                                        errorPlayer.playFromStart()
                                                 }
                                                 var pass = true
                                                 for i in ans.correct{
@@ -163,7 +163,7 @@ struct MiniGame2B: View {
                                                     }
                                                 }
                                             })
-                                            )
+                                        )
                                     }
                                 }
                             }
@@ -316,10 +316,8 @@ extension MiniGame2B {
         countingRound += 1
         print("roundCount:\(roundCount)")
         roundChanging = true
-        // ‼️‼️‼️시간 관련 메소드 불러오기
-        // 시간을 다시 초기화 해야됨 -> 다음 라운드에 단어 초기화
-//        timerController()
-        timeRemaining = 6
+        // ‼️‼️‼️시간 관련 메소드 불러오기 (16초)
+        timeRemaining = 16
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
 //            strSpeacker(str:vocaVM.English)
 //            strSpeacker(str:vocaVM.Korean)
@@ -359,16 +357,12 @@ extension MiniGame2B {
             VStack{
                 //Text("Your record time :  600.0")
                 Text("Congratulations!😄💪🐥")
-                    .font(.system(size:55,design: .monospaced))
+                    .font(.system(size:30,design: .monospaced))
                     .foregroundColor(.black)
                 //                Text("Your record time : "+String(format:"%.1f", timeClock))
                 //                    .font(.system(size:30,design: .monospaced))
                 //                    .foregroundColor(.blue)
                 
-                //                TextField("Your Name", text: $username)
-                //                    .frame(width:300)
-                //                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                //                     //.keyboardType(.numberPad)
             }
         }
         .onAppear{
