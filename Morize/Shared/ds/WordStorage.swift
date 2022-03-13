@@ -22,12 +22,12 @@ class WordStorage: ObservableObject {
     @Published var flipped: [Bool] = []
     
     
-    func getRandomWords(count: Int) -> [String: [Any]] {
-        var tempDic: [String: [Any]] = [:]
-        for _ in 0...count {
+    func getRandomWords(count: Int) -> [String: String] {
+        var tempDic: [String: String] = [:]
+        while tempDic.count < count {
             let tempEle = wordArr.randomElement()
             if tempDic[tempEle!.key] == nil {
-                tempDic[tempEle!.key] = tempEle!.value
+                tempDic[tempEle!.key] = (tempEle!.value[0] as AnyObject).description
             }
         }
         return tempDic
@@ -54,6 +54,9 @@ class WordStorage: ObservableObject {
     }
     
     func setting() {
+        zIndexs = []
+        flipped = []
+        dragOffset = []
         for i in 0..<self.word.count {
             zIndexs.append(Double((i + 1) * -1))
             flipped.append(false)
@@ -70,7 +73,6 @@ class WordStorage: ObservableObject {
                 mean.append(i.value[0] as! String)
             }
         }
-        print("dd")
     }
     
     func setBasedWords() {

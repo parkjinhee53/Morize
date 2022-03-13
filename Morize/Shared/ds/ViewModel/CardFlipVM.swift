@@ -28,16 +28,6 @@ class CardFlipVM: ObservableObject {
         setZindexArr()
     }
     
-    func reset() {
-        words = WordStorage.shared.word
-        means = WordStorage.shared.mean
-        zIndexs = WordStorage.shared.zIndexs
-        flipped = WordStorage.shared.flipped
-        dragOffset = WordStorage.shared.dragOffset
-        
-        setZindexArr()
-    }
-    
     func setZindexArr() {
         for _ in 0..<words.count {
             zindexsArr.append(zIndexs)
