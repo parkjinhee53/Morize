@@ -296,7 +296,7 @@ final public class UserApi {
     }
     
     /// 앱에 가입한 사용자의 배송지 정보를 얻을 수 있습니다.
-    /// - seealso: `UserShippingAddresses`
+        /// - seealso: `UserShippingAddresses`
     public func shippingAddresses(fromUpdatedAt: Int? = nil, pageSize: Int? = nil, completion:@escaping (UserShippingAddresses?, Error?) -> Void) {
        AUTH.responseData(.get,
                          Urls.compose(path:Paths.userShippingAddress),

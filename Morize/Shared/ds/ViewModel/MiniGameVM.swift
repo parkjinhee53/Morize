@@ -11,10 +11,7 @@ import SwiftUI
 class MiniGameVM: ObservableObject{
     // MARK: - 생성자
     // 생성자
-    init() {
-        // 생성 시 단어 섞기
-        wordFour.shuffle()
-    }
+    init() { }
     
     // MARK: - 변수
     // 4*4, 6*6 게임 레벨 변수
@@ -69,5 +66,22 @@ class MiniGameVM: ObservableObject{
         for i in 0..<buttonArray.count {
             buttonArray[i] = 0
         }
+    }
+    
+    // 단어 가져오기
+    func setGame(count: Int) {
+        // answer dic
+        answer = WordStorage.shared.getRandomWords(count: count)
+        // words array dic
+        let answers: [String] = answer.map{ $0.key.description }
+        let values: [String] = answer.map{ $0.value.description }
+        
+        wordFour = answers + values
+        
+        // 생성 시 단어 섞기
+        wordFour.shuffle()
+    
+        print(answer)
+        print(wordFour)
     }
 }

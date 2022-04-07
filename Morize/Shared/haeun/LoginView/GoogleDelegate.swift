@@ -24,10 +24,31 @@ class GoogleDelegate: ObservableObject {
             let user = GIDSignIn.sharedInstance.currentUser
             guard let user = user else {return}
             let givenName = user.profile?.givenName
+            // UserID 저장
+            UserDefaults.standard.set(user.userID, forKey: "UserID")
+            // UserName 저장
             UserDefaults.standard.set(givenName, forKey: "UserName")
-            print(UserDefaults.standard.string(forKey: "UserName")!)
             UserDefaults.standard.set(true, forKey: "isLogin")
-//            self.member.username = givenName ?? ""
+            
+            WordStorage.shared.getFirebaseDB()
+        }else{
+            self.member.username = "로그인 안됨"
+        }
+    }
+    
+    func firstLoggin(){
+        if(GIDSignIn.sharedInstance.currentUser != nil){
+            let user = GIDSignIn.sharedInstance.currentUser
+            guard let user = user else {return}
+            let givenName = user.profile?.givenName
+            // UserID 저장
+            UserDefaults.standard.set(user.userID, forKey: "UserID")
+            // UserName 저장
+            UserDefaults.standard.set(givenName, forKey: "UserName")
+            UserDefaults.standard.set(true, forKey: "isLogin")
+            
+            WordStorage.shared.setBasedWords()
+            WordStorage.shared.getFirebaseDB()
         }else{
             self.member.username = "로그인 안됨"
         }
@@ -55,7 +76,7 @@ class GoogleDelegate: ObservableObject {
                 if let error = error {
                     self.errorMessage = "error: \(error.localizedDescription)"
                 }
-                self.checkStatus()
+                self.firstLoggin()
             }
         )
     }
