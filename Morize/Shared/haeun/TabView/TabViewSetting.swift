@@ -8,58 +8,48 @@
 import SwiftUI
 
 struct TabViewSetting: View {
+    @State private var currentTab = 0
     @Binding var level: String
+
+    @State var words = WordStorage.shared.word
+    @State var means = WordStorage.shared.mean
+    @State var zIndexs = WordStorage.shared.zIndexs
+    @State var flipped = WordStorage.shared.flipped
+    @State var dragOffset = WordStorage.shared.dragOffset
     
     var body: some View {
-        ZStack {
-            Color(hex: "eaefe5")
-                .ignoresSafeArea()
-            VStack {
-                // 상단 TabView
-                WordView()
-                // 하단 TabView
-                TabView {
-                    CardMemory()
-                        .tabItem{
-                            Image(systemName: "character.book.closed.fill")
-                        }
-                        .navigationBarHidden(false)
-                    
-                    ListView()
-                        .tabItem{
-                            Image(systemName: "book")
-                       }
-                       .navigationBarHidden(false)
-                    
-//                    if level == "middle" {
-//                        MiddleWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-//                    else if level == "high" {
-//                        HighWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-//                    else if level == "toeic" {
-//                        ToeicWord()
-//                            .tabItem{
-//                                Image(systemName: "book")
-//                            }
-//                            .navigationBarHidden(false)
-//                    }
-                    MiniGameView()
-                        .tabItem{
-                            Image(systemName: "gamecontroller.fill")
-                        }
-                        .navigationBarHidden(false)
-                }
-                .accentColor(.black)
+        VStack {
+            // 상단 TabView
+            WordView()
+            // 하단 TabView
+            TabView {
+                CardFlip(card: $words)
+                    .tabItem{
+                        Image(systemName: "note.text")
+                    }
+                    .navigationBarHidden(false)
+                    .onAppear {
+                        words = WordStorage.shared.word
+                        means = WordStorage.shared.mean
+                        zIndexs = WordStorage.shared.zIndexs
+                        flipped = WordStorage.shared.flipped
+                        dragOffset = WordStorage.shared.dragOffset
+                        print(words)
+                    }
+                
+                ListView()
+                    .tabItem{
+                        Image(systemName: "book")
+                   }
+                   .navigationBarHidden(false)
+                
+                MiniGameView()
+                    .tabItem{
+                        Image(systemName: "gamecontroller")
+                    }
+                    .navigationBarHidden(false)
             }
+            .accentColor(Color(hex: "008E00"))
         }
     }
 }

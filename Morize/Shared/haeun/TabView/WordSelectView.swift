@@ -12,18 +12,17 @@ struct WordSelectView: View {
     
     var body: some View {
         ZStack{
-            Color(hex: "eaefe5")
-                .ignoresSafeArea()
             VStack(alignment: .leading){
                 if level == "none" {
                     Text("저희 어플을 처음 사용하시나요 ?")
+                        .foregroundColor(Color.init(hex: "008E00"))
                         .font(.custom("GodoM", size: 30))
                         .padding(.bottom, 10)
                         .padding(.leading, 20)
                         .padding(.top, 50)
                     Text("기본으로 제공되는 단어장의 종류를 선택해 주세요!")
                         .font(.custom("GodoM", size: 15))
-                        .foregroundColor(Color.init(hex: "1a1e17"))
+                        .foregroundColor(Color.init(hex: "666666"))
                         .padding(.leading, 20)
                         .padding(.bottom, 50)
                     Spacer()

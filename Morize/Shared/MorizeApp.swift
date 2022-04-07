@@ -21,8 +21,10 @@ struct MorizeApp: App {
     
     init() {
         FirebaseApp.configure() // 코드 추가
-        getFirebaseDB()
+//        getFirebaseDB()
         UserDefaults.standard.set("로그인", forKey: "UserName")
+        UserDefaults.standard.set("nil", forKey: "UserID")
+        UserDefaults.standard.set("toeic", forKey: "level")
         KakaoSDK.initSDK(appKey: "67ccb1551072d256d2a37ebef4b61bfd")
     }
     
@@ -30,27 +32,26 @@ struct MorizeApp: App {
         var ref: DatabaseReference!
         
         ref = Database.database().reference()
-        
-        //        ref.child("users").child("ds").setValue(["apple": "사과"])
-        //        ref.child("users/ds/banana").setValue("바나나")
-        
-        ref.child("users/ds").getData(completion:  { error, snapshot in
-            guard error == nil else {
-                print(error!.localizedDescription)
-                return
-            }
-            let arr = snapshot.value as? [String: String] ?? [:]
-            wordStorage.wordArr = arr
-        });
+        let id = UserDefaults.standard.string(forKey: "UserID")!
+        if id != "nil" {
+            ref.child("users/\(id)").getData(completion:  { error, snapshot in
+                guard error == nil else {
+                    print(error!.localizedDescription)
+                    return
+                }
+                let arr = snapshot.value as? [String: [Any]] ?? [:]
+                wordStorage.wordArr = arr
+            });
+        }
     }
     
     var body: some Scene {
         WindowGroup {
-//            LoginView()
-//                .environmentObject(self.userAuth)
-//                .environmentObject(self.kakaoAuth)
+            LoginView()
+                .environmentObject(self.userAuth)
+                .environmentObject(self.kakaoAuth)
 //            MiniGame2B(currentPage: .constant(Pages.GamePage))
-            MiniGame2B()
+//            MiniGame2B()
         }
     }
 }

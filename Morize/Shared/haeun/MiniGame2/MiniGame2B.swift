@@ -18,9 +18,11 @@ struct MiniGame2B: View {
     // MARK: - 변수
     @State private var vocaVM = MiniGame2BVM() // ViewModel MiniGame2BVM()를 사용하는 변수
     // timer
-    private let maxValue: Double = 5                // 5초 간격으로 넘어가기
-    @State private var timeRemaining:Double = 5     // 5초 간격으로 넘어가기
+    private let maxValue: Double = 15                // 타이머바 크기 (15초 간격으로 넘어가기)
+    @State private var timeRemaining: Double = 15    // 15초 간격으로 넘어가기
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
+    @State var countingRound: Int = 0               // 라운드별로 맞추면 count하기
+    @State var maxCount: Int = 5                    // 문제의 갯수
     // animation paused
     @State private var isPaused: Bool = true
     @State var connectedTimer: Cancellable? = nil
@@ -31,13 +33,16 @@ struct MiniGame2B: View {
     @State private var showAns:Bool = false         // 답을 가리기 위한 조건 (삼항 조건 연산자에서 쓰임 question ? answer1 : answer2 구조)
     // 단어 제공
     @State private var vocabularyOrder = [Int]()
+    // 한글 뜻을 나타낼 변수
+    @State var kWord: String = ""
     // 게임을 진행할 단어의 위치 사용, 저장하는 변수
     @State private var offset = [CGSize]()          // 선택하는 단어 위치 나타내는 변수
     @State private var newPosition = [CGSize]()     // 선택하는 단어의 새로운 위치를 나타내는 변수 (답을 입력하는 칸의 위치)
     @State var ans = alphabet()                     // alphabet()를 사용하는 변수 ans(선택하는 부분의 위치)
     @State var ques = alphabet()                    // alphabet()를 사용하는 변수 ques(답을 입력하는 부분의 위치)
-    @State private var ansChars = [String]()        // 선택하는 부분의 단어 (Char)
-    @State private var quesChars = [String]()       // 답을 입력하는 부분의 단어 (Char)
+    @State private var ansChars = [String]()        // 선택하는 부분의 단어(글자) (Char)
+    @State private var quesChars = [String]()       // 답을 입력하는 부분의 단어(글자) (Char)
+    @State private var koreanString = [String]()    // 뜻을 나타낼 변수 (한글 뜻)
     // 게임을 진행할 단어를 꾸미는 변수
     let color: [Color] = [.gray,.green]
     @State private var fgColor: Color = .white      // 선택하는 단어 색 고르는 변수
@@ -47,39 +52,50 @@ struct MiniGame2B: View {
     // 단어를 읽는 부분 -> 나중에 구현될 부분
     @State private var vocaSpeak = [Bool]()
     let synthesizer = AVSpeechSynthesizer()
+    
 
     var body: some View {
         ZStack{
             VStack{
                 ZStack{
+                    // 라운드가 바뀌고있으면
                     if(roundChanging){
                         Text("Round \(roundCount+0)")
                             .font(.system(size:50,design: .monospaced))
                     }
                     else{
                         VStack{
+                            // count
+                            Text("\(countingRound)/\(maxCount)")
+                                .frame(alignment: .leading)
                             // 타이머 바
-                            TimerBar(value: timeRemaining,
+                            TimerBar(value: self.timeRemaining,
                                      maxValue: self.maxValue,
                                      foregroundColor: .green)
-                                .frame(height: 10)
-                            
-                            // 뜻과 예문 나타내는 설명창
-                            HStack{
-                                Rectangle()
-                                    .size(width: 500, height: 500)
-                            }.padding(30)
-                            
-                            // 글자를 선택하는 부분
+                                .frame(height: 15)
+                            Spacer()
+                            ZStack{
+                                // 뜻과 예문 나타내는 설명창
+                                RoundedRectangle(cornerRadius: 20)
+                                    .fill(Color.green)
+                                    .frame(width: 300, height: 220)
+                                Text("\(kWord)")
+                                    .font(.headline)
+                                    .padding(30)
+                                    .foregroundColor(.white)
+                            }
+                            Spacer()
+                            // 글자를 선택하는 부분 -> 분석필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
                                     ForEach(ansChars.indices,id:\.self){
                                         (index) in
+                                        
                                         Text("\(ansChars[index])")
                                             .font(.system(size:15,design: .monospaced))
                                             .foregroundColor(.blue)
                                             .frame(width: ansTextSize, height: ansTextSize)
-                                            .background(fgColor)
+                                            .background(.white)
                                             .cornerRadius(50)
                                             .overlay(RoundedRectangle(cornerRadius: 50)
                                                         .stroke(Color.yellow,lineWidth: 2))
@@ -92,7 +108,7 @@ struct MiniGame2B: View {
                                                 print("newPosition[\(index)]:\(newPosition[index])")
                                                 print("ansPos[\(index)]:\(ans.pos[index])")
                                                 print("(\(ans.pos[index].origin.x-newPosition[index].width),\(ans.pos[index].origin.y-newPosition[index].height))")
-                                                fgColor = color.randomElement()!
+//                                                fgColor = color.randomElement()!
                                             }
                                             .offset(offset[index])
                                             .gesture(DragGesture()
@@ -105,7 +121,7 @@ struct MiniGame2B: View {
                                                 offset[index].width = value.translation.width + newPosition[index].width
                                                 offset[index].height = value.translation.height + newPosition[index].height
                                             })
-                                                        .onEnded({ value in
+                                            .onEnded({ value in
                                                 if(ans.correct[index]){ return }
                                                 vocaSpeak[index] = false
                                                 newPosition[index].width = offset[index].width
@@ -124,7 +140,7 @@ struct MiniGame2B: View {
                                                             
                                                             ans.correct[index] = true
                                                             ques.correct[i] = true
-                                                            //                                                                correctPlayer.playFromStart()
+//                                                                correctPlayer.playFromStart()
                                                             break
                                                         }
                                                     }
@@ -132,7 +148,7 @@ struct MiniGame2B: View {
                                                 if(!ans.correct[index]){
                                                     offset[index] = .zero
                                                     newPosition[index] = .zero
-                                                    //                                                        errorPlayer.playFromStart()
+//                                                        errorPlayer.playFromStart()
                                                 }
                                                 var pass = true
                                                 for i in ans.correct{
@@ -147,12 +163,12 @@ struct MiniGame2B: View {
                                                     }
                                                 }
                                             })
-                                            )
+                                        )
                                     }
                                 }
                             }
-                            Spacer()
-                            // 답을 입력하는 부분
+//                            Spacer()
+                            // 답을 입력하는 부분 -> 분석 필요
                             HStack(alignment: .center,spacing:15){
                                 Group{
                                     ForEach(quesChars.indices,id:\.self){
@@ -218,7 +234,9 @@ extension MiniGame2B {
     func initialRound(){
         showAns = false             // 초기화 하기위해 round조건을 false로 만듦.
         vocaVM = vocabularyDataSet[vocabularyOrder.removeLast()]    // DataSet에서 제공한 단어를 삭제(가장 마지막 요소를 제거) +가장 마지막 요소를 제거한 데이터 셋이 VM이다.
-        vocabularyInit(voca:vocaVM.English)     // 영어 단어로 단어생성자에 넣기
+        vocabularyInit(voca:vocaVM.English)     // 영어 단어로 단어생성자에 넣기(초기화)
+        kWord = vocaVM.Korean                   // 한글 단어로 초기화
+        
 //        strSpeacker(str:"")
     }
     // 게임 시작
@@ -266,6 +284,7 @@ extension MiniGame2B {
         vocaSpeak.removeAll()
         ansChars.removeAll()
         quesChars.removeAll()
+        koreanString.removeAll()
         offset.removeAll()
         newPosition.removeAll()
         ans.correct.removeAll()
@@ -284,6 +303,7 @@ extension MiniGame2B {
         let charSh = chars.shuffled()
         for i in charSh{ ansChars.append(String(i)) }
         for i in chars{ quesChars.append(String(i)) }
+        for i in chars{ koreanString.append(String(i))  }
     }
     // 단어의 위치를 갱신하는 함수
     func updatePos(geometry:GeometryProxy,ptr:UnsafeMutablePointer<CGRect>){
@@ -293,10 +313,11 @@ extension MiniGame2B {
     // 다음Round로 준비하는 함수
     func nextRoundDelay(){
         roundCount += 1
+        countingRound += 1
         print("roundCount:\(roundCount)")
         roundChanging = true
-        // ‼️‼️‼️시간 관련 메소드 불러오기
-//        timerController()
+        // ‼️‼️‼️시간 관련 메소드 불러오기 (16초)
+        timeRemaining = 16
         DispatchQueue.main.asyncAfter(deadline: .now() + 0.8){
 //            strSpeacker(str:vocaVM.English)
 //            strSpeacker(str:vocaVM.Korean)
@@ -336,16 +357,12 @@ extension MiniGame2B {
             VStack{
                 //Text("Your record time :  600.0")
                 Text("Congratulations!😄💪🐥")
-                    .font(.system(size:55,design: .monospaced))
+                    .font(.system(size:30,design: .monospaced))
                     .foregroundColor(.black)
                 //                Text("Your record time : "+String(format:"%.1f", timeClock))
                 //                    .font(.system(size:30,design: .monospaced))
                 //                    .foregroundColor(.blue)
                 
-                //                TextField("Your Name", text: $username)
-                //                    .frame(width:300)
-                //                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                //                     //.keyboardType(.numberPad)
             }
         }
         .onAppear{
