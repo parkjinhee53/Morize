@@ -11,7 +11,9 @@ struct MiniGameView: View {
     @State var state = 0
     
     // not navigation
-    @State var start = false
+    @State var cardStart = false
+    @State var wordStart = false
+    @State var timerStart = false
     
     init(){
         UINavigationBar.setAnimationsEnabled(false)
@@ -21,9 +23,9 @@ struct MiniGameView: View {
         VStack {
             Button("카드 맞추기") {
                 print("asdf")
-                start = true
+                cardStart = true
             }
-            .fullScreenCover(isPresented: $start, content: MiniGameIntro.init)
+            .fullScreenCover(isPresented: $cardStart, content: MiniGameIntro.init)
             .font(.custom("NotoSansKR-Bold", size: 20))
             .padding()
             .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
@@ -34,9 +36,9 @@ struct MiniGameView: View {
             
             Button("단어 맞추기") {
                 print("asdf")
-                start = true
+                wordStart = true
             }
-            .fullScreenCover(isPresented: $start, content: MiniGame2B.init)
+            .fullScreenCover(isPresented: $wordStart, content: MiniGame2B.init)
             .font(.custom("NotoSansKR-Bold", size: 20))
             .padding()
             .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
@@ -47,9 +49,9 @@ struct MiniGameView: View {
             
             Button("타이머 게임") {
                 print("asdf")
-                start = true
+                timerStart = true
             }
-            .fullScreenCover(isPresented: $start, content: WelcomeView.init)
+            .fullScreenCover(isPresented: $timerStart, content: WelcomeView.init)
             .font(.custom("NotoSansKR-Bold", size: 20))
             .padding()
             .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
