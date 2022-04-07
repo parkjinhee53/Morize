@@ -18,7 +18,7 @@ struct MiniGame2B: View {
     // MARK: - 변수
     @State private var vocaVM = MiniGame2BVM() // ViewModel MiniGame2BVM()를 사용하는 변수
     // timer
-    private let maxValue: Double = 15                // 타이머바 크기 15초 간격으로 넘어가기
+    private let maxValue: Double = 15                // 타이머바 크기 (15초 간격으로 넘어가기)
     @State private var timeRemaining: Double = 15    // 15초 간격으로 넘어가기
     let timer = Timer.publish(every: 1, on: .main, in: .common).autoconnect()
     @State var countingRound: Int = 0               // 라운드별로 맞추면 count하기
