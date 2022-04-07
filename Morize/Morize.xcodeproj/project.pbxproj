@@ -84,7 +84,6 @@
 		B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968292782CDB0001B0884 /* WelcomeView.swift */; };
 		B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
 		B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
-		B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B712F9C6277D6D8700E7A3BD /* Lottie */; };
 		B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B712F9C9277D6DE000E7A3BD /* LottieView.swift */; };
 		B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = B712F9CB277D6F9300E7A3BD /* fireworks.json */; };
 		B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */; };
@@ -96,8 +95,6 @@
 		B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */; };
 		B744F14927BA8E7B00A2D1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */; };
 		B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */; };
-		B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */; };
-		B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */; };
 		B7498E3427BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
 		B7498E3527BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
 		B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
@@ -108,7 +105,6 @@
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
-		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
 		B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7D7607E277D985600D50AFA /* minigame2.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7D7607D277D985600D50AFA /* minigame2.swift */; };
@@ -131,6 +127,10 @@
 		F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD5279E413600557E45 /* ListViewModel.swift */; };
 		F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
 		F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
+		F7A9EC8827D99121004E8B93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8727D99121004E8B93 /* Lottie */; };
+		F7A9EC8A27D99177004E8B93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */; };
+		F7A9EC8C27D99182004E8B93 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */; };
+		F7A9EC8E27D9918D004E8B93 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */; };
 		F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F7AB7CF1278BF91E0039989F /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CF2278BF92A0039989F /* Toeic.swift */; };
@@ -269,11 +269,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */,
 				7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */,
-				B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */,
-				B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */,
-				B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */,
+				F7A9EC8827D99121004E8B93 /* Lottie in Frameworks */,
+				F7A9EC8C27D99182004E8B93 /* FirebaseDatabase in Frameworks */,
+				F7A9EC8E27D9918D004E8B93 /* FirebaseFirestore in Frameworks */,
+				F7A9EC8A27D99177004E8B93 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -652,10 +652,10 @@
 			);
 			name = "Morize (iOS)";
 			packageProductDependencies = (
-				B712F9C6277D6D8700E7A3BD /* Lottie */,
-				B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */,
-				B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */,
-				B7984F0927BA990A00231CFE /* FirebaseFirestore */,
+				F7A9EC8727D99121004E8B93 /* Lottie */,
+				F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */,
+				F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */,
+				F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */,
 			);
 			productName = "Morize (iOS)";
 			productReference = 2A3017C3277AA5FC00369590 /* Morize.app */;
@@ -775,7 +775,7 @@
 			mainGroup = 2A3017B6277AA5F900369590;
 			packageReferences = (
 				B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2A3017C4277AA5FC00369590 /* Products */;
 			projectDirPath = "";
@@ -958,12 +958,7 @@
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
 				F7F7E131278415BB008FF432 /* WordList.swift in Sources */,
 				2A3AF3AA279E39270020DC74 /* CSVDataView.swift in Sources */,
-<<<<<<< HEAD
-				B70968362782CDB0001B0884 /* MainTabView.swift in Sources */,
 				B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */,
-				B70968402782CDB0001B0884 /* ControlsView.swift in Sources */,
-=======
->>>>>>> main
 				F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */,
 				F787461B27969BB00010A47C /* AppDelegate.swift in Sources */,
 				B709683C2782CDB0001B0884 /* ResultsView.swift in Sources */,
@@ -971,10 +966,7 @@
 				B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */,
 				F787461527969B330010A47C /* ToeicWord.swift in Sources */,
 				2A3AF3A4279E38EB0020DC74 /* NoticeView.swift in Sources */,
-<<<<<<< HEAD
 				B7498E3427BBDA3300C46344 /* ListView.swift in Sources */,
-=======
->>>>>>> main
 				2A3017E6277AA5FC00369590 /* ContentView.swift in Sources */,
 				2ABE297027C3E48D00EDA3E3 /* Vocabulary.swift in Sources */,
 				F787461627969B4F0010A47C /* Middle.swift in Sources */,
@@ -1014,11 +1006,8 @@
 				B70968312782CDB0001B0884 /* Question.swift in Sources */,
 				B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */,
 				2A903A6F27969B9C00DB774A /* WordListView.swift in Sources */,
-<<<<<<< HEAD
 				B7498E3927BBDF8000C46344 /* ListVM.swift in Sources */,
 				B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */,
-=======
->>>>>>> main
 				2A3AF3AE279E39AF0020DC74 /* FAQView.swift in Sources */,
 				F7AE674B27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				2A903A6E27969B9900DB774A /* MiniGameView.swift in Sources */,
@@ -1533,7 +1522,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -1544,24 +1533,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B712F9C6277D6D8700E7A3BD /* Lottie */ = {
+		F7A9EC8727D99121004E8B93 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */ = {
+		F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */ = {
+		F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		B7984F0927BA990A00231CFE /* FirebaseFirestore */ = {
+		F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
