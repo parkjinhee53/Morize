@@ -12,13 +12,23 @@ let ttimer = Timer
     .autoconnect()
 
 struct TimerGame: View {
+    @Environment(\.presentationMode) var presentationMode: Binding<PresentationMode>
     @StateObject var viewModel = GameViewModel()
     @State var counter: Int = 0
-    var countTo: Int = 5
-    
+    @State var countTo: Int = 5
+    @State var gameover: Bool = false
+    @State var isTimer: Bool = true
     var body: some View {
         ZStack {
             GameColor.main.ignoresSafeArea()
+            if gameover {
+                Button {
+                    self.presentationMode.wrappedValue.dismiss()
+                } label: {
+                    Text("게임 오버!")
+                        .background(.black)
+                }
+            }
             VStack {
                 HStack {
                     Text(viewModel.progressText)
@@ -55,8 +65,13 @@ struct TimerGame: View {
                     }
                 }
                 .onReceive(timer) { time in
-                    if(self.counter < self.countTo) {
-                        self.counter += 1
+                    if isTimer {
+                        if(self.counter < self.countTo) {
+                            self.counter += 1
+                        }
+                        else {
+                            gameover = true
+                        }
                     }
                 }
                 
@@ -71,15 +86,21 @@ struct TimerGame: View {
                     ForEach(viewModel.answerIndices) { index in
                         AnswerButton(text: viewModel.answerText(for: index)) {
                             viewModel.makeSelectionForCurrentQuestion(at: index)
+                            isTimer = false
                         }
                         .background(viewModel.colorForButton(at: index))
                         .disabled(viewModel.selectionWasMade)
                     }
                 }
                 if viewModel.selectionWasMade {
-                    Button(action: viewModel.advanceGameState,
-                           label: {
-                            BottomText(str: "Next")
+                    Button(action: {
+                        viewModel.advanceGameState()
+                        counter = 0
+                        countTo = 5
+                        isTimer = true
+                    },
+                       label: {
+                        BottomText(str: "Next")
                     })
                 }
             }.padding(.bottom)
