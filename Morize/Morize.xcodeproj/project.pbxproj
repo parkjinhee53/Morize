@@ -68,8 +68,6 @@
 		7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */; };
 		B709682C2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682D2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
-		B709682E2782CDB0001B0884 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968202782CDB0001B0884 /* GameColor.swift */; };
-		B709682F2782CDB0001B0884 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968202782CDB0001B0884 /* GameColor.swift */; };
 		B70968302782CDB0001B0884 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968212782CDB0001B0884 /* Question.swift */; };
 		B70968312782CDB0001B0884 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968212782CDB0001B0884 /* Question.swift */; };
 		B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968232782CDB0001B0884 /* GameViewModel.swift */; };
@@ -228,7 +226,6 @@
 		8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		AB332727A5833889AE29007F /* Pods-Morize (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).release.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		B709681F2782CDB0001B0884 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		B70968202782CDB0001B0884 /* GameColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		B70968212782CDB0001B0884 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B70968232782CDB0001B0884 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		B70968262782CDB0001B0884 /* BottomText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
@@ -653,7 +650,6 @@
 			isa = PBXGroup;
 			children = (
 				B70968232782CDB0001B0884 /* GameViewModel.swift */,
-				B70968202782CDB0001B0884 /* GameColor.swift */,
 				B709682B2782CDB0001B0884 /* ResultsViewModel.swift */,
 				F7A63AD5279E413600557E45 /* ListViewModel.swift */,
 			);
@@ -991,7 +987,6 @@
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				F787461727969B520010A47C /* High.swift in Sources */,
 				F787461927969BA80010A47C /* MiniGameView.swift in Sources */,
-				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				2A903A6227969B2700DB774A /* WordView.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
@@ -1078,7 +1073,6 @@
 				F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */,
 				F7AB7CF4278BF92A0039989F /* Toeic.swift in Sources */,
 				2A903A6627969B5300DB774A /* LoginView.swift in Sources */,
-				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				B7498E3527BBDA3300C46344 /* ListView.swift in Sources */,
