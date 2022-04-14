@@ -32,25 +32,26 @@ struct TimerGame: View {
             VStack {
                 HStack {
                     Text(viewModel.progressText)
-                        .padding(.leading, 30)
+                        .padding(.leading, 15)
+                        .font(.system(size: 30, weight: .bold, design: .default))
                     Spacer()
                     // 타이머
                     ZStack {
                         Circle()
                             .fill(Color.clear)
-                            .frame(width: 60, height: 60)
+                            .frame(width: 50, height: 50)
                             .overlay(
-                                Circle().stroke(Color.green, lineWidth: 10)
+                                Circle().stroke(Color.init(hex: "008E00"), lineWidth: 5)
                             )
                         
                         Circle()
                             .fill(Color.clear)
-                            .frame(width: 60, height: 60)
+                            .frame(width: 50, height: 50)
                             .overlay(
                                 Circle().trim(from: 0, to: progress())
                                     .stroke(
                                         style: StrokeStyle(
-                                            lineWidth: 10,
+                                            lineWidth: 5,
                                             lineCap: .round,
                                             lineJoin: .round
                                         )
@@ -63,6 +64,7 @@ struct TimerGame: View {
                             )
                         Cllock(counter: counter, countTo: countTo)
                     }
+                    .padding(.trailing, 10)
                 }
                 .onReceive(timer) { time in
                     if isTimer {
@@ -74,13 +76,13 @@ struct TimerGame: View {
                         }
                     }
                 }
-                
+                Spacer()
                 // 게임 
                 Text(viewModel.questionText)
-                    .font(.title)
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
                     .multilineTextAlignment(.center)
                     .padding()
-                Spacer()
                 Spacer()
                 HStack {
                     ForEach(viewModel.answerIndices) { index in
@@ -89,6 +91,7 @@ struct TimerGame: View {
                             isTimer = false
                         }
                         .background(viewModel.colorForButton(at: index))
+                        .cornerRadius(32)
                         .disabled(viewModel.selectionWasMade)
                     }
                 }
@@ -105,6 +108,7 @@ struct TimerGame: View {
                 }
             }.padding(.bottom)
         }
+        .foregroundColor(.black)
         .navigationBarHidden(true)
         .background(resultsNavigationLink)
     }
@@ -133,9 +137,15 @@ struct AnswerButton: View {
             onClick()
         }) {
             Text(text)
+                .font(Font.system(size: 18, weight: .medium, design: .default))
+                .foregroundColor(.black)
         }
-        .padding()
-        .border(Color.blue, width: 4)
+        .padding(10)
+        .cornerRadius(32)
+        .overlay(
+            RoundedRectangle(cornerRadius: 32)
+                .stroke(Color.init(hex: "008E00"), lineWidth: 4)
+        )
     }
 }
 
@@ -146,7 +156,7 @@ struct Cllock: View {
     var body: some View {
         VStack {
             Text(counterToMinutes())
-                .font(.system(size: 20))
+                .font(.system(size: 15))
                 .fontWeight(.black)
         }
     }
