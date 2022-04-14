@@ -151,6 +151,8 @@
 		F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
 		F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
 		F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
+		F7DAC401280895F900F81806 /* FAQView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC400280895F900F81806 /* FAQView2.swift */; };
+		F7DAC402280895F900F81806 /* FAQView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC400280895F900F81806 /* FAQView2.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 /* End PBXBuildFile section */
@@ -278,6 +280,7 @@
 		F7AE674927867D5F007D62FF /* MiddleWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleWord.swift; sourceTree = "<group>"; };
 		F7AE674C27867F0E007D62FF /* HighWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighWord.swift; sourceTree = "<group>"; };
 		F7AE674F27867F3B007D62FF /* ToeicWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToeicWord.swift; sourceTree = "<group>"; };
+		F7DAC400280895F900F81806 /* FAQView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView2.swift; sourceTree = "<group>"; };
 		F7F7E130278415BB008FF432 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -443,6 +446,7 @@
 				2A3AF3A9279E39270020DC74 /* CSVDataView.swift */,
 				2A3AF3AC279E39AF0020DC74 /* FAQView.swift */,
 				2A3AF3AF279E39EB0020DC74 /* SendEmail.swift */,
+				F7DAC400280895F900F81806 /* FAQView2.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -1017,6 +1021,7 @@
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */,
 				B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */,
+				F7DAC401280895F900F81806 /* FAQView2.swift in Sources */,
 				2A903A6427969B4100DB774A /* Middle.swift in Sources */,
 				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
@@ -1062,6 +1067,7 @@
 				2A3AF3A5279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				F7AB7CF1278BF91E0039989F /* High.swift in Sources */,
 				2A3AF3A2279E38B00020DC74 /* AccountManagement.swift in Sources */,
+				F7DAC402280895F900F81806 /* FAQView2.swift in Sources */,
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */,
 				2A903A6927969B8E00DB774A /* minigame2.swift in Sources */,
