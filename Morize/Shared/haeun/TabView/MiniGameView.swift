@@ -51,7 +51,7 @@ struct MiniGameView: View {
                 print("asdf")
                 timerStart = true
             }
-            .fullScreenCover(isPresented: $timerStart, content: WelcomeView.init)
+            .fullScreenCover(isPresented: $timerStart, content: TimerGameIntro.init)
             .font(.custom("NotoSansKR-Bold", size: 20))
             .padding()
             .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
@@ -59,25 +59,6 @@ struct MiniGameView: View {
             .foregroundColor(.white)
             .cornerRadius(8)
         }
-        
-//        NavigationView {
-//            VStack{
-//                NavigationLink(destination: MiniGameIntro()) {
-//                    Text("카드 맞추기")
-//                }
-//                .padding()
-//                NavigationLink(destination:MiniGame2B()) {
-////                                MiniGame2B(currentPage: .constant(Pages.GamePage)
-//                    Text("단어 맞추기")
-//                }
-//                .padding()
-//                NavigationLink(destination: WelcomeView()) {
-//                    Text("타이머 게임")
-//                }
-//                .padding()
-//            }
-//            .navigationBarHidden(true)
-//        }
     }
 }
 

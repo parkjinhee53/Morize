@@ -18,7 +18,7 @@ struct BottomText: View {
                 .fontWeight(.bold)
                 .padding(.all)
             Spacer()
-        }.background(Color.blue.opacity(0.4))
+        }.background(Color.init(hex: "008E00").opacity(0.4))
     }
 }
 
