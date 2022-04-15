@@ -33,7 +33,7 @@ struct Question: Hashable {
         Question(questionText: "빵",
                  possibleAnswers: [
                     "Bread",
-                    "Scone.",
+                    "Scone",
                     "Bead",
                     "Cookie",
                  ],

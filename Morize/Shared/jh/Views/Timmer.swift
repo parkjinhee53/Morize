@@ -14,7 +14,7 @@ let timer = Timer
 struct Timmer: View {
     
     @State var counter: Int = 0
-    var countTo: Int = 5
+    var countTo: Int = 10
     
     var body: some View {
         VStack {

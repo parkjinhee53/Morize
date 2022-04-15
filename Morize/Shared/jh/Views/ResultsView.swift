@@ -10,9 +10,11 @@ import SwiftUI
 struct ResultsView: View {
     let viewModel: ResultsViewModel
     
+    @State var start = false
+    @State var end = false
+    
     var body: some View {
         ZStack {
-            GameColor.main.ignoresSafeArea()
             VStack {
                 Spacer()
                 HStack {
@@ -33,12 +35,37 @@ struct ResultsView: View {
                     .font(.system(size: 30))
                 Text("Total time: \(viewModel.totalGameTimeText)")
                 Spacer()
-                NavigationLink(
-                    destination: TimerGame(),
-                    label: {
-                        BottomText(str: "Re-take Quiz")
-                            .padding(.bottom)
-                    })
+                
+                HStack {
+                    Button("뒤로가기") {
+                        print("asdf")
+                        end = true
+                    }
+                    .fullScreenCover(isPresented: $end, content: MiniGameView.init)
+                    .font(.custom("NotoSansKR-Bold", size: 20))
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
+                    .background(Color.init(hex: "666666"))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .padding(.bottom, 50)
+                    .padding(.leading, 16)
+                    
+                    Spacer()
+                    Button("다시하기") {
+                        print("asdf")
+                        start = true
+                    }
+                    .fullScreenCover(isPresented: $start, content: TimerGame.init)
+                    .font(.custom("NotoSansKR-Bold", size: 20))
+                    .padding()
+                    .frame(width: UIScreen.main.bounds.width / 2 - 32, height: 50)
+                    .background(Color.init(hex: "008E00"))
+                    .foregroundColor(.white)
+                    .cornerRadius(8)
+                    .padding(.bottom, 50)
+                    .padding(.trailing, 16)
+                }
             }
         }
         .navigationBarHidden(true)

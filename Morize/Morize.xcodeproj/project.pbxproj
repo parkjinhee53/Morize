@@ -68,8 +68,6 @@
 		7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 32AA951ACD747BC6C5B669C9 /* Pods_Morize__iOS_.framework */; };
 		B709682C2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
 		B709682D2782CDB0001B0884 /* Game.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709681F2782CDB0001B0884 /* Game.swift */; };
-		B709682E2782CDB0001B0884 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968202782CDB0001B0884 /* GameColor.swift */; };
-		B709682F2782CDB0001B0884 /* GameColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968202782CDB0001B0884 /* GameColor.swift */; };
 		B70968302782CDB0001B0884 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968212782CDB0001B0884 /* Question.swift */; };
 		B70968312782CDB0001B0884 /* Question.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968212782CDB0001B0884 /* Question.swift */; };
 		B70968342782CDB0001B0884 /* GameViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968232782CDB0001B0884 /* GameViewModel.swift */; };
@@ -84,7 +82,6 @@
 		B709683F2782CDB0001B0884 /* WelcomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B70968292782CDB0001B0884 /* WelcomeView.swift */; };
 		B70968422782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
 		B70968432782CDB0001B0884 /* ResultsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B709682B2782CDB0001B0884 /* ResultsViewModel.swift */; };
-		B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = B712F9C6277D6D8700E7A3BD /* Lottie */; };
 		B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B712F9C9277D6DE000E7A3BD /* LottieView.swift */; };
 		B712F9CC277D6F9300E7A3BD /* fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = B712F9CB277D6F9300E7A3BD /* fireworks.json */; };
 		B713F46A278BC36C0040E6A4 /* CardFlipTutorial.swift in Sources */ = {isa = PBXBuildFile; fileRef = B713F469278BC36C0040E6A4 /* CardFlipTutorial.swift */; };
@@ -96,8 +93,6 @@
 		B733B2C2278673CB0011C68F /* AnimatableModifierDouble.swift in Sources */ = {isa = PBXBuildFile; fileRef = B733B2C1278673CB0011C68F /* AnimatableModifierDouble.swift */; };
 		B744F14927BA8E7B00A2D1F8 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = B744F14827BA8E7B00A2D1F8 /* GoogleService-Info.plist */; };
 		B744F15127BA945F00A2D1F8 /* FirebaseTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B744F15027BA945F00A2D1F8 /* FirebaseTest.swift */; };
-		B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */; };
-		B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */; };
 		B7498E3427BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
 		B7498E3527BBDA3300C46344 /* ListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3327BBDA3200C46344 /* ListView.swift */; };
 		B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7498E3727BBDF8000C46344 /* ListVM.swift */; };
@@ -110,7 +105,6 @@
 		B774CF01277BEDD500A9B368 /* MiniGameVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B774CF00277BEDD500A9B368 /* MiniGameVM.swift */; };
 		B777307A27851BA000123DAD /* CardFlip.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307927851BA000123DAD /* CardFlip.swift */; };
 		B777307C27851FD800123DAD /* CardFlipVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B777307B27851FD800123DAD /* CardFlipVM.swift */; };
-		B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = B7984F0927BA990A00231CFE /* FirebaseFirestore */; };
 		B7B3D66A27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7B3D66B27BBE8D900B4A741 /* ListAddView.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7B3D66927BBE8D900B4A741 /* ListAddView.swift */; };
 		B7BB219527DB8EE7006358EC /* MiniGameIntro.swift in Sources */ = {isa = PBXBuildFile; fileRef = B7BB219427DB8EE7006358EC /* MiniGameIntro.swift */; };
@@ -146,6 +140,10 @@
 		F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD5279E413600557E45 /* ListViewModel.swift */; };
 		F7A63AD9279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
 		F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A63AD8279E416E00557E45 /* ListModel.swift */; };
+		F7A9EC8827D99121004E8B93 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8727D99121004E8B93 /* Lottie */; };
+		F7A9EC8A27D99177004E8B93 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */; };
+		F7A9EC8C27D99182004E8B93 /* FirebaseDatabase in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */; };
+		F7A9EC8E27D9918D004E8B93 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */; };
 		F7AB7CE8278BB42E0039989F /* Middle.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CE6278BB42D0039989F /* Middle.swift */; };
 		F7AB7CF1278BF91E0039989F /* High.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CEF278BF91E0039989F /* High.swift */; };
 		F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AB7CF2278BF92A0039989F /* Toeic.swift */; };
@@ -155,6 +153,8 @@
 		F7AE674D27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
 		F7AE674E27867F0E007D62FF /* HighWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674C27867F0E007D62FF /* HighWord.swift */; };
 		F7AE675127867F3B007D62FF /* ToeicWord.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7AE674F27867F3B007D62FF /* ToeicWord.swift */; };
+		F7DAC401280895F900F81806 /* FAQView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC400280895F900F81806 /* FAQView2.swift */; };
+		F7DAC402280895F900F81806 /* FAQView2.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7DAC400280895F900F81806 /* FAQView2.swift */; };
 		F7F7E131278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 		F7F7E132278415BB008FF432 /* WordList.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7F7E130278415BB008FF432 /* WordList.swift */; };
 /* End PBXBuildFile section */
@@ -230,7 +230,6 @@
 		8980DC06CA9105AA41A0F6A5 /* Pods-Morize (macOS).debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (macOS).debug.xcconfig"; path = "Target Support Files/Pods-Morize (macOS)/Pods-Morize (macOS).debug.xcconfig"; sourceTree = "<group>"; };
 		AB332727A5833889AE29007F /* Pods-Morize (iOS).release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Morize (iOS).release.xcconfig"; path = "Target Support Files/Pods-Morize (iOS)/Pods-Morize (iOS).release.xcconfig"; sourceTree = "<group>"; };
 		B709681F2782CDB0001B0884 /* Game.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Game.swift; sourceTree = "<group>"; };
-		B70968202782CDB0001B0884 /* GameColor.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameColor.swift; sourceTree = "<group>"; };
 		B70968212782CDB0001B0884 /* Question.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Question.swift; sourceTree = "<group>"; };
 		B70968232782CDB0001B0884 /* GameViewModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GameViewModel.swift; sourceTree = "<group>"; };
 		B70968262782CDB0001B0884 /* BottomText.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BottomText.swift; sourceTree = "<group>"; };
@@ -284,6 +283,7 @@
 		F7AE674927867D5F007D62FF /* MiddleWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MiddleWord.swift; sourceTree = "<group>"; };
 		F7AE674C27867F0E007D62FF /* HighWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HighWord.swift; sourceTree = "<group>"; };
 		F7AE674F27867F3B007D62FF /* ToeicWord.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ToeicWord.swift; sourceTree = "<group>"; };
+		F7DAC400280895F900F81806 /* FAQView2.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FAQView2.swift; sourceTree = "<group>"; };
 		F7F7E130278415BB008FF432 /* WordList.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WordList.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -292,11 +292,11 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B712F9C7277D6D8700E7A3BD /* Lottie in Frameworks */,
 				7812AEF9A4236C0933D20A63 /* Pods_Morize__iOS_.framework in Frameworks */,
-				B744F18B27BA96EE00A2D1F8 /* FirebaseDatabase in Frameworks */,
-				B7984F0A27BA990A00231CFE /* FirebaseFirestore in Frameworks */,
-				B744F18927BA96EE00A2D1F8 /* FirebaseAnalytics in Frameworks */,
+				F7A9EC8827D99121004E8B93 /* Lottie in Frameworks */,
+				F7A9EC8C27D99182004E8B93 /* FirebaseDatabase in Frameworks */,
+				F7A9EC8E27D9918D004E8B93 /* FirebaseFirestore in Frameworks */,
+				F7A9EC8A27D99177004E8B93 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -449,6 +449,7 @@
 				2A3AF3A9279E39270020DC74 /* CSVDataView.swift */,
 				2A3AF3AC279E39AF0020DC74 /* FAQView.swift */,
 				2A3AF3AF279E39EB0020DC74 /* SendEmail.swift */,
+				F7DAC400280895F900F81806 /* FAQView2.swift */,
 			);
 			path = SettingView;
 			sourceTree = "<group>";
@@ -657,7 +658,6 @@
 			isa = PBXGroup;
 			children = (
 				B70968232782CDB0001B0884 /* GameViewModel.swift */,
-				B70968202782CDB0001B0884 /* GameColor.swift */,
 				B709682B2782CDB0001B0884 /* ResultsViewModel.swift */,
 				F7A63AD5279E413600557E45 /* ListViewModel.swift */,
 			);
@@ -683,10 +683,10 @@
 			);
 			name = "Morize (iOS)";
 			packageProductDependencies = (
-				B712F9C6277D6D8700E7A3BD /* Lottie */,
-				B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */,
-				B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */,
-				B7984F0927BA990A00231CFE /* FirebaseFirestore */,
+				F7A9EC8727D99121004E8B93 /* Lottie */,
+				F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */,
+				F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */,
+				F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */,
 			);
 			productName = "Morize (iOS)";
 			productReference = 2A3017C3277AA5FC00369590 /* Morize.app */;
@@ -806,7 +806,7 @@
 			mainGroup = 2A3017B6277AA5F900369590;
 			packageReferences = (
 				B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */,
-				B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
 			);
 			productRefGroup = 2A3017C4277AA5FC00369590 /* Products */;
 			projectDirPath = "";
@@ -996,7 +996,6 @@
 				B7D7607E277D985600D50AFA /* minigame2.swift in Sources */,
 				F787461727969B520010A47C /* High.swift in Sources */,
 				F787461927969BA80010A47C /* MiniGameView.swift in Sources */,
-				B709682E2782CDB0001B0884 /* GameColor.swift in Sources */,
 				2A903A6227969B2700DB774A /* WordView.swift in Sources */,
 				B70968302782CDB0001B0884 /* Question.swift in Sources */,
 				F79D02EB279003EF008A43D6 /* Timmer.swift in Sources */,
@@ -1027,6 +1026,7 @@
 				B712F9CA277D6DE000E7A3BD /* LottieView.swift in Sources */,
 				F7AB7CF3278BF92A0039989F /* Toeic.swift in Sources */,
 				B7498E3827BBDF8000C46344 /* ListVM.swift in Sources */,
+				F7DAC401280895F900F81806 /* FAQView2.swift in Sources */,
 				2A903A6427969B4100DB774A /* Middle.swift in Sources */,
 				F7AE674A27867D5F007D62FF /* MiddleWord.swift in Sources */,
 				B709682C2782CDB0001B0884 /* Game.swift in Sources */,
@@ -1072,6 +1072,7 @@
 				2A3AF3A5279E38EB0020DC74 /* NoticeView.swift in Sources */,
 				F7AB7CF1278BF91E0039989F /* High.swift in Sources */,
 				2A3AF3A2279E38B00020DC74 /* AccountManagement.swift in Sources */,
+				F7DAC402280895F900F81806 /* FAQView2.swift in Sources */,
 				B709683B2782CDB0001B0884 /* TimerGame.swift in Sources */,
 				2A903A6727969B5800DB774A /* GoogleDelegate.swift in Sources */,
 				2A903A6927969B8E00DB774A /* minigame2.swift in Sources */,
@@ -1083,7 +1084,6 @@
 				F7A63ADA279E416E00557E45 /* ListModel.swift in Sources */,
 				F7AB7CF4278BF92A0039989F /* Toeic.swift in Sources */,
 				2A903A6627969B5300DB774A /* LoginView.swift in Sources */,
-				B709682F2782CDB0001B0884 /* GameColor.swift in Sources */,
 				F7A63AD7279E413600557E45 /* ListViewModel.swift in Sources */,
 				B70968352782CDB0001B0884 /* GameViewModel.swift in Sources */,
 				B7498E3527BBDA3300C46344 /* ListView.swift in Sources */,
@@ -1568,7 +1568,7 @@
 				minimumVersion = 3.0.0;
 			};
 		};
-		B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+		F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
 			requirement = {
@@ -1579,24 +1579,24 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		B712F9C6277D6D8700E7A3BD /* Lottie */ = {
+		F7A9EC8727D99121004E8B93 /* Lottie */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = B712F9C5277D6D8700E7A3BD /* XCRemoteSwiftPackageReference "lottie-ios" */;
 			productName = Lottie;
 		};
-		B744F18827BA96EE00A2D1F8 /* FirebaseAnalytics */ = {
+		F7A9EC8927D99177004E8B93 /* FirebaseAnalytics */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseAnalytics;
 		};
-		B744F18A27BA96EE00A2D1F8 /* FirebaseDatabase */ = {
+		F7A9EC8B27D99182004E8B93 /* FirebaseDatabase */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseDatabase;
 		};
-		B7984F0927BA990A00231CFE /* FirebaseFirestore */ = {
+		F7A9EC8D27D9918D004E8B93 /* FirebaseFirestore */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B744F14A27BA8F4C00A2D1F8 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			package = F7C893FE27D8E6AB00222DBF /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
 			productName = FirebaseFirestore;
 		};
 /* End XCSwiftPackageProductDependency section */
