@@ -75,9 +75,9 @@ struct MiniGame: View {
                         time += 0.1
                     }
                 Spacer()
-                ForEach(0..<viewModel.level){ i in
+                ForEach(0..<viewModel.level, id: \.self){ i in
                     HStack{
-                        ForEach(0..<viewModel.level){ j in
+                        ForEach(0..<viewModel.level, id: \.self){ j in
                             Button {
                                 if viewModel.buttonArray[(i * 4) + (j)] != 2 {
                                     if viewModel.checkArray.isEmpty{
@@ -145,11 +145,5 @@ struct MiniGame: View {
                 Spacer()
             }
         }
-    }
-}
-
-struct MiniGame_Previews: PreviewProvider {
-    static var previews: some View {
-        MiniGame()
     }
 }

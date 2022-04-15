@@ -19,7 +19,7 @@ struct BottomText: View {
                 .padding(.all)
                 .font(.system(size: 20))
             Spacer()
-        }//.background(Color.green.opacity(0.4))
+        }.background(Color.init(hex: "008E00").opacity(0.4))
     }
 }
 
