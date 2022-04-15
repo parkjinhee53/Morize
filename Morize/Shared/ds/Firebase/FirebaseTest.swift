@@ -30,7 +30,7 @@ struct FirebaseTest: View {
         } label: {
             Text("데이터 추가")
         }
-        
+
     }
 }
 

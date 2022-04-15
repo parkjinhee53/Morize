@@ -17,6 +17,7 @@ struct BottomText: View {
                 .font(.body)
                 .fontWeight(.bold)
                 .padding(.all)
+                .font(.system(size: 20))
             Spacer()
         }.background(Color.init(hex: "008E00").opacity(0.4))
     }
